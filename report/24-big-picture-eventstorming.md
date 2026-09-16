@@ -62,7 +62,7 @@ El equipo identificó eventos correspondientes a las diferentes actividades real
 
 - **Alertas:** Identificación de eventos relacionados con alertas por mantenimiento próximo, consumo elevado de combustible o incidencias detectadas.
 
-![Step 1 - Unstructured Exploration](assets/images/step1.png)
+![Step 1 - Unstructured Exploration](../assets/images/step1.png)
 
 
 
@@ -90,7 +90,7 @@ En este paso, los eventos identificados durante la exploración desestructurada 
 
 - **Continuidad operativa:** Una vez solucionada la incidencia y verificado el vehículo, este puede volver a estar disponible para la operación.
 
-![Step 2 - Timelines](assets/images/step2.png)
+![Step 2 - Timelines](../assets/images/step2.png)
 
 
 
@@ -126,7 +126,7 @@ Las principales observaciones fueron:
 
 - **Hotspot de integración IoT/GPS:** La incorporación de dispositivos IoT representa un punto que requiere definición técnica para garantizar que los datos del vehículo sean recibidos y actualizados correctamente en la plataforma.
 
-![Step 3 - Timelines with Hotspots](assets/images/step3.png)
+![Step 3 - Timelines with Hotspots](../assets/images/step3.png)
 
 
 

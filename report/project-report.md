@@ -7,7 +7,7 @@ El repositorio público del informe se encuentra organizado bajo la organizació
 
 El repositorio aplica **GitFlow** como workflow de control de versiones y **Conventional Commits** para los mensajes de commit.
 
-
+![foto](../assets/images/commit-report.png)
 
 Los commits reflejados en esta tabla corresponden únicamente al repositorio del informe (flotix-report). Los commits de código de los repositorios de Landing Page, Frontend y Web Services se registran en sus respectivos repositorios.
 

@@ -1,23 +1,11 @@
 ## 4.5. Web Applications Prototyping
-
-> ![User Flow Diagrams](../assets/images/Web%20application.png)
-
-> ![User Flow Diagrams](../assets/images/Web%20application%20(1).png)
-
-> ![User Flow Diagrams](../assets/images/Web%20application%20(2).png)
-
-> ![User Flow Diagrams](../assets/images/Web%20application%20(3).png)
-
-> ![User Flow Diagrams](../assets/images/Web%20application%20(4).png)
-
-> ![User Flow Diagrams](../assets/images/Web%20application%20(5).png)
-
-> ![User Flow Diagrams](../assets/images/Web%20application%20(6).png)
-
-> ![User Flow Diagrams](../assets/images/Web%20application%20(7).png)
-
-> ![User Flow Diagrams](../assets/images/Web%20application%20(8).png)
-
-> ![User Flow Diagrams](../assets/images/Web%20application%20(9).png)
-
-> ![User Flow Diagrams](../assets/images/Web%20application%20(10).png)
+> ![Wireframes — Web Application](../assets/images/mockup-login.png)
+> ![Wireframes — Web Application](../assets/images/mockup-dashboard.png)
+> ![Wireframes — Web Application](../assets/images/mockup-flota.png)
+> ![Wireframes — Web Application](../assets/images/mockup-conductores.png)
+> ![Wireframes — Web Application](../assets/images/mockup-mantenimiento.png)
+> ![Wireframes — Web Application](../assets/images/mockup-incidencias.png)
+> ![Wireframes — Web Application](../assets/images/mockup-monitoreo.png)
+> ![Wireframes — Web Application](../assets/images/mockup-talleres.png)
+> ![Wireframes — Web Application](../assets/images/mockup-iot.png)
+> ![Wireframes — Web Application](../assets/images/mockup-configuracion.png)

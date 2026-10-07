@@ -19,7 +19,7 @@
 **Profesor:** Velasquez Nuñez Angel Augusto
 
 ---
-## Informe del AV1
+## Informe del TB1
 
 ### Developer Team
 

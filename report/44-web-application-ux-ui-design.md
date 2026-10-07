@@ -8,27 +8,17 @@
 
 > **Figura 4.4.1.** Wireframes de baja fidelidad de la Web Application (Dashboard, Vehículos, Conductores, Combustible, Mantenimiento, Monitoreo GPS, Talleres, Reportes).
 
-> ![Wireframes — Web Application](../assets/images/WF%20-%20Login.png)
+> ![Wireframes — Web Application](../assets/images/wireframe-login.png)
+> ![Wireframes — Web Application](../assets/images/wireframe-dashboard.png)
+> ![Wireframes — Web Application](../assets/images/wireframe-flota.png)
+> ![Wireframes — Web Application](../assets/images/wireframe-conductores.png)
+> ![Wireframes — Web Application](../assets/images/wireframe-mantenimiento.png)
+> ![Wireframes — Web Application](../assets/images/wireframe-incidencias.png)
+> ![Wireframes — Web Application](../assets/images/wireframe-monitoreo.png)
+> ![Wireframes — Web Application](../assets/images/wireframe-talleres.png)
+> ![Wireframes — Web Application](../assets/images/wireframe-iot.png)
+> ![Wireframes — Web Application](../assets/images/wireframe-configuracion.png)
 
-> ![Wireframes — Web Application](../assets/images/WF%20-%20Dashboard.png)
-
-> ![Wireframes — Web Application](../assets/images/WF%20-%20Vehículos.png)
-
-> ![Wireframes — Web Application](../assets/images/WF%20-%20Conductores.png)
-
-> ![Wireframes — Web Application](../assets/images/WF%20-%20Combustible.png)
-
-> ![Wireframes — Web Application](../assets/images/WF%20-%20Mantenimiento.png)
-
-> ![Wireframes — Web Application](../assets/images/WF%20-%20Monitoreo%20GPS.png)
-
-> ![Wireframes — Web Application](../assets/images/WF%20-%20Talleres.png)
-
-> ![Wireframes — Web Application](../assets/images/WF%20-%20Reportes.png)
-
-> ![Wireframes — Web Application](../assets/images/WF%20-%20Dispositivos%20IoT.png)
-
-> ![Wireframes — Web Application](../assets/images/WF%20-%20Configuración.png)
 
 
 
@@ -53,27 +43,16 @@
 
 > **Figura 4.4.2b.** Mock-ups de alta fidelidad de la Web Application.
 
-> ![Mock-ups — Web Application](../assets/images/Web%20application.png)
-
-> ![Mock-ups — Web Application](../assets/images/Web%20application%20(1).png)
-
-> ![Mock-ups — Web Application](../assets/images/Web%20application%20(2).png)
-
-> ![Mock-ups — Web Application](../assets/images/Web%20application%20(3).png)
-
-> ![Mock-ups — Web Application](../assets/images/Web%20application%20(4).png)
-
-> ![Mock-ups — Web Application](../assets/images/Web%20application%20(5).png)
-
-> ![Mock-ups — Web Application](../assets/images/Web%20application%20(6).png)
-
-> ![Mock-ups — Web Application](../assets/images/Web%20application%20(7).png)
-
-> ![Mock-ups — Web Application](../assets/images/Web%20application%20(8).png)
-
-> ![Mock-ups — Web Application](../assets/images/Web%20application%20(9).png)
-
-> ![Mock-ups — Web Application](../assets/images/Web%20application%20(10).png)
+> ![Wireframes — Web Application](../assets/images/mockup-login.png)
+> ![Wireframes — Web Application](../assets/images/mockup-dashboard.png)
+> ![Wireframes — Web Application](../assets/images/mockup-flota.png)
+> ![Wireframes — Web Application](../assets/images/mockup-conductores.png)
+> ![Wireframes — Web Application](../assets/images/mockup-mantenimiento.png)
+> ![Wireframes — Web Application](../assets/images/mockup-incidencias.png)
+> ![Wireframes — Web Application](../assets/images/mockup-monitoreo.png)
+> ![Wireframes — Web Application](../assets/images/mockup-talleres.png)
+> ![Wireframes — Web Application](../assets/images/mockup-iot.png)
+> ![Wireframes — Web Application](../assets/images/mockup-configuracion.png)
 
 
 ### 4.4.3. Web Applications User Flow Diagrams

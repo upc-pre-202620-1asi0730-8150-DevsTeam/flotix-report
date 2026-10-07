@@ -4,12 +4,12 @@ El Impact Mapping es una herramienta de planificación estratégica que nos perm
 
 ### Impact Map - Segmento 1: Dueño
 
-![dueño](../assets/images/Impact-map-dueño.png)
+![dueño](../assets/images/impact-map1.png)
 
 ### Impact Map - Segmento 2: Conductor
 
-![conductor](../assets/images/Impact-map-conductor.png)
+![conductor](../assets/images/Impact-map2.png)
 
 ### Impact Map – Segmento 3: Mecánica
 
-![mecanico](../assets/images/Impact-map-mecanico.png)
+![mecanico](../assets/images/Impact-map3.png)

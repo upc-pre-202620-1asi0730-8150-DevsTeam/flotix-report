@@ -32,4 +32,4 @@ Durante la elaboración de la entrega TB1, el equipo corrigió y mejoró los art
 | Ramirez Rodriguez, Mauricio Joao | Lideró la actualización del Capítulo II, mejorando las secciones de Needfinding y Big Picture EventStorming, y actualizó el Ubiquitous Language del dominio. En el Capítulo III reorganizó las User Stories y el Product Backlog en función de los bounded contexts de la solución, coordinando con el equipo la priorización por valor de negocio. |
 | Lechuga Aguilar, Joaquin Andre | Lideró las correcciones del Capítulo IV: actualizó los wireframes y mock-ups del Landing Page, incorporando las secciones "Flotix in action" y "Team behind Flotix", y los de la Web Application. Corrigió los prototipos de la Web Application y las rutas de sus archivos en la sección 4.5 Web Applications Prototyping. |
 
-![foto](../assets/images/commit-report-tb1.png)
+![foto](../assets/images/commit_tb2_report.png)

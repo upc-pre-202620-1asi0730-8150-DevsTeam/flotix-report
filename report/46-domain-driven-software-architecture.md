@@ -214,7 +214,7 @@ Nota: Elaboración propia en Structurizr.
 
 > **Figura 4.6.3.** Diagrama de Contenedores (C4 Model) — Landing Page, Web Application, API Application y Base de Datos.
 
-> ![Diagrama de Contenedores](../assets/images/Containers-dark%20(1).png)
+> ![Diagrama de Contenedores](../assets/images/container-diagram-c4.png)
 
 
 

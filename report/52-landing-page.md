@@ -359,3 +359,43 @@ Siguiendo la retrospectiva del Sprint 1, el equipo decidió no esperar al API Ap
 
 > ![Commits](../assets/images/app_web_frontend.png)
 
+
+### 5.2.3. Sprint 3
+
+En esta sección se registra y explica el avance en términos de producto y trabajo colaborativo del Sprint 3. A diferencia del Sprint 1, enfocado en el Landing Page, y del Sprint 2, que entregó la Web Application sobre una capa de persistencia local, este sprint entrega la primera versión de los Web Services de Flotix: el API Application en C# con .NET Core Minimal APIs y PostgreSQL, documentado con OpenAPI (Swagger) y desplegado en la nube. El sprint también integra la Web Application con el API en los módulos respaldados por las Technical Stories TS01 a TS04, y completa las historias pendientes del Landing Page (EP09): videos, cambio de idioma y accesibilidad.
+
+#### 5.2.3.1. Sprint Planning 3
+
+| Campo | Detalle |
+|---|---|
+| **Sprint #** | Sprint 3 |
+| **Sprint Planning Background** | |
+| Date | 2026-10-28|
+| Time | 18:00 |
+| Location | Reunión virtual (Google Meet) |
+| Prepared By | Jaime Forcelledo, Gonzalo Alexander |
+| Attendees (to planning meeting) | Jaime Forcelledo, Gonzalo Alexander · Ramirez Rodriguez, Mauricio Joao · Lechuga Aguilar, Joaquin Andre · Olivares Lao, Gustavo Alonso |
+| Sprint 2 Review Summary | Durante el Sprint 2 se implementó la primera versión de la Web Application de Flotix en Vue 3 con una carpeta independiente por Bounded Context, navegable de extremo a extremo para los tres roles (Dueño, Conductor y Mecánica) y desplegada en Netlify. Los datos se persistieron mediante `LocalStorageRepository`, que replica el contrato del futuro API (`getAll`, `getById`, `findBy`, `add`, `update`, `remove`). No se implementaron Web Services reales. |
+| Sprint 2 Retrospective Summary | El equipo identificó como fortaleza el contrato de repositorio único reutilizado por los cuatro integrantes, que permitió desarrollar los módulos en paralelo sin bloqueos. Como oportunidad de mejora, se acordó implementar el API Application para reemplazar la capa local por un cliente HTTP sin modificar las capas de aplicación ni de presentación, documentar los endpoints con OpenAPI desde el inicio y completar las historias pendientes del Landing Page requeridas para la entrega. |
+| **Sprint Goal & User Stories** | |
+| Sprint 3 Goal | Our focus is on delivering the first deployed version of the Flotix RESTful API, covering vehicle management, IoT telemetry ingestion, the maintenance request lifecycle between owners and workshops, and fuel and maintenance reports, together with the integration of the Web Application with these services and the completion of the Landing Page (videos, language switch and accessibility). We believe it delivers a documented and testable backend that replaces local persistence in the integrated modules, and a Landing Page ready for the product and team videos. This will be confirmed when every endpoint in scope is documented in Swagger and reachable from the deployed environment, the Fleet, Tracking, Maintenance and Analytics modules consume the API, and the Landing Page shows both videos, switches between English and Spanish, and can be used with keyboard and screen reader. |
+| User Stories incluidas en el Sprint | **Web Services:** TS01: Implementar registro y consulta de vehículos vía API (3) · TS02: Implementar ingesta de datos IoT en tiempo real (8) · TS03: Implementar flujo de solicitud de mantenimiento entre Dueño y Mecánica (5) · TS04: Implementar generación de reportes (5)<br>**Landing Page (EP09):** US49: Ver video About the Product (2) · US51: Ver video About the Team (2) · US53: Cambiar idioma (3) · US54: Acceder al contenido de forma accesible (2) |
+| Fuera del alcance del Sprint | Los módulos Fuel Control, Incidents, Alerts e IoT Commerce, y la autenticación por rol mediante JWT (Auth Service), continúan sobre la capa de persistencia local, ya que el capítulo 3 no define Technical Stories para ellos. **[CONFIRMAR]** |
+| Sprint 3 Velocity | 30 Story Points |
+| Sum of Story Points | 30 Story Points |
+
+#### 5.2.3.2. Aspect Leaders and Collaborators
+
+En esta sección se define la matriz de liderazgo y colaboración (LACX) del Sprint 3. Los aspectos se organizan por área de responsabilidad y respetan la distribución de bounded contexts del Sprint 2: Gonzalo conserva la plataforma, Mauricio Fleet y Analytics, Joaquin Maintenance, y Gustavo Tracking.
+
+*L = Leader · C = Collaborator*
+
+| Team Member (Last Name, First Name) | GitHub Username | Platform, OpenAPI & Deployment | Fleet & Reports | Maintenance & Landing Page | IoT Telemetry |
+|---|---|:---:|:---:|:---:|:---:|
+| Jaime Forcelledo, Gonzalo Alexander | gonzalojaimeforcelledo | L | C | C | C |
+| Ramirez Rodriguez, Mauricio | MauRicio1321rr | C | L | C | C |
+| Lechuga Aguilar, Joaquin | joaquin-aguilar | C | C | L | C |
+| Olivares Lao, Gustavo | GeGuMaGu25 | C | C | C | L |
+
+
+

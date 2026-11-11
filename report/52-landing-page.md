@@ -397,5 +397,292 @@ En esta sección se define la matriz de liderazgo y colaboración (LACX) del Spr
 | Lechuga Aguilar, Joaquin | joaquin-aguilar | C | C | L | C |
 | Olivares Lao, Gustavo | GeGuMaGu25 | C | C | C | L |
 
+#### 5.2.3.3. Sprint Backlog 3
 
+El Sprint 3 tuvo como objetivo principal implementar, documentar y desplegar la primera versión del API Application de Flotix, integrarla con los módulos de la Web Application y distribuir el trabajo por bounded context entre los cuatro integrantes. La gestión del Sprint Backlog se realiza en Trello, con las columnas To-do / In-Process / To-Review / Done.
+
+**URL del Board:** **[COMPLETAR]**
+
+> ![Tablero Trello del Sprint 3: tareas en To do](../assets/images/sprint3.png)
+> *Tablero Trello del Sprint 3: tareas en To do*
+
+> ![Tablero Trello del Sprint 3: tareas en Done](../assets/images/sprint3_1.png)
+> *Tablero Trello del Sprint 3: tareas en Done*
+
+**Sprint #:** Sprint 3
+
+| Story Id | Story Title | Task Id | Task Title | Task Description | Assigned To | Estimation (Hours) |     Status      |
+|---|---|:---:|---|---|---|:---:|:---------------:|
+| General | Constraint técnico del API | TASK01 | Solución, base de datos y datos semilla | Creación de la solución .NET con Minimal APIs organizada por bounded context, esquemas lógicos en PostgreSQL, migraciones con Entity Framework Core y datos semilla de `users`, `vehicles`, `fuel_records`, `maintenance_requests`, `incidents` e `iot_devices` | Gonzalo Jaime Forcelledo | 8 |        Done        |
+| General | Constraint técnico del API | TASK02 | Cliente HTTP compartido en el frontend | Implementación del cliente HTTP base en `flotix-webapp` con el mismo contrato de `LocalStorageRepository`, para reemplazar la capa local por módulo | Gonzalo Jaime Forcelledo | 5 | Done |
+| General | Constraint técnico del API | TASK03 | Despliegue del API y la base de datos | Configuración del servicio en la nube, variables de entorno, cadena de conexión, CORS y publicación desde la rama principal | Gonzalo Jaime Forcelledo | 6 | Done |
+| TS31 | Documentar el RESTful API con OpenAPI | TASK04 | Documentación OpenAPI | Generación de la especificación OpenAPI y configuración de Scalar como interfaz de consulta, con inglés como idioma por defecto, agrupación por bounded context y ejemplos de request y response | Gonzalo Jaime Forcelledo | 4 | Done |
+| TS01 | Implementar registro y consulta de vehículos vía API | TASK05 | Endpoints de vehículos e integración de Fleet | Agregado `Vehicle`, repositorio, endpoints `POST` y `GET` de `/vehicles` con respuestas 201 y 400, e integración de las vistas de registro y listado | Gonzalo Jaime Forcelledo | 8 | Done |
+| TS05 | Implementar actualización y eliminación de vehículos vía API | TASK06 | Actualización y eliminación de vehículos | Endpoints `PUT` y `DELETE` de `/vehicles/{id}` con respuestas 200, 204 y 404, e integración de la edición y eliminación en Fleet | Gonzalo Jaime Forcelledo | 4 | Done |
+| TS06 | Implementar asignación de conductores a vehículos vía API | TASK07 | Asignación de conductores | Endpoints de asignación y desasignación de conductor, con actualización del estado "En ruta" e integración en Fleet | Gonzalo Jaime Forcelledo | 5 |Done |
+| TS28 | Implementar panel general de operación | TASK08 | Endpoint e integración del dashboard | Endpoint que consolida vehículos disponibles y en mantenimiento, gasto de combustible, alertas abiertas, incidencias urgentes y mantenimientos pendientes, e integración del dashboard | Gonzalo Jaime Forcelledo | 8 | Done |
+| TS08 | Implementar registro de recargas de combustible vía API | TASK09 | Registro de recargas e integración | Endpoint `POST` de `/fuel-records` con validación de litros, costo y kilometraje, respuestas 201, 400 y 404, e integración del formulario de combustible | Mauricio Ramirez Rodriguez | 6 | Done |
+| TS09 | Implementar historial y cálculo de rendimiento de combustible | TASK10 | Historial y rendimiento km/L | Endpoint de historial por vehículo ordenado de la más reciente a la más antigua, con cálculo de rendimiento desde la segunda recarga e integración del listado | Mauricio Ramirez Rodriguez | 6 | Done |
+| TS10 | Implementar detección de consumo anómalo | TASK11 | Regla de consumo anómalo | Marcado de recargas con rendimiento inferior al 70% del promedio histórico del vehículo e integración del indicador en la vista | Mauricio Ramirez Rodriguez | 4 | Done |
+| TS12 | Implementar creación y consulta de solicitudes de mantenimiento vía API | TASK12 | Creación y consulta de solicitudes | Endpoints `POST` y `GET` de `/maintenance-requests`, con taller destino opcional, estado inicial "Pendiente" e integración de las vistas del Dueño | Mauricio Ramirez Rodriguez | 7 | Done |
+| TS02 | Implementar ingesta de datos IoT en tiempo real | TASK13 | Endpoint de telemetría | Endpoint de recepción de paquetes con validación de esquema, descarte de paquetes corruptos y registro en el log de errores | Gustavo Olivares Lao | 8 | Done |
+| TS02 | Implementar ingesta de datos IoT en tiempo real | TASK14 | Procesamiento de telemetría | Servicio en segundo plano que actualiza la posición y los indicadores del vehículo asociado al dispositivo | Gustavo Olivares Lao | 5 | Done |
+| TS02 | Implementar ingesta de datos IoT en tiempo real | TASK15 | Integración del módulo Tracking | Endpoint de última lectura de telemetría y consumo en el dashboard de monitoreo | Gustavo Olivares Lao | 4 |Done |
+| TS03 | Implementar flujo de solicitud de mantenimiento entre Dueño y Mecánica | TASK16 | Transiciones de la solicitud | Endpoints de diagnóstico y cotización, aprobación o rechazo, inicio y cierre, con máquina de estados y respuesta 409 en transiciones inválidas, e integración de las vistas de la Mecánica | Gustavo Olivares Lao | 9 | Done |
+| TS04 | Implementar generación de reportes | TASK17 | Endpoints de reportes | Endpoints de reportes de combustible y mantenimiento por rango de fechas, con respuesta informativa cuando no existen datos | Gustavo Olivares Lao | 8 |Done|
+| TS04 | Implementar generación de reportes | TASK18 | Integración del módulo Analytics | Consumo de los endpoints de reportes en el dashboard de Analytics | Gustavo Olivares Lao | 4 | Done |
+| TS13 | Implementar sincronización del estado del vehículo con el mantenimiento | TASK19 | Sincronización Fleet y Maintenance | Actualización del estado del vehículo a "En mantenimiento" al iniciar la reparación y a "Disponible" al completarla, dentro de la misma operación | Joaquin Lechuga Aguilar | 5 | Done |
+| TS14 | Implementar consulta y búsqueda de talleres afiliados | TASK20 | Talleres afiliados | Endpoint `GET` de `/workshops` con búsqueda por nombre o ciudad e integración del listado de talleres | Joaquin Lechuga Aguilar | 4 | Done |
+| TS15 | Implementar eliminación de solicitudes de mantenimiento vía API | TASK21 | Eliminación de solicitudes | Endpoint `DELETE` de `/maintenance-requests/{id}` con respuestas 204 y 404 e integración en la vista | Joaquin Lechuga Aguilar | 2 | Done |
+| TS16 | Implementar registro de incidencias y generación de notificación | TASK22 | Registro de incidencias | Endpoint `POST` de `/incidents` con estado inicial "Abierto", registro de la notificación para el Dueño e integración del formulario del Conductor | Joaquin Lechuga Aguilar | 6 | Done |
+| TS17 | Implementar ciclo de vida de incidencias | TASK23 | Estados de la incidencia | Endpoints para pasar la incidencia a "En revisión" y "Resuelto", con respuesta 409 en transiciones inválidas | Joaquin Lechuga Aguilar | 4 | Done |
+| TS18 | Implementar consulta y eliminación de incidencias | TASK24 | Consulta y eliminación de incidencias | Endpoints `GET` y `DELETE` de `/incidents` con totales por estado e integración de la lista del Dueño | Joaquin Lechuga Aguilar | 5 | Done |
+
+#### 5.2.3.4. Development Evidence for Sprint Review
+
+En este Sprint se implementó la primera versión del API Application en C# con .NET Core Minimal APIs, organizada por bounded context y con PostgreSQL como base de datos relacional. Además se integraron con el API los módulos Fleet, Fuel Control, Maintenance, Incidents, Tracking, Analytics y el dashboard de la Web Application. El desarrollo siguió GitFlow, con una rama `feature/<nombre>` por funcionalidad, Pull Requests revisados antes del merge a `develop` y Conventional Commits.
+
+| Repository | Branch | Commit Id | Commit Message | Commit Message Body | Committed on (Date) |
+|---|---|---|---|---|:---:|
+| flotix-api | feature/platform | **[COMPLETAR]** | `feat(platform): add solution structure, schemas and seed data` | Se crea la estructura del API, las migraciones y los datos semilla | **[COMPLETAR]** |
+| flotix-api | feature/openapi | **[COMPLETAR]** | `docs(openapi): configure scalar api reference` | Se documentan los endpoints con OpenAPI en inglés | **[COMPLETAR]** |
+| flotix-api | feature/fleet | **[COMPLETAR]** | `feat(fleet): add vehicle and driver assignment endpoints` | Se implementan el registro, la edición, la eliminación y la asignación de conductores | **[COMPLETAR]** |
+| flotix-api | feature/dashboard | **[COMPLETAR]** | `feat(dashboard): add operation overview endpoint` | Se implementa el panel general de operación | **[COMPLETAR]** |
+| flotix-api | feature/fuel-control | **[COMPLETAR]** | `feat(fuel): add refuel records, efficiency and anomaly rule` | Se implementan el registro de recargas, el rendimiento y el consumo anómalo | **[COMPLETAR]** |
+| flotix-api | feature/maintenance-requests | **[COMPLETAR]** | `feat(maintenance): add request creation and query endpoints` | Se implementan la creación y consulta de solicitudes de mantenimiento | **[COMPLETAR]** |
+| flotix-api | feature/maintenance-lifecycle | **[COMPLETAR]** | `feat(maintenance): add request state transitions` | Se implementa la máquina de estados de la solicitud | **[COMPLETAR]** |
+| flotix-api | feature/maintenance-sync | **[COMPLETAR]** | `feat(maintenance): sync vehicle status, workshops and deletion` | Se sincroniza el estado del vehículo y se agregan talleres y eliminación | **[COMPLETAR]** |
+| flotix-api | feature/incidents | **[COMPLETAR]** | `feat(incidents): add incident registration, lifecycle and query` | Se implementan el registro, los estados y la consulta de incidencias | **[COMPLETAR]** |
+| flotix-api | feature/telemetry | **[COMPLETAR]** | `feat(telemetry): add iot ingestion endpoint and processor` | Se implementan la recepción, validación y procesamiento de paquetes de telemetría | **[COMPLETAR]** |
+| flotix-api | feature/reports | **[COMPLETAR]** | `feat(reports): add fuel and maintenance reports` | Se implementan los reportes por rango de fechas | **[COMPLETAR]** |
+| flotix-webapp | feature/http-client | **[COMPLETAR]** | `feat(shared): add http client with repository contract` | Se agrega el cliente HTTP compartido por los módulos | **[COMPLETAR]** |
+| flotix-webapp | feature/api-fleet | **[COMPLETAR]** | `feat(fleet): consume vehicles api` | Se reemplaza la persistencia local en Fleet | **[COMPLETAR]** |
+| flotix-webapp | feature/api-fuel | **[COMPLETAR]** | `feat(fuel): consume fuel api` | Se reemplaza la persistencia local en Fuel Control | **[COMPLETAR]** |
+| flotix-webapp | feature/api-maintenance | **[COMPLETAR]** | `feat(maintenance): consume maintenance api` | Se reemplaza la persistencia local en Maintenance | **[COMPLETAR]** |
+| flotix-webapp | feature/api-incidents | **[COMPLETAR]** | `feat(incidents): consume incidents api` | Se reemplaza la persistencia local en Incidents | **[COMPLETAR]** |
+| flotix-webapp | feature/api-tracking | **[COMPLETAR]** | `feat(tracking): consume telemetry api` | Se reemplaza la persistencia local en Tracking | **[COMPLETAR]** |
+| flotix-webapp | feature/api-analytics | **[COMPLETAR]** | `feat(analytics): consume reports and dashboard api` | Se reemplaza la persistencia local en Analytics y el dashboard | **[COMPLETAR]** |
+
+#### 5.2.3.5. Execution Evidence for Sprint Review
+
+En el Sprint 3 se logró poner en funcionamiento el API Application de Flotix y verificar sus reglas de negocio principales: validación de datos de vehículos y recargas, asignación de conductores, cálculo de rendimiento en km/L, marcado de consumo anómalo bajo el 70% del promedio histórico, transiciones válidas e inválidas de las solicitudes de mantenimiento y de las incidencias, sincronización del estado del vehículo con el mantenimiento, descarte de paquetes de telemetría corruptos y generación de reportes y del panel general. La Web Application consume el API en los módulos integrados.
+
+**Video de demostración de navegación (Web Application):** **[COMPLETAR]**
+
+**Screenshots**
+
+> ![Web Application: flota consumiendo el API](../assets/images/s3-webapp-fleet.png)
+> *Web Application: listado de flota consumiendo el API*
+
+> ![Web Application: historial de combustible con consumo anómalo](../assets/images/s3-webapp-fuel.png)
+> *Web Application: historial de combustible con consumo anómalo*
+
+> ![Web Application: solicitud de mantenimiento con su estado](../assets/images/s3-webapp-maintenance.png)
+> *Web Application: solicitud de mantenimiento con su estado*
+
+> ![Web Application: incidencias reportadas](../assets/images/s3-webapp-incidents.png)
+> *Web Application: incidencias reportadas por los Conductores*
+
+> ![Web Application: monitoreo con telemetría del API](../assets/images/s3-webapp-tracking.png)
+> *Web Application: monitoreo con telemetría del API*
+
+> ![Web Application: dashboard y reportes](../assets/images/s3-webapp-dashboard.png)
+> *Web Application: dashboard y reportes de Analytics*
+
+#### 5.2.3.6. Services Documentation Evidence for Sprint Review
+
+En este Sprint se documentaron con OpenAPI, mediante Scalar, los endpoints del API Application incluidos en el alcance. La documentación, redactada en inglés como idioma por defecto, agrupa los endpoints por bounded context e incluye parámetros, cuerpos de request, códigos de respuesta y ejemplos con datos de muestra.
+
+**Repositorio de Web Services:** **[COMPLETAR]**
+**Documentación Scalar desplegada:** **[COMPLETAR]**
+**Commits de documentación:** **[COMPLETAR]**
+
+Todas las rutas parten de `{baseUrl}/api/v1`.
+
+| Endpoint | Verbo | Sintaxis de llamada | Parámetros | Response |
+|---|:---:|---|---|---|
+| `/vehicles` (TS01) | POST | `POST /api/v1/vehicles` | Body: `plate`, `type`, `mileage`, `status`, `driverId` (opcional) | 201 con el vehículo creado. 400 con el detalle del error si los datos están incompletos |
+| `/vehicles` (TS01) | GET | `GET /api/v1/vehicles` | Ninguno | 200 con la lista de vehículos, su estado y kilometraje |
+| `/vehicles/{id}` (TS05) | PUT | `PUT /api/v1/vehicles/{id}` | Path: `id`. Body: `plate`, `type`, `mileage`, `status`, `driverId` | 200 con el vehículo actualizado. 400 si los datos son inválidos. 404 si no existe |
+| `/vehicles/{id}` (TS05) | DELETE | `DELETE /api/v1/vehicles/{id}` | Path: `id` | 204 sin contenido. 404 si no existe |
+| `/vehicles/{id}/driver` (TS06) | PUT | `PUT /api/v1/vehicles/{id}/driver` | Path: `id`. Body: `driverId` | 200 con la asignación y el conductor en estado "En ruta". 404 si el vehículo o el conductor no existen |
+| `/vehicles/{id}/driver` (TS06) | DELETE | `DELETE /api/v1/vehicles/{id}/driver` | Path: `id` | 200 con el vehículo en conductor "Sin asignar" |
+| `/fuel-records` (TS08) | POST | `POST /api/v1/fuel-records` | Body: `vehicleId`, `liters`, `totalCost`, `odometer`, `date` | 201 con la recarga creada. 400 si los datos son inválidos o el kilometraje es menor al de la última recarga. 404 si el vehículo no existe |
+| `/vehicles/{vehicleId}/fuel-records` (TS09, TS10) | GET | `GET /api/v1/vehicles/{vehicleId}/fuel-records` | Path: `vehicleId` | 200 con las recargas de la más reciente a la más antigua, con `efficiencyKmPerLiter` (nulo en la primera recarga) e `isAnomalous` |
+| `/maintenance-requests` (TS12) | POST | `POST /api/v1/maintenance-requests` | Body: `vehicleId`, `description`, `workshopId` (opcional) | 201 con la solicitud en estado "Pendiente". 404 si el vehículo o el taller no existen |
+| `/maintenance-requests` (TS12) | GET | `GET /api/v1/maintenance-requests` | Ninguno | 200 con las solicitudes, su estado y presupuesto, junto con las abiertas, en reparación y completadas |
+| `/maintenance-requests/{id}/diagnosis` (TS03) | PUT | `PUT /api/v1/maintenance-requests/{id}/diagnosis` | Path: `id`. Body: `diagnosis`, `estimatedCost` | 200 con la solicitud en estado "Presupuestado". 409 si la solicitud no está en "Pendiente" |
+| `/maintenance-requests/{id}/approval` (TS03) | PATCH | `PATCH /api/v1/maintenance-requests/{id}/approval` | Path: `id`. Body: `decision` (`approved` o `rejected`) | 200 con la solicitud en "Aprobado" o "Rechazado". 409 si no está en "Presupuestado" |
+| `/maintenance-requests/{id}/start` (TS03, TS13) | PATCH | `PATCH /api/v1/maintenance-requests/{id}/start` | Path: `id` | 200 con la solicitud en "En reparación" y el vehículo en "En mantenimiento". 409 si no está en "Aprobado" |
+| `/maintenance-requests/{id}/completion` (TS03, TS13) | PATCH | `PATCH /api/v1/maintenance-requests/{id}/completion` | Path: `id` | 200 con la solicitud en "Completado" y el vehículo en "Disponible". 409 si la solicitud ya está cerrada o no está en reparación |
+| `/maintenance-requests/{id}` (TS15) | DELETE | `DELETE /api/v1/maintenance-requests/{id}` | Path: `id` | 204 sin contenido. 404 si no existe |
+| `/workshops` (TS14) | GET | `GET /api/v1/workshops?search={text}` | Query: `search` (opcional, nombre o ciudad) | 200 con los talleres que coinciden y su cantidad. Sin coincidencias, 200 con una lista vacía |
+| `/incidents` (TS16) | POST | `POST /api/v1/incidents` | Body: `vehicleId`, `description` | 201 con la incidencia en estado "Abierto" y notificación para el Dueño. 400 si faltan datos. 404 si el vehículo no existe |
+| `/incidents/{id}/review` (TS17) | PATCH | `PATCH /api/v1/incidents/{id}/review` | Path: `id` | 200 con la incidencia en "En revisión" |
+| `/incidents/{id}/resolution` (TS17) | PATCH | `PATCH /api/v1/incidents/{id}/resolution` | Path: `id` | 200 con la incidencia en "Resuelto". 409 si no está en "En revisión" |
+| `/incidents` (TS18) | GET | `GET /api/v1/incidents` | Ninguno | 200 con las incidencias y los totales por estado |
+| `/incidents/{id}` (TS18) | DELETE | `DELETE /api/v1/incidents/{id}` | Path: `id` | 204 sin contenido. 404 si no existe |
+| `/telemetry` (TS02) | POST | `POST /api/v1/telemetry` | Body: `deviceId`, `latitude`, `longitude`, `speed`, `timestamp` | 202 si el paquete es válido y se procesa. 400 si no cumple el esquema (se descarta y se registra en el log de errores) |
+| `/telemetry/latest` (TS02) | GET | `GET /api/v1/telemetry/latest` | Ninguno | 200 con la última posición y velocidad de cada vehículo con dispositivo |
+| `/reports/fuel` (TS04) | GET | `GET /api/v1/reports/fuel?from={date}&to={date}` | Query: `from`, `to` (YYYY-MM-DD) | 200 con el reporte de combustible. Si no hay registros, 200 con un mensaje informativo |
+| `/reports/maintenance` (TS04) | GET | `GET /api/v1/reports/maintenance?from={date}&to={date}` | Query: `from`, `to` (YYYY-MM-DD) | 200 con el reporte de mantenimiento. Si no hay registros, 200 con un mensaje informativo |
+| `/dashboard` (TS28) | GET | `GET /api/v1/dashboard` | Ninguno | 200 con vehículos disponibles y en mantenimiento, gasto de combustible, alertas abiertas, incidencias urgentes y mantenimientos pendientes |
+
+**Ejemplos de request y response con datos de muestra**
+
+`POST /api/v1/vehicles`
+
+```json
+{
+  "plate": "ABC-123",
+  "type": "Van",
+  "mileage": 45200,
+  "status": "Available",
+  "driverId": null
+}
+```
+
+Response 201 (Created): el API retorna el vehículo con su identificador.
+
+```json
+{
+  "id": 1,
+  "plate": "ABC-123",
+  "type": "Van",
+  "mileage": 45200,
+  "status": "Available",
+  "driver": "Unassigned"
+}
+```
+
+`GET /api/v1/vehicles/1/fuel-records`
+
+Response 200 (OK): la primera recarga no tiene rendimiento y la segunda se marca como anómala al estar por debajo del 70% del promedio histórico.
+
+```json
+[
+  {
+    "id": 2,
+    "date": "2026-10-10",
+    "liters": 30.0,
+    "totalCost": 126.0,
+    "odometer": 45500,
+    "efficiencyKmPerLiter": 3.3,
+    "isAnomalous": true
+  },
+  {
+    "id": 1,
+    "date": "2026-10-01",
+    "liters": 35.0,
+    "totalCost": 147.0,
+    "odometer": 45200,
+    "efficiencyKmPerLiter": null,
+    "isAnomalous": false
+  }
+]
+```
+
+`PUT /api/v1/maintenance-requests/7/diagnosis` sobre una solicitud ya cerrada
+
+Response 409 (Conflict): el API rechaza la transición y conserva el estado.
+
+```json
+{
+  "status": 409,
+  "title": "Invalid state transition",
+  "detail": "The maintenance request is closed and cannot be modified."
+}
+```
+
+`PATCH /api/v1/incidents/3/resolution` sobre una incidencia en estado "Abierto"
+
+Response 409 (Conflict): el API indica que la incidencia debe pasar primero a "En revisión".
+
+```json
+{
+  "status": 409,
+  "title": "Invalid state transition",
+  "detail": "The incident must be under review before it can be resolved."
+}
+```
+
+`POST /api/v1/telemetry` con un paquete que no cumple el esquema
+
+Response 400 (Bad Request): el paquete se descarta y el evento queda registrado en el log de errores.
+
+```json
+{
+  "status": 400,
+  "title": "Invalid telemetry packet",
+  "detail": "Field 'speed' is required and must be numeric."
+}
+```
+
+`GET /api/v1/reports/fuel?from=2026-10-01&to=2026-10-31` sin registros en el rango
+
+Response 200 (OK): el API retorna un mensaje informativo sin error.
+
+```json
+{
+  "items": [],
+  "message": "No fuel records were found for the selected date range."
+}
+```
+
+**Capturas de la interacción con la documentación**
+
+> ![Scalar: POST /vehicles con datos de muestra](../assets/images/s3-scalar-post-vehicles.png)
+> *Scalar: ejecución de `POST /vehicles` con datos de muestra*
+
+> ![Scalar: GET fuel-records con rendimiento](../assets/images/s3-scalar-get-fuel.png)
+> *Scalar: respuesta de `GET /vehicles/{vehicleId}/fuel-records`*
+
+> ![Scalar: respuesta 409 en una solicitud de mantenimiento cerrada](../assets/images/s3-scalar-maintenance-409.png)
+> *Scalar: respuesta 409 en una solicitud de mantenimiento cerrada*
+
+#### 5.2.3.7. Software Deployment Evidence for Sprint Review
+
+En este Sprint se desplegó por primera vez el API Application junto con su base de datos PostgreSQL, y se actualizó el despliegue de la Web Application para que consuma el API.
+
+**Infraestructura utilizada**
+
+- Repositorio del backend: GitHub (`flotix-Platform`).
+- Plataforma de hosting del backend: **[COMPLETAR]**
+- Base de datos PostgreSQL: **[COMPLETAR]**
+- Web Application: Netlify.
+
+1. **Creación de cuentas y recursos:** se creó la cuenta en el proveedor de nube y se aprovisionó el servicio del API y la instancia de PostgreSQL. **[COMPLETAR]**
+2. **Configuración del proyecto:** se definieron las variables de entorno (cadena de conexión y orígenes permitidos por CORS) y el comando de build del proyecto .NET. **[COMPLETAR]**
+3. **Migraciones y datos semilla:** se aplicaron las migraciones de Entity Framework Core y se cargaron los datos semilla sobre la base de datos desplegada. **[COMPLETAR]**
+4. **Publicación automática:** cada push a la rama `main` dispara el build y la publicación del servicio. **[COMPLETAR]**
+5. **Web Application:** se configuró la URL del API en el build de producción y se volvió a publicar en Netlify.
+6. **Verificación:** se comprobó el acceso a la documentación en Scalar y la respuesta de los endpoints desde el entorno desplegado.
+> ![Servicio del API desplegado](../assets/images/s3-deploy-backend.png)
+> *Servicio del backend desplegado*
+
+> ![Base de datos PostgreSQL aprovisionada](../assets/images/s3-deploy-db.png)
+> *Base de datos PostgreSQL aprovisionada*
+
+**URL del Backend:** **[COMPLETAR]**
+**URL de Scalar:** **[COMPLETAR]**
+**URL de la Web Application:** https://flotix-app-web.netlify.app/dashboard
+
+#### 5.2.3.8. Team Collaboration Insights during Sprint
+
+Durante el Sprint 3, el equipo Developers Team distribuyó el trabajo por bounded context. Gonzalo Jaime Forcelledo lideró la plataforma (estructura del API, base de datos, despliegue y cliente HTTP compartido), Vehicle & Fleet Management y el dashboard; Mauricio Ramirez Rodriguez lideró Fuel Control y la creación y consulta de solicitudes de mantenimiento; Gustavo Olivares Lao lideró Real-Time Monitoring, Reporting & Analytics y las transiciones de estado del mantenimiento; y Joaquin Lechuga Aguilar lideró Incident Management y la sincronización del mantenimiento con el estado del vehículo, los talleres y la eliminación de solicitudes.
+
+Siguiendo la retrospectiva del Sprint 2, el contrato de repositorio definido para el frontend se mantuvo como guía de los endpoints, lo que permitió reemplazar la capa local por el cliente HTTP módulo por módulo sin tocar las capas de aplicación ni de presentación. El trabajo se organizó con GitFlow, una rama `feature/<nombre>` por funcionalidad y Pull Requests revisados por al menos un integrante antes de cada merge a `develop`. Todos los integrantes participaron en los Web Services y en la Web Application.
+
+| Team Member | Web Application | Web Services |
+|---|---|---|
+| Jaime Forcelledo, Gonzalo Alexander | Cliente HTTP compartido, Fleet y dashboard | Plataforma, OpenAPI, despliegue, vehículos y panel general |
+| Ramirez Rodriguez, Mauricio | Fuel Control y solicitudes de mantenimiento | Combustible y creación y consulta de solicitudes |
+| Olivares Lao, Gustavo | Tracking, Analytics y acciones de la Mecánica | Telemetría IoT, reportes y transiciones del mantenimiento |
+| Lechuga Aguilar, Joaquin | Incidents, talleres y eliminación de solicitudes | Incidencias, sincronización del vehículo y talleres |
+
+> ![Commits por integrante en flotix-api](../assets/images/s3-insights-platform.png)
+> *GitHub Insights: contribuciones en `flotix-platform`*
+
+> ![Commits por integrante en flotix-webapp](../assets/images/s3-insights-webapp.png)
+> *GitHub Insights: contribuciones en `flotix-webapp`*
 

@@ -33,3 +33,13 @@ Durante la elaboración de la entrega TB1, el equipo corrigió y mejoró los art
 | Lechuga Aguilar, Joaquin Andre | Lideró las correcciones del Capítulo IV: actualizó los wireframes y mock-ups del Landing Page, incorporando las secciones "Flotix in action" y "Team behind Flotix", y los de la Web Application. Corrigió los prototipos de la Web Application y las rutas de sus archivos en la sección 4.5 Web Applications Prototyping. |
 
 ![foto](../assets/images/commit_tb2_report.png)
+
+## AV2 – Sprint Review (Semana 12)
+
+Durante la elaboración de la entrega AV2, Jaime Forcelledo, Gonzalo Alexander se encargó de redactar e integrar la totalidad del contenido del informe correspondiente al Sprint 3. Trabajó en su propia *feature branch* siguiendo GitFlow y Conventional Commits, la integró en `develop` y consolidó el informe en `main` antes de la exportación a PDF. Los commits de código de Web Services (`flotix-platform`) y Frontend (`flotix-webapp`) se registran en sus respectivos repositorios y en la sección 5.2.3.4.
+
+| Integrantes | Actividades realizadas en el informe |
+|---|---|
+| Jaime Forcelledo, Gonzalo Alexander | Elaboró íntegramente la sección 5.2.3 (Sprint 3): Sprint Planning 3, Aspect Leaders and Collaborators, Sprint Backlog 3, Development Evidence, Execution Evidence, Services Documentation Evidence (endpoints, parámetros, respuestas y ejemplos de request/response), Software Deployment Evidence y Team Collaboration Insights during Sprint. Elaboró también la sección 5.4 (Video About-the-Product). Actualizó la Carátula, el Registro de Versiones del Informe, la sección Student Outcome y la presente sección Project Report Collaboration Insights con las acciones de AV2. Coordinó la integración en la rama `develop` y realizó el merge final a `main`. |
+
+![foto](../assets/images/commit_av2_report.png)

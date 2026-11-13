@@ -401,7 +401,7 @@ En esta sección se define la matriz de liderazgo y colaboración (LACX) del Spr
 
 El Sprint 3 tuvo como objetivo principal implementar, documentar y desplegar la primera versión del API Application de Flotix, integrarla con los módulos de la Web Application y distribuir el trabajo por bounded context entre los cuatro integrantes. La gestión del Sprint Backlog se realiza en Trello, con las columnas To-do / In-Process / To-Review / Done.
 
-**URL del Board:** **[COMPLETAR]**
+**URL del Board: https://trello.com/invite/b/6adf70a966d4291bccf690d2/ATTIc667f3a211184f0a0f5333d95c73e66c8A418E19/developer-team-sprint-backlog-3
 
 > ![Tablero Trello del Sprint 3: tareas en To do](../assets/images/sprint3.png)
 > *Tablero Trello del Sprint 3: tareas en To do*
@@ -440,62 +440,164 @@ El Sprint 3 tuvo como objetivo principal implementar, documentar y desplegar la 
 
 #### 5.2.3.4. Development Evidence for Sprint Review
 
-En este Sprint se implementó la primera versión del API Application en C# con .NET Core Minimal APIs, organizada por bounded context y con PostgreSQL como base de datos relacional. Además se integraron con el API los módulos Fleet, Fuel Control, Maintenance, Incidents, Tracking, Analytics y el dashboard de la Web Application. El desarrollo siguió GitFlow, con una rama `feature/<nombre>` por funcionalidad, Pull Requests revisados antes del merge a `develop` y Conventional Commits.
+En este Sprint se implementó la primera versión del API Application en el repositorio `flotix-platform`, desarrollado en C# con ASP.NET Core sobre .NET 10, con PostgreSQL como base de datos mediante Entity Framework Core y Npgsql, documentación OpenAPI con Scalar y notificación de ubicación en tiempo real con SignalR. El código se organiza por bounded context (Fleet, Fuel, Maintenance Management, Incidents, Notifications, Commerce, Analytics, Monitoring y Shared) con las capas de dominio, aplicación, infraestructura e interfaces. El desarrollo siguió GitFlow: cada funcionalidad se trabajó en una rama `feature/<nombre>` que se integró a `develop` mediante Pull Request, y `develop` se integró a `main` mediante los Pull Requests #27 y #29. Entre el 21 de octubre y el 11 de noviembre de 2026 el repositorio registró 94 commits de trabajo y 28 Pull Requests integrados.
 
-| Repository | Branch | Commit Id | Commit Message | Commit Message Body | Committed on (Date) |
-|---|---|---|---|---|:---:|
-| flotix-api | feature/platform | **[COMPLETAR]** | `feat(platform): add solution structure, schemas and seed data` | Se crea la estructura del API, las migraciones y los datos semilla | **[COMPLETAR]** |
-| flotix-api | feature/openapi | **[COMPLETAR]** | `docs(openapi): configure scalar api reference` | Se documentan los endpoints con OpenAPI en inglés | **[COMPLETAR]** |
-| flotix-api | feature/fleet | **[COMPLETAR]** | `feat(fleet): add vehicle and driver assignment endpoints` | Se implementan el registro, la edición, la eliminación y la asignación de conductores | **[COMPLETAR]** |
-| flotix-api | feature/dashboard | **[COMPLETAR]** | `feat(dashboard): add operation overview endpoint` | Se implementa el panel general de operación | **[COMPLETAR]** |
-| flotix-api | feature/fuel-control | **[COMPLETAR]** | `feat(fuel): add refuel records, efficiency and anomaly rule` | Se implementan el registro de recargas, el rendimiento y el consumo anómalo | **[COMPLETAR]** |
-| flotix-api | feature/maintenance-requests | **[COMPLETAR]** | `feat(maintenance): add request creation and query endpoints` | Se implementan la creación y consulta de solicitudes de mantenimiento | **[COMPLETAR]** |
-| flotix-api | feature/maintenance-lifecycle | **[COMPLETAR]** | `feat(maintenance): add request state transitions` | Se implementa la máquina de estados de la solicitud | **[COMPLETAR]** |
-| flotix-api | feature/maintenance-sync | **[COMPLETAR]** | `feat(maintenance): sync vehicle status, workshops and deletion` | Se sincroniza el estado del vehículo y se agregan talleres y eliminación | **[COMPLETAR]** |
-| flotix-api | feature/incidents | **[COMPLETAR]** | `feat(incidents): add incident registration, lifecycle and query` | Se implementan el registro, los estados y la consulta de incidencias | **[COMPLETAR]** |
-| flotix-api | feature/telemetry | **[COMPLETAR]** | `feat(telemetry): add iot ingestion endpoint and processor` | Se implementan la recepción, validación y procesamiento de paquetes de telemetría | **[COMPLETAR]** |
-| flotix-api | feature/reports | **[COMPLETAR]** | `feat(reports): add fuel and maintenance reports` | Se implementan los reportes por rango de fechas | **[COMPLETAR]** |
-| flotix-webapp | feature/http-client | **[COMPLETAR]** | `feat(shared): add http client with repository contract` | Se agrega el cliente HTTP compartido por los módulos | **[COMPLETAR]** |
-| flotix-webapp | feature/api-fleet | **[COMPLETAR]** | `feat(fleet): consume vehicles api` | Se reemplaza la persistencia local en Fleet | **[COMPLETAR]** |
-| flotix-webapp | feature/api-fuel | **[COMPLETAR]** | `feat(fuel): consume fuel api` | Se reemplaza la persistencia local en Fuel Control | **[COMPLETAR]** |
-| flotix-webapp | feature/api-maintenance | **[COMPLETAR]** | `feat(maintenance): consume maintenance api` | Se reemplaza la persistencia local en Maintenance | **[COMPLETAR]** |
-| flotix-webapp | feature/api-incidents | **[COMPLETAR]** | `feat(incidents): consume incidents api` | Se reemplaza la persistencia local en Incidents | **[COMPLETAR]** |
-| flotix-webapp | feature/api-tracking | **[COMPLETAR]** | `feat(tracking): consume telemetry api` | Se reemplaza la persistencia local en Tracking | **[COMPLETAR]** |
-| flotix-webapp | feature/api-analytics | **[COMPLETAR]** | `feat(analytics): consume reports and dashboard api` | Se reemplaza la persistencia local en Analytics y el dashboard | **[COMPLETAR]** |
+**Repositorio:** https://github.com/upc-pre-202620-1asi0730-8150-DevsTeam/flotix-platform
+
+**Ramas creadas**
+
+| Branch | Responsable | Fecha del primer commit | Fecha de integración | Pull Request | Commits |
+|---|---|:---:|:---:|:---:|:---:|
+| `main` | Joaquin Lechuga Aguilar | 2026-10-21 | - | - | 2 |
+| `feature/fleet` | Gonzalo Jaime Forcelledo | 2026-10-29 | 2026-11-02 | #2 | 12 |
+| `feature/Shared` | Gonzalo Jaime Forcelledo | 2026-10-31 | 2026-11-02 | #1 | 3 |
+| `feature/maintenance-management` | Joaquin Lechuga Aguilar | 2026-11-02 | 2026-11-02 | #8 | 15 |
+| `feature/fuel` | Mauricio Ramirez Rodriguez | 2026-11-02 | 2026-11-02 | #4 | 4 |
+| `feature/docs` | Gonzalo Jaime Forcelledo | 2026-11-02 | 2026-11-02 | #3 | 4 |
+| `feature/incidents` | Mauricio Ramirez Rodriguez | 2026-11-02 | 2026-11-02 | #5 | 4 |
+| `feature/migrations` | Gonzalo Jaime Forcelledo, Gustavo Olivares Lao | 2026-11-02 | 2026-11-02, 2026-11-11 | #6, merge directo | 4 |
+| `feature/changelog-and-license` | Gonzalo Jaime Forcelledo | 2026-11-02 | 2026-11-02 | #7 | 1 |
+| `feature/notifications` | Gonzalo Jaime Forcelledo | 2026-11-03 | 2026-11-03 | #9 | 4 |
+| `feature/resources` | Gonzalo Jaime Forcelledo | 2026-11-03 | 2026-11-03 | #10 | 1 |
+| `feature/commerce` | Joaquin Lechuga Aguilar | 2026-11-03 | 2026-11-03 | #11 | 14 |
+| `develop` | Gonzalo Jaime Forcelledo | 2026-11-03 | 2026-11-06 y 2026-11-11 | #27, #29 | 1 |
+| `feature/analytics` | Gonzalo Jaime Forcelledo | 2026-11-03 | 2026-11-03 | #12 | 4 |
+| `feature/monitoring` | Gonzalo Jaime Forcelledo, Gustavo Olivares Lao | 2026-11-03 | 2026-11-04 | #13 | 9 |
+| `feature/update-share` | Gonzalo Jaime Forcelledo | 2026-11-04 | 2026-11-04 | #14 | 1 |
+| `feature/path-fix` | Joaquin Lechuga Aguilar | 2026-11-04 | 2026-11-04 | #15, #17, #24 | 2 |
+| `feature/update-fuel` | Mauricio Ramirez Rodriguez | 2026-11-04 | 2026-11-04 | #16 | 1 |
+| `feature/update-incidents` | Mauricio Ramirez Rodriguez | 2026-11-04 | 2026-11-04 | #18 | 1 |
+| `feature/update-fleet` | Gonzalo Jaime Forcelledo | 2026-11-04 | 2026-11-04 | #20 | 1 |
+| `revert-18-feature/update-incidents` | Mauricio Ramirez Rodriguez | 2026-11-04 | 2026-11-04 | #19 | 1 |
+| `feature/update-notifications` | Gonzalo Jaime Forcelledo | 2026-11-04 | 2026-11-04 | #21 | 1 |
+| `feature/update-analytics` | Mauricio Ramirez Rodriguez | 2026-11-04 | 2026-11-04 | #22 | 1 |
+| `feature/editing-errors` | Gonzalo Jaime Forcelledo | 2026-11-04 | 2026-11-04 | #25 | 1 |
+| `feature/conexion-db` | Gonzalo Jaime Forcelledo | 2026-11-04 | 2026-11-04 | #26 | 1 |
+| `feature/general-improvements` | Gonzalo Jaime Forcelledo | 2026-11-11 | 2026-11-11 | #28 | 1 |
+
+La rama `feature/update-incidents` (Pull Request #18) fue revertida mediante la rama `revert-18-feature/update-incidents` (Pull Request #19). La rama `feature/migrations` se utilizó en dos momentos: el 2 de noviembre para las migraciones iniciales y el 11 de noviembre para los archivos de migración de la base de datos.
+
+**Commits por rama**
+
+| Repository | Branch | Commit Message | Committed on (Date) |
+|---|---|---|:---:|
+| flotix-platform | `main` | `chore: inital commit` | 2026-10-21 |
+| flotix-platform | `main` | `feat(build): add dependencies on csproj file` | 2026-10-21 |
+| flotix-platform | `feature/fleet` | `feat(fleet): add IVehicleRepository.cs` | 2026-10-29 |
+| flotix-platform | `feature/fleet` | `feat(fleet): add file Vehicle.cs and VehicleAudit.cs` | 2026-10-29 |
+| flotix-platform | `feature/fleet` | `feat(fleet): add directory commands` | 2026-10-29 |
+| flotix-platform | `feature/fleet` | `feat(fleet): add directory Queries` | 2026-10-29 |
+| flotix-platform | `feature/fleet` | `feat(fleet): add directory Value Objects` | 2026-10-29 |
+| flotix-platform | `feature/fleet` | `feat(fleet): update file vehicle.cs, UpdateVehicleCommand.cs and CreateVehicleCommand.cs` | 2026-10-29 |
+| flotix-platform | `feature/fleet` | `feat(fleet): add FleetContextFacade.cs of application` | 2026-10-30 |
+| flotix-platform | `feature/fleet` | `feat(fleet): add CreateVehicleError.cs, DeleteVehicleError.cs and UpdateVehicleError.cs of Application` | 2026-10-30 |
+| flotix-platform | `feature/fleet` | `feat(fleet): add VehicleCommandService.cs and VehicleQueryService.cs` | 2026-10-30 |
+| flotix-platform | `feature/fleet` | `feat(fleet): add VehicleQueryService.cs and IVehicleCommandService.cs` | 2026-10-30 |
+| flotix-platform | `feature/fleet` | `feat(fleet): add ModelBuilderExtensions.cs and VehicleRepository.cs` | 2026-10-31 |
+| flotix-platform | `feature/fleet` | `feat(fleet): aggregate interfaces, rest and ACL` | 2026-10-31 |
+| flotix-platform | `feature/Shared` | `feat(shared): aggregate domain in Shared` | 2026-10-31 |
+| flotix-platform | `feature/Shared` | `feat(shared): aggregate Result.cs of Application` | 2026-11-02 |
+| flotix-platform | `feature/Shared` | `feat(shared): aggregate layer infrastructure of shared` | 2026-11-02 |
+| flotix-platform | `feature/maintenance-management` | `feat(maintenance-management): add Maintenance Request Status value object` | 2026-11-02 |
+| flotix-platform | `feature/maintenance-management` | `feat(maintenance-management): add commands Approve Budget, Complete Maintenance, Delete Maintenance Request, Request Diagnostic, Submit Maintenance Request, Update Repair Status` | 2026-11-02 |
+| flotix-platform | `feature/maintenance-management` | `feat(maintenance-management): add queries Request by Mechanic Id, Request By Vehicle Id, All Requests, Request by Id` | 2026-11-02 |
+| flotix-platform | `feature/maintenance-management` | `feat(maintenance-management): add aggregate Maintenance Request and Maintenance Request Audit` | 2026-11-02 |
+| flotix-platform | `feature/maintenance-management` | `feat(maintenance-management): add Model Builder Extensions` | 2026-11-02 |
+| flotix-platform | `feature/maintenance-management` | `feat(maintenance-management): add Maintenance Request Repository` | 2026-11-02 |
+| flotix-platform | `feature/maintenance-management` | `feat(maintenance-management): add Errors` | 2026-11-02 |
+| flotix-platform | `feature/maintenance-management` | `feat(maintenance-management): add Request Command Service` | 2026-11-02 |
+| flotix-platform | `feature/maintenance-management` | `feat(maintenance-management): add Request Query Service` | 2026-11-02 |
+| flotix-platform | `feature/maintenance-management` | `feat(maintenance-management): add Comand and Query services` | 2026-11-02 |
+| flotix-platform | `feature/maintenance-management` | `feat(maintenance-management): add Maintance Context Facade` | 2026-11-02 |
+| flotix-platform | `feature/maintenance-management` | `feat(maintenance-management): add IMaintenanceContextFacade` | 2026-11-02 |
+| flotix-platform | `feature/maintenance-management` | `feat(maintenance-management): add transforms` | 2026-11-02 |
+| flotix-platform | `feature/maintenance-management` | `feat(maintenance-management): add resources` | 2026-11-02 |
+| flotix-platform | `feature/maintenance-management` | `feat(maintenance-management): add Request controller` | 2026-11-02 |
+| flotix-platform | `feature/fuel` | `feat(fuel): add domain of bounded context fuel` | 2026-11-02 |
+| flotix-platform | `feature/fuel` | `feat(fuel): add application of bounded context fuel` | 2026-11-02 |
+| flotix-platform | `feature/fuel` | `feat(fuel): add infrastructure of bounded context fuel` | 2026-11-02 |
+| flotix-platform | `feature/fuel` | `feat(fuel): add Interfaces of bounded context fuel` | 2026-11-02 |
+| flotix-platform | `feature/docs` | `feat(docs): aggregate adrs.md` | 2026-11-02 |
+| flotix-platform | `feature/docs` | `feat(docs): aggregate README.md` | 2026-11-02 |
+| flotix-platform | `feature/docs` | `feat(docs): aggregate db.json` | 2026-11-02 |
+| flotix-platform | `feature/docs` | `docs(docs): aggregate class-diagram.puml, fake-api.md and user stories.md(TS)` | 2026-11-02 |
+| flotix-platform | `feature/incidents` | `feat(Incidents): add domain of bounded contexts Incidents` | 2026-11-02 |
+| flotix-platform | `feature/incidents` | `feat(Incidents): add applications of bounded contexts Incidents` | 2026-11-02 |
+| flotix-platform | `feature/incidents` | `feat(Incidents): add infrastructure of bounded contexts Incidents` | 2026-11-02 |
+| flotix-platform | `feature/incidents` | `feat(Incidents): add interfaces of bounded contexts Incidents` | 2026-11-02 |
+| flotix-platform | `feature/migrations` | `feat(migrations): aggregate migrations` | 2026-11-02 |
+| flotix-platform | `feature/migrations` | `feat(migrations): add InitialCreate migration file` | 2026-11-11 |
+| flotix-platform | `feature/migrations` | `feat(migrations): add InitialCreate.Designer migration file` | 2026-11-11 |
+| flotix-platform | `feature/migrations` | `feat(migrations): add AppDbContextModeSnapshot migration file` | 2026-11-11 |
+| flotix-platform | `feature/changelog-and-license` | `feat(changelog-and-license):  aggregate changelog.md and LICENSE.md` | 2026-11-02 |
+| flotix-platform | `feature/notifications` | `feat(notifications): aggregate domain` | 2026-11-03 |
+| flotix-platform | `feature/notifications` | `feat(notifications): aggregate application in bounded context notifications` | 2026-11-03 |
+| flotix-platform | `feature/notifications` | `feat(notifications): aggregate infrastructure in bounded context notifications` | 2026-11-03 |
+| flotix-platform | `feature/notifications` | `feat(notifications): aggregate interfaces in bounded context notifications` | 2026-11-03 |
+| flotix-platform | `feature/resources` | `feat(resources): aggregate file resources .cs and .resx` | 2026-11-03 |
+| flotix-platform | `feature/commerce` | `feat(commerce): add Order Status value object` | 2026-11-03 |
+| flotix-platform | `feature/commerce` | `feat(commerce): add commands` | 2026-11-03 |
+| flotix-platform | `feature/commerce` | `feat(commerce): add queries` | 2026-11-03 |
+| flotix-platform | `feature/commerce` | `feat(commerce): add IoT Order Aggregate` | 2026-11-03 |
+| flotix-platform | `feature/commerce` | `feat(commerce): add IoT Order Audit Aggregate` | 2026-11-03 |
+| flotix-platform | `feature/commerce` | `feat(commerce): add IoT Order Repository` | 2026-11-03 |
+| flotix-platform | `feature/commerce` | `feat(commerce): add Command and Query serivices` | 2026-11-03 |
+| flotix-platform | `feature/commerce` | `feat(commerce): add Command and Query service contracts` | 2026-11-03 |
+| flotix-platform | `feature/commerce` | `feat(commerce): add Create and Update IoT Order Error` | 2026-11-03 |
+| flotix-platform | `feature/commerce` | `feat(commerce): add Model Builder Extensions` | 2026-11-03 |
+| flotix-platform | `feature/commerce` | `feat(commerce): add IoT Order Repository` | 2026-11-03 |
+| flotix-platform | `feature/commerce` | `feat(commerce): add assemblers` | 2026-11-03 |
+| flotix-platform | `feature/commerce` | `feat(commerce): add Create Ior Order, IoT Order and Update IoT Order resources` | 2026-11-03 |
+| flotix-platform | `feature/commerce` | `feat(commerce): add IoT Orders api REST interface` | 2026-11-03 |
+| flotix-platform | `develop` | `feat(develop): aggregate to develop fleet` | 2026-11-03 |
+| flotix-platform | `feature/analytics` | `feat(analytics): aggregate domaiin in bounded context analytics` | 2026-11-03 |
+| flotix-platform | `feature/analytics` | `feat(analytics): aggregate application in bounded context analytics` | 2026-11-03 |
+| flotix-platform | `feature/analytics` | `feat(analytics): aggregate infrastructure in bounded context analytics` | 2026-11-03 |
+| flotix-platform | `feature/analytics` | `feat(analytics): aggregate interfaces in bounded context analytics` | 2026-11-03 |
+| flotix-platform | `feature/monitoring` | `feat(monitoring): aggregate domain in bounded context monitoring` | 2026-11-03 |
+| flotix-platform | `feature/monitoring` | `feat(monitoring): aggregate application in bounded context monitoring` | 2026-11-03 |
+| flotix-platform | `feature/monitoring` | `feat(database): organize tables in a schema per bounded context with foreign keys` | 2026-11-03 |
+| flotix-platform | `feature/monitoring` | `feat(monitoring): list the telemetry of a device from the most recent reading` | 2026-11-03 |
+| flotix-platform | `feature/monitoring` | `feat(monitoring): add the IoT Telemetry Processor with a channel queue and a SignalR location notifier` | 2026-11-03 |
+| flotix-platform | `feature/monitoring` | `feat(monitoring): add the IoT Telemetry Processor with a channel queue and a SignalR location notifier` | 2026-11-03 |
+| flotix-platform | `feature/monitoring` | `feat(monitoring): add the IoT Telemetry Processor with a channel queue and a SignalR location notifier` | 2026-11-03 |
+| flotix-platform | `feature/monitoring` | `feat(monitoring): add the interface layer for the monitoring bounded context` | 2026-11-03 |
+| flotix-platform | `feature/monitoring` | `feat(monitoring): update file API to Api extensions` | 2026-11-04 |
+| flotix-platform | `feature/update-share` | `feat(update-share): update file API to Api extensions` | 2026-11-04 |
+| flotix-platform | `feature/path-fix` | `feat(path-fix): change Commerce boundend context namespaces` | 2026-11-04 |
+| flotix-platform | `feature/path-fix` | `feat(path-fix): change Maintenance boundend context namespaces` | 2026-11-04 |
+| flotix-platform | `feature/update-fuel` | `feat(update-fuel): update FuelContextFacade and IFuelContextFacade` | 2026-11-04 |
+| flotix-platform | `feature/update-incidents` | `feat(update-incidents): update IncidentRepository` | 2026-11-04 |
+| flotix-platform | `feature/update-fleet` | `feat(update-fleet): update file API to Api extensions` | 2026-11-04 |
+| flotix-platform | `revert-18-feature/update-incidents` | `Revert "Feature/update incidents"` | 2026-11-04 |
+| flotix-platform | `feature/update-notifications` | `feat(update-notifications): update file API to Api extensions` | 2026-11-04 |
+| flotix-platform | `feature/update-analytics` | `feat(update-analytics): update IReportQueryService, ReportCommandService and ReportsController` | 2026-11-04 |
+| flotix-platform | `feature/editing-errors` | `feat(editing-errors): Error editing with extensions` | 2026-11-04 |
+| flotix-platform | `feature/conexion-db` | `feat(conexion-db): conexion database` | 2026-11-04 |
+| flotix-platform | `feature/general-improvements` | `docs: add CONTRBUTING.md` | 2026-11-11 |
 
 #### 5.2.3.5. Execution Evidence for Sprint Review
 
 En el Sprint 3 se logró poner en funcionamiento el API Application de Flotix y verificar sus reglas de negocio principales: validación de datos de vehículos y recargas, asignación de conductores, cálculo de rendimiento en km/L, marcado de consumo anómalo bajo el 70% del promedio histórico, transiciones válidas e inválidas de las solicitudes de mantenimiento y de las incidencias, sincronización del estado del vehículo con el mantenimiento, descarte de paquetes de telemetría corruptos y generación de reportes y del panel general. La Web Application consume el API en los módulos integrados.
 
-**Video de demostración de navegación (Web Application):** **[COMPLETAR]**
+**Video de demostración de navegación (Web Application):** https://gly.lat/r/N0xWXS
 
 **Screenshots**
 
-> ![Web Application: flota consumiendo el API](../assets/images/s3-webapp-fleet.png)
-> *Web Application: listado de flota consumiendo el API*
+> ![Web Application: dashboard](../assets/images/s3-webapp-dashboard.png)
+> *Web Application: dashboard*
 
-> ![Web Application: historial de combustible con consumo anómalo](../assets/images/s3-webapp-fuel.png)
-> *Web Application: historial de combustible con consumo anómalo*
 
-> ![Web Application: solicitud de mantenimiento con su estado](../assets/images/s3-webapp-maintenance.png)
-> *Web Application: solicitud de mantenimiento con su estado*
-
-> ![Web Application: incidencias reportadas](../assets/images/s3-webapp-incidents.png)
-> *Web Application: incidencias reportadas por los Conductores*
-
-> ![Web Application: monitoreo con telemetría del API](../assets/images/s3-webapp-tracking.png)
-> *Web Application: monitoreo con telemetría del API*
-
-> ![Web Application: dashboard y reportes](../assets/images/s3-webapp-dashboard.png)
-> *Web Application: dashboard y reportes de Analytics*
+> ![Web Application: API Scalar](../assets/images/s3-webapp-scalar.png)
+> *Web Application: En Scalar*
 
 #### 5.2.3.6. Services Documentation Evidence for Sprint Review
 
 En este Sprint se documentaron con OpenAPI, mediante Scalar, los endpoints del API Application incluidos en el alcance. La documentación, redactada en inglés como idioma por defecto, agrupa los endpoints por bounded context e incluye parámetros, cuerpos de request, códigos de respuesta y ejemplos con datos de muestra.
 
-**Repositorio de Web Services:** **[COMPLETAR]**
-**Documentación Scalar desplegada:** **[COMPLETAR]**
-**Commits de documentación:** **[COMPLETAR]**
+**Repositorio de Web Services:** https://github.com/upc-pre-202620-1asi0730-8150-DevsTeam/flotix-platform
+
+**Documentación Scalar desplegada:** https://flotix-platform-production.up.railway.app/scalar
 
 Todas las rutas parten de `{baseUrl}/api/v1`.
 
@@ -528,106 +630,6 @@ Todas las rutas parten de `{baseUrl}/api/v1`.
 | `/reports/maintenance` (TS04) | GET | `GET /api/v1/reports/maintenance?from={date}&to={date}` | Query: `from`, `to` (YYYY-MM-DD) | 200 con el reporte de mantenimiento. Si no hay registros, 200 con un mensaje informativo |
 | `/dashboard` (TS28) | GET | `GET /api/v1/dashboard` | Ninguno | 200 con vehículos disponibles y en mantenimiento, gasto de combustible, alertas abiertas, incidencias urgentes y mantenimientos pendientes |
 
-**Ejemplos de request y response con datos de muestra**
-
-`POST /api/v1/vehicles`
-
-```json
-{
-  "plate": "ABC-123",
-  "type": "Van",
-  "mileage": 45200,
-  "status": "Available",
-  "driverId": null
-}
-```
-
-Response 201 (Created): el API retorna el vehículo con su identificador.
-
-```json
-{
-  "id": 1,
-  "plate": "ABC-123",
-  "type": "Van",
-  "mileage": 45200,
-  "status": "Available",
-  "driver": "Unassigned"
-}
-```
-
-`GET /api/v1/vehicles/1/fuel-records`
-
-Response 200 (OK): la primera recarga no tiene rendimiento y la segunda se marca como anómala al estar por debajo del 70% del promedio histórico.
-
-```json
-[
-  {
-    "id": 2,
-    "date": "2026-10-10",
-    "liters": 30.0,
-    "totalCost": 126.0,
-    "odometer": 45500,
-    "efficiencyKmPerLiter": 3.3,
-    "isAnomalous": true
-  },
-  {
-    "id": 1,
-    "date": "2026-10-01",
-    "liters": 35.0,
-    "totalCost": 147.0,
-    "odometer": 45200,
-    "efficiencyKmPerLiter": null,
-    "isAnomalous": false
-  }
-]
-```
-
-`PUT /api/v1/maintenance-requests/7/diagnosis` sobre una solicitud ya cerrada
-
-Response 409 (Conflict): el API rechaza la transición y conserva el estado.
-
-```json
-{
-  "status": 409,
-  "title": "Invalid state transition",
-  "detail": "The maintenance request is closed and cannot be modified."
-}
-```
-
-`PATCH /api/v1/incidents/3/resolution` sobre una incidencia en estado "Abierto"
-
-Response 409 (Conflict): el API indica que la incidencia debe pasar primero a "En revisión".
-
-```json
-{
-  "status": 409,
-  "title": "Invalid state transition",
-  "detail": "The incident must be under review before it can be resolved."
-}
-```
-
-`POST /api/v1/telemetry` con un paquete que no cumple el esquema
-
-Response 400 (Bad Request): el paquete se descarta y el evento queda registrado en el log de errores.
-
-```json
-{
-  "status": 400,
-  "title": "Invalid telemetry packet",
-  "detail": "Field 'speed' is required and must be numeric."
-}
-```
-
-`GET /api/v1/reports/fuel?from=2026-10-01&to=2026-10-31` sin registros en el rango
-
-Response 200 (OK): el API retorna un mensaje informativo sin error.
-
-```json
-{
-  "items": [],
-  "message": "No fuel records were found for the selected date range."
-}
-```
 
 **Capturas de la interacción con la documentación**
 
@@ -637,9 +639,6 @@ Response 200 (OK): el API retorna un mensaje informativo sin error.
 > ![Scalar: GET fuel-records con rendimiento](../assets/images/s3-scalar-get-fuel.png)
 > *Scalar: respuesta de `GET /vehicles/{vehicleId}/fuel-records`*
 
-> ![Scalar: respuesta 409 en una solicitud de mantenimiento cerrada](../assets/images/s3-scalar-maintenance-409.png)
-> *Scalar: respuesta 409 en una solicitud de mantenimiento cerrada*
-
 #### 5.2.3.7. Software Deployment Evidence for Sprint Review
 
 En este Sprint se desplegó por primera vez el API Application junto con su base de datos PostgreSQL, y se actualizó el despliegue de la Web Application para que consuma el API.
@@ -647,14 +646,14 @@ En este Sprint se desplegó por primera vez el API Application junto con su base
 **Infraestructura utilizada**
 
 - Repositorio del backend: GitHub (`flotix-Platform`).
-- Plataforma de hosting del backend: **[COMPLETAR]**
-- Base de datos PostgreSQL: **[COMPLETAR]**
+- Plataforma de hosting del backend: Railway.
+- Base de datos PostgreSQL: Neon Console.
 - Web Application: Netlify.
 
-1. **Creación de cuentas y recursos:** se creó la cuenta en el proveedor de nube y se aprovisionó el servicio del API y la instancia de PostgreSQL. **[COMPLETAR]**
-2. **Configuración del proyecto:** se definieron las variables de entorno (cadena de conexión y orígenes permitidos por CORS) y el comando de build del proyecto .NET. **[COMPLETAR]**
-3. **Migraciones y datos semilla:** se aplicaron las migraciones de Entity Framework Core y se cargaron los datos semilla sobre la base de datos desplegada. **[COMPLETAR]**
-4. **Publicación automática:** cada push a la rama `main` dispara el build y la publicación del servicio. **[COMPLETAR]**
+1. **Creación de cuentas y recursos:** se creó la cuenta en el proveedor de nube y se aprovisionó el servicio del API y la instancia de PostgreSQL.
+2. **Configuración del proyecto:** se definieron las variables de entorno (cadena de conexión y orígenes permitidos por CORS) y el comando de build del proyecto .NET. 
+3. **Migraciones y datos semilla:** se aplicaron las migraciones de Entity Framework Core y se cargaron los datos semilla sobre la base de datos desplegada.
+4. **Publicación automática:** cada push a la rama `main` dispara el build y la publicación del servicio.
 5. **Web Application:** se configuró la URL del API en el build de producción y se volvió a publicar en Netlify.
 6. **Verificación:** se comprobó el acceso a la documentación en Scalar y la respuesta de los endpoints desde el entorno desplegado.
 > ![Servicio del API desplegado](../assets/images/s3-deploy-backend.png)
@@ -663,9 +662,11 @@ En este Sprint se desplegó por primera vez el API Application junto con su base
 > ![Base de datos PostgreSQL aprovisionada](../assets/images/s3-deploy-db.png)
 > *Base de datos PostgreSQL aprovisionada*
 
-**URL del Backend:** **[COMPLETAR]**
-**URL de Scalar:** **[COMPLETAR]**
-**URL de la Web Application:** https://flotix-app-web.netlify.app/dashboard
+**URL del Backend:** https://flotix-platform-production.up.railway.app
+
+**URL de Scalar:** https://flotix-platform-production.up.railway.app/scalar
+
+**URL de la Web Application:** https://flotix-app-web.netlify.app
 
 #### 5.2.3.8. Team Collaboration Insights during Sprint
 

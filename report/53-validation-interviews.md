@@ -1,6 +1,6 @@
 ## 5.3. Validation Interviews
 
-> Los campos marcados como **[COMPLETAR]** corresponden a datos de las sesiones reales (entrevistados, tiempos en el video, resúmenes y hallazgos). No se redactaron hallazgos ni resúmenes de entrevistas que aún no se realizaron. Los bullets de "Características del arquetipo" se tomaron de las User Personas del capítulo 2.3 y deben ajustarse a cada entrevistado.
+> Los campos marcados como corresponden a datos de las sesiones reales (entrevistados, tiempos en el video, resúmenes y hallazgos). No se redactaron hallazgos ni resúmenes de entrevistas que aún no se realizaron. Los bullets de "Características del arquetipo" se tomaron de las User Personas del capítulo 2.3 y deben ajustarse a cada entrevistado.
 
 ### 5.3.1. Diseño de Entrevistas
 
@@ -42,20 +42,17 @@ Las entrevistas tuvieron como finalidad validar la comprensión de la propuesta 
 
 ### 5.3.2. Registro de Entrevistas
 
-**Link del video consolidado de entrevistas:** **[COMPLETAR]**
+**Link del video consolidado de entrevistas:https://acortar.link/Y2NB9J**
 
 ### Entrevista 1
 
-| Campo | Información |
-|---------|------------------------|
-| Segmento | Dueño |
-| Inicio | **[COMPLETAR]** |
-| Duración | **[COMPLETAR]** |
-| Nombre completo | **[COMPLETAR]** |
-| Edad | **[COMPLETAR]** |
-| Distrito | **[COMPLETAR]** |
-| Link | **[COMPLETAR]** |
-
+| Campo | Información                    |
+|---------|--------------------------------|
+| Segmento | Dueño                          |
+| Inicio | 0:00                           |
+| Duración | 10 min 35 s                    |
+| Nombre completo | Mabel |
+| Distrito | Comas                          |
 #### Características del arquetipo
 
 - Dueño de uno o varios vehículos de transporte particular, de pasajeros o de carga.
@@ -66,151 +63,42 @@ Las entrevistas tuvieron como finalidad validar la comprensión de la propuesta 
 
 #### Resumen de la entrevista
 
-**[COMPLETAR]** Describir en un párrafo las principales apreciaciones del entrevistado: qué tareas completó sin ayuda, qué valoró de la plataforma, qué dudas o dificultades tuvo y cómo cambiaría su forma de trabajo actual.
+Mabel, dueña de una pequeña empresa de reparto en Lima con seis camionetas y cinco choferes, participó en una demostración guiada con pantalla compartida y un cuestionario estructurado. Actualmente controla unidades, combustible y mantenimientos con Excel, llamadas y WhatsApp, por donde recibe fotos de vouchers y cotizaciones de talleres, por lo que pierde visibilidad de qué conductor maneja cada camioneta. Comprendió de inmediato la propuesta de valor de Flotix y la consideró muy relevante, aunque habría querido ver más rápido si funciona desde el celular, pues pasa casi todo el día en la calle. Registró un vehículo con rapidez gracias a la visibilidad del botón, pero no habría encontrado a tiempo cómo asignar un conductor, ya que intuitivamente lo buscaría en la sección de conductores. Entendió sin dificultad los estados de flota y mantenimiento y sus colores, y sugirió renombrar "presupuestado" a "presupuesto por aprobar". Identificó al instante el consumo anómalo de combustible de la camioneta MTX 556 y la alerta de exceso de velocidad en la Panamericana, y pidió recibir esas alertas como notificaciones en el teléfono. Juzgó el flujo de solicitud al taller y aprobación de cotización (por ejemplo, 2,500 soles por pastillas de freno) más ordenado que WhatsApp, y propuso desglosar repuestos y mano de obra y agregar una confirmación antes de aprobar para evitar clics accidentales. Afirmó que reemplazaría Excel por la plataforma y le dio 8 sobre 10, que subiría a 9 o 10 con notificaciones móviles.
 
 ---
 
 ### Entrevista 2
 
-| Campo | Información |
-|---------|------------------------|
-| Segmento | Dueño |
-| Inicio | **[COMPLETAR]** |
-| Duración | **[COMPLETAR]** |
-| Nombre completo | **[COMPLETAR]** |
-| Edad | **[COMPLETAR]** |
-| Distrito | **[COMPLETAR]** |
-| Link | **[COMPLETAR]** |
-
+| Campo | Información                     |
+|---------|---------------------------------|
+| Segmento | Conductor                       |
+| Inicio | 10:36                           |
+| Duración | 5 min 14 s                      |
+| Nombre completo | Ronald |
+| Distrito | San Juan del Lurigancho         |
 #### Características del arquetipo
 
-- Dueño de uno o varios vehículos de transporte particular, de pasajeros o de carga.
-- Coordina con conductores y talleres mediante WhatsApp, llamadas y hojas de cálculo.
-- Busca controlar el gasto de combustible y conocer el estado real de cada unidad.
-- Le preocupan los mantenimientos correctivos inesperados.
-- Valora contar con información centralizada para tomar decisiones.
+- Opera diariamente un vehículo de la flota.
+- Se comunica con el dueño mediante WhatsApp y llamadas.
+- Registra combustible, kilometraje e incidencias de forma manual.
+- Necesita herramientas rápidas y sencillas desde el smartphone.
+- Valora poder reportar fallas sin intercambios largos de mensajes.
 
 #### Resumen de la entrevista
 
-**[COMPLETAR]** Describir en un párrafo las principales apreciaciones del entrevistado: qué tareas completó sin ayuda, qué valoró de la plataforma, qué dudas o dificultades tuvo y cómo cambiaría su forma de trabajo actual.
+Ronald, conductor operativo acostumbrado a registrar sus datos en papel o a enviar reportes sueltos por mensajería, participó en un recorrido guiado por las cuatro secciones principales de Flotix (Dashboard, Combustible, Incidencias y Configuración), seguido de un cuestionario estructurado de siete preguntas. Comprendió con claridad la propuesta de valor desde el primer contacto: una herramienta centralizada para conocer la unidad asignada en su turno, verificar kilometraje y próximos mantenimientos, registrar abastecimientos y reportar fallas en ruta. Calificó la navegación desde el celular como intuitiva y ágil, y valoró el botón azul de acceso directo para registrar combustible, cuyos campos (litros, costo en soles y kilometraje) le resultaron familiares porque coinciden con el ticket del grifo y el odómetro. Consideró práctico y rápido el módulo de incidencias, en especial poder ver en tiempo real si un reporte sigue abierto o ya fue solucionado. No reportó dificultades ni sugirió cambios, y afirmó que reemplazaría WhatsApp y las llamadas por la plataforma porque deja la información ordenada y accesible para el conductor y el personal administrativo.
 
 ---
 
 ### Entrevista 3
 
-| Campo | Información |
-|---------|------------------------|
-| Segmento | Dueño |
-| Inicio | **[COMPLETAR]** |
-| Duración | **[COMPLETAR]** |
-| Nombre completo | **[COMPLETAR]** |
-| Edad | **[COMPLETAR]** |
-| Distrito | **[COMPLETAR]** |
-| Link | **[COMPLETAR]** |
-
-#### Características del arquetipo
-
-- Dueño de uno o varios vehículos de transporte particular, de pasajeros o de carga.
-- Coordina con conductores y talleres mediante WhatsApp, llamadas y hojas de cálculo.
-- Busca controlar el gasto de combustible y conocer el estado real de cada unidad.
-- Le preocupan los mantenimientos correctivos inesperados.
-- Valora contar con información centralizada para tomar decisiones.
-
-#### Resumen de la entrevista
-
-**[COMPLETAR]** Describir en un párrafo las principales apreciaciones del entrevistado: qué tareas completó sin ayuda, qué valoró de la plataforma, qué dudas o dificultades tuvo y cómo cambiaría su forma de trabajo actual.
-
----
-
-### Entrevista 4
-
-| Campo | Información |
-|---------|------------------------|
-| Segmento | Conductor |
-| Inicio | **[COMPLETAR]** |
-| Duración | **[COMPLETAR]** |
-| Nombre completo | **[COMPLETAR]** |
-| Edad | **[COMPLETAR]** |
-| Distrito | **[COMPLETAR]** |
-| Link | **[COMPLETAR]** |
-
-#### Características del arquetipo
-
-- Opera diariamente un vehículo de la flota.
-- Se comunica con el dueño mediante WhatsApp y llamadas.
-- Registra combustible, kilometraje e incidencias de forma manual.
-- Necesita herramientas rápidas y sencillas desde el smartphone.
-- Valora poder reportar fallas sin intercambios largos de mensajes.
-
-#### Resumen de la entrevista
-
-**[COMPLETAR]** Describir en un párrafo las principales apreciaciones del entrevistado: qué tareas completó sin ayuda, qué valoró de la plataforma, qué dudas o dificultades tuvo y cómo cambiaría su forma de trabajo actual.
-
----
-
-### Entrevista 5
-
-| Campo | Información |
-|---------|------------------------|
-| Segmento | Conductor |
-| Inicio | **[COMPLETAR]** |
-| Duración | **[COMPLETAR]** |
-| Nombre completo | **[COMPLETAR]** |
-| Edad | **[COMPLETAR]** |
-| Distrito | **[COMPLETAR]** |
-| Link | **[COMPLETAR]** |
-
-#### Características del arquetipo
-
-- Opera diariamente un vehículo de la flota.
-- Se comunica con el dueño mediante WhatsApp y llamadas.
-- Registra combustible, kilometraje e incidencias de forma manual.
-- Necesita herramientas rápidas y sencillas desde el smartphone.
-- Valora poder reportar fallas sin intercambios largos de mensajes.
-
-#### Resumen de la entrevista
-
-**[COMPLETAR]** Describir en un párrafo las principales apreciaciones del entrevistado: qué tareas completó sin ayuda, qué valoró de la plataforma, qué dudas o dificultades tuvo y cómo cambiaría su forma de trabajo actual.
-
----
-
-### Entrevista 6
-
-| Campo | Información |
-|---------|------------------------|
-| Segmento | Conductor |
-| Inicio | **[COMPLETAR]** |
-| Duración | **[COMPLETAR]** |
-| Nombre completo | **[COMPLETAR]** |
-| Edad | **[COMPLETAR]** |
-| Distrito | **[COMPLETAR]** |
-| Link | **[COMPLETAR]** |
-
-#### Características del arquetipo
-
-- Opera diariamente un vehículo de la flota.
-- Se comunica con el dueño mediante WhatsApp y llamadas.
-- Registra combustible, kilometraje e incidencias de forma manual.
-- Necesita herramientas rápidas y sencillas desde el smartphone.
-- Valora poder reportar fallas sin intercambios largos de mensajes.
-
-#### Resumen de la entrevista
-
-**[COMPLETAR]** Describir en un párrafo las principales apreciaciones del entrevistado: qué tareas completó sin ayuda, qué valoró de la plataforma, qué dudas o dificultades tuvo y cómo cambiaría su forma de trabajo actual.
-
----
-
-### Entrevista 7
-
-| Campo | Información |
-|---------|------------------------|
-| Segmento | Mecánica |
-| Inicio | **[COMPLETAR]** |
-| Duración | **[COMPLETAR]** |
-| Nombre completo | **[COMPLETAR]** |
-| Edad | **[COMPLETAR]** |
-| Distrito | **[COMPLETAR]** |
-| Link | **[COMPLETAR]** |
+| Campo | Información     |
+|---------|-----------------|
+| Segmento | Mecánica        |
+| Inicio | 15:51           |
+| Duración | 10 min 40 s     |
+| Nombre completo | Jorge           |
+| Distrito | La victoria     |
 
 #### Características del arquetipo
 
@@ -222,61 +110,7 @@ Las entrevistas tuvieron como finalidad validar la comprensión de la propuesta 
 
 #### Resumen de la entrevista
 
-**[COMPLETAR]** Describir en un párrafo las principales apreciaciones del entrevistado: qué tareas completó sin ayuda, qué valoró de la plataforma, qué dudas o dificultades tuvo y cómo cambiaría su forma de trabajo actual.
-
----
-
-### Entrevista 8
-
-| Campo | Información |
-|---------|------------------------|
-| Segmento | Mecánica |
-| Inicio | **[COMPLETAR]** |
-| Duración | **[COMPLETAR]** |
-| Nombre completo | **[COMPLETAR]** |
-| Edad | **[COMPLETAR]** |
-| Distrito | **[COMPLETAR]** |
-| Link | **[COMPLETAR]** |
-
-#### Características del arquetipo
-
-- Mecánico o taller que atiende vehículos particulares y de empresas.
-- Recibe solicitudes mediante llamadas y WhatsApp, y se organiza con Word y calendarios.
-- Necesita consultar el historial del vehículo antes de recibirlo.
-- Enfrenta saturación cuando hay alta demanda y pocos mecánicos.
-- Prefiere que el diagnóstico lo realice el equipo de mecánicos.
-
-#### Resumen de la entrevista
-
-**[COMPLETAR]** Describir en un párrafo las principales apreciaciones del entrevistado: qué tareas completó sin ayuda, qué valoró de la plataforma, qué dudas o dificultades tuvo y cómo cambiaría su forma de trabajo actual.
-
----
-
-### Entrevista 9
-
-| Campo | Información |
-|---------|------------------------|
-| Segmento | Mecánica |
-| Inicio | **[COMPLETAR]** |
-| Duración | **[COMPLETAR]** |
-| Nombre completo | **[COMPLETAR]** |
-| Edad | **[COMPLETAR]** |
-| Distrito | **[COMPLETAR]** |
-| Link | **[COMPLETAR]** |
-
-#### Características del arquetipo
-
-- Mecánico o taller que atiende vehículos particulares y de empresas.
-- Recibe solicitudes mediante llamadas y WhatsApp, y se organiza con Word y calendarios.
-- Necesita consultar el historial del vehículo antes de recibirlo.
-- Enfrenta saturación cuando hay alta demanda y pocos mecánicos.
-- Prefiere que el diagnóstico lo realice el equipo de mecánicos.
-
-#### Resumen de la entrevista
-
-**[COMPLETAR]** Describir en un párrafo las principales apreciaciones del entrevistado: qué tareas completó sin ayuda, qué valoró de la plataforma, qué dudas o dificultades tuvo y cómo cambiaría su forma de trabajo actual.
-
----
+Jorge, mecánico con poca afinidad tecnológica que gestiona su trabajo en hojas de cálculo de Excel, participó en una prueba de usabilidad moderada con pantalla compartida y una entrevista semiestructurada. Sin ayuda creó una nueva orden de mantenimiento (New Request), registró una cotización de seiscientos soles y avanzó los estados del servicio tras simular la aceptación del presupuesto por el cliente. Confirmó que la interfaz se entiende a primera vista y que la secuencia de estados (revisión inicial, aprobación de cotización, ejecución de la reparación y entrega final) refleja el flujo real de su taller. Identificó el indicador de solicitudes pendientes del dashboard como el dato más útil, porque le permite conocer su carga de trabajo antes de aceptar nuevas órdenes, y validó que el alta de vehículos sea responsabilidad de los dueños de la flota. Propuso tres mejoras: registrar y visualizar boletas por servicio; ampliar los campos técnicos de la solicitud (placa, marca, tipo de vehículo y tipo de motor); y añadir un buscador y un listado de toda la flota, no solo de las unidades averiadas, con antigüedad, historial de atenciones y kilometraje por intervención, para anticipar mantenimientos preventivos y revisiones técnicas.
 
 ### 5.3.3. Evaluaciones según heurísticas
 
@@ -284,14 +118,14 @@ Las entrevistas tuvieron como finalidad validar la comprensión de la propuesta 
 
 **Usability – Inclusive Design – Information Architecture**
 
-| Campo | Detalle |
-|---|---|
-| **CARRERA** | Ingeniería de Software |
-| **CURSO** | Aplicaciones Web |
-| **SECCIÓN** | 8150 |
-| **PROFESORES** | Todos |
-| **AUDITOR** | Developers Team |
-| **CLIENTE(S)** | **[COMPLETAR]** (nombres de los entrevistados) |
+| Campo | Detalle                                              |
+|---|------------------------------------------------------|
+| **CARRERA** | Ingeniería de Software                               |
+| **CURSO** | Aplicaciones Web                                     |
+| **SECCIÓN** | 8150                                                 |
+| **PROFESORES** | Todos                                                |
+| **AUDITOR** | Developer Team                                       |
+| **CLIENTE(S)** | Mabel (Dueño), Ronald (Conductor) y Jorge (Mecánica) |
 
 **SITE o APP A EVALUAR:**
 **FLOTIX** (Landing Page y Web Application de la plataforma de gestión de flotas con IoT).
@@ -334,80 +168,126 @@ El alcance de esta evaluación incluye la revisión de la usabilidad de las sigu
 
 | # | Problema | Severidad | Heurística / Principio Violado |
 |---|-----------|:-:|-------------------------------|
-| 1 | **[COMPLETAR]** | **[COMPLETAR]** | **[COMPLETAR]** |
-| 2 | **[COMPLETAR]** | **[COMPLETAR]** | **[COMPLETAR]** |
-| 3 | **[COMPLETAR]** | **[COMPLETAR]** | **[COMPLETAR]** |
-| 4 | **[COMPLETAR]** | **[COMPLETAR]** | **[COMPLETAR]** |
-| 5 | **[COMPLETAR]** | **[COMPLETAR]** | **[COMPLETAR]** |
-| 6 | **[COMPLETAR]** | **[COMPLETAR]** | **[COMPLETAR]** |
-
-Heurísticas y principios disponibles para clasificar cada problema:
-
-| Grupo | Heurísticas y principios |
-|---|---|
-| Usability | Visibilidad del estado del sistema, correspondencia entre el sistema y el mundo real, libertad y control del usuario, consistencia y estándares, prevención de errores, reconocimiento antes que recuerdo, flexibilidad y eficiencia de uso, diseño estético y minimalista, ayuda a reconocer y recuperarse de errores, ayuda y documentación |
-| Inclusive Design | Proporciona experiencias comparables, considera la situación del usuario, es consistente, da control al usuario, ofrece opciones, prioriza el contenido, agrega valor |
-| Information Architecture | Is it useful, usable, findable, credible, desirable, accessible, valuable |
+| 1 | Las alertas de consumo anómalo y exceso de velocidad solo se ven dentro de la plataforma, sin notificaciones al teléfono | 3 | Inclusive Design: considera la situación del usuario |
+| 2 | La aprobación de una cotización no pide confirmación | 3 | Usability: prevención de errores |
+| 3 | La asignación de conductor está dentro de la edición del vehículo y no en la sección de conductores | 2 | Information Architecture: is it findable |
+| 4 | El estado "Presupuestado" no deja claro que requiere la aprobación del Dueño | 2 | Usability: correspondencia entre el sistema y el mundo real |
+| 5 | La Mecánica no cuenta con un buscador ni un listado de toda la flota con su historial | 3 | Usability: flexibilidad y eficiencia de uso |
+| 6 | La solicitud de mantenimiento no incluye los datos técnicos del vehículo (placa, marca, tipo y motor) | 2 | Information Architecture: is it useful |
 
 ---
 
 #### DESCRIPCIÓN DE PROBLEMAS
 
-Repetir el siguiente bloque por cada problema de la tabla resumen.
+##### Problema #1: Alertas sin notificaciones al teléfono
 
-##### Problema #1: **[COMPLETAR]**
+**Severidad:** 3
+**Heurística violada:** Inclusive Design: considera la situación del usuario
 
-**Severidad:** **[COMPLETAR]**
-**Heurística violada:** **[COMPLETAR]**
-
-**Fuente:** **[COMPLETAR]** (entrevistados que lo manifestaron)
+**Fuente:** Mabel (Dueño)
 
 ###### Problema
 
-**[COMPLETAR]** Describir qué ocurrió durante la sesión, en qué tarea y con qué frecuencia.
-
-<img alt="eu_1.png" src="../assets/images/eu_1.png" width="500"/>
+Durante el monitoreo de la flota, Mabel identificó de inmediato el consumo anómalo de combustible resaltado en rojo en la camioneta MTX 556 y la alerta de exceso de velocidad en la Panamericana. Sin embargo, indicó que necesita recibir esas alertas como notificaciones en su teléfono, porque pasa casi todo el día en la calle y no está frente a la plataforma cuando ocurren. Condicionó su puntuación de recomendación a este punto: calificó la plataforma con 8 sobre 10 y dijo que subiría a 9 o 10 si se incorporan las notificaciones móviles. Además, comentó que le habría gustado comprobar más rápido si la herramienta funciona desde el celular.
 
 ###### Recomendación
 
-**[COMPLETAR]**
+Incorporar notificaciones push o por correo para las alertas de consumo anómalo y exceso de velocidad, y comunicar de forma visible en el Landing Page y en la pantalla inicial que la plataforma se puede usar desde el celular.
+
+<img alt="eu_1.png" src="../assets/images/eu_1_2.png" width="500"/>
 
 ---
 
-##### Problema #2: **[COMPLETAR]**
+##### Problema #2: Aprobación de cotización sin confirmación
 
-**Severidad:** **[COMPLETAR]**
-**Heurística violada:** **[COMPLETAR]**
+**Severidad:** 3
+**Heurística violada:** Usability: prevención de errores
 
-**Fuente:** **[COMPLETAR]** (entrevistados que lo manifestaron)
+**Fuente:** Mabel (Dueño)
 
 ###### Problema
 
-**[COMPLETAR]** Describir qué ocurrió durante la sesión, en qué tarea y con qué frecuencia.
-
-<img alt="eu_2.png" src="../assets/images/eu_2.png" width="500"/>
+Al revisar el flujo de envío de una solicitud al taller y aprobación de la cotización (ejemplo de cambio de pastillas de freno por 2,500 soles), Mabel lo consideró más ordenado que WhatsApp. No obstante, observó que la aprobación se ejecuta directamente y propuso un aviso de confirmación para evitar clics accidentales. Como la aprobación compromete un gasto y activa el inicio de la reparación, un clic erróneo tiene un costo alto.
 
 ###### Recomendación
 
-**[COMPLETAR]**
+Agregar un diálogo de confirmación antes de aprobar o rechazar una cotización, que muestre el monto y el vehículo involucrado.
+
+<img alt="eu_1.png" src="../assets/images/eu_1_1.png" width="500"/>
 
 ---
 
-##### Problema #3: **[COMPLETAR]**
+##### Problema #3: Asignación de conductor difícil de encontrar
 
-**Severidad:** **[COMPLETAR]**
-**Heurística violada:** **[COMPLETAR]**
+**Severidad:** 2
+**Heurística violada:** Information Architecture: is it findable
 
-**Fuente:** **[COMPLETAR]** (entrevistados que lo manifestaron)
+**Fuente:** Mabel (Dueño)
 
 ###### Problema
 
-**[COMPLETAR]** Describir qué ocurrió durante la sesión, en qué tarea y con qué frecuencia.
+Mabel registró un vehículo nuevo con rapidez gracias a la visibilidad del botón. Sin embargo, señaló que no habría encontrado tan rápido la opción para asignar un conductor, porque está dentro de la edición del vehículo y ella la buscaría de forma intuitiva en la sección de conductores. Esto contradice el modelo mental del Dueño, cuya prioridad es saber qué conductor maneja cada unidad.
 
-<img alt="eu_3.png" src="../assets/images/eu_3.png" width="500"/>
+<img alt="eu_1.png" src="../assets/images/eu_1_3.png" width="500"/>
+
 
 ###### Recomendación
 
-**[COMPLETAR]**
+Permitir asignar o cambiar el vehículo también desde la sección de conductores, y mostrar el conductor asignado de forma visible en el listado de vehículos.
 
 ---
+
+##### Problema #4: Estado "Presupuestado" ambiguo
+
+**Severidad:** 2
+**Heurística violada:** Usability: correspondencia entre el sistema y el mundo real
+
+**Fuente:** Mabel (Dueño)
+
+###### Problema
+
+Mabel entendió sin dificultad los estados de flota y mantenimiento (disponible, en mantenimiento, pendiente, aprobado y completado) junto con sus colores. Pero propuso renombrar "Presupuestado" como "Presupuesto por aprobar", porque el término actual no le deja claro que es el estado en el que debe dar su autorización. Describe lo que hizo el taller, no la acción que se espera del Dueño.
+
+###### Recomendación
+
+Renombrar el estado a "Presupuesto por aprobar" en la vista del Dueño, o agregar un indicador de acción pendiente que lo destaque.
+
+<img alt="eu_1.png" src="../assets/images/eu_1_4.png" width="500"/>
+
+---
+
+##### Problema #5: Falta de buscador y listado completo de la flota para la Mecánica
+
+**Severidad:** 3
+**Heurística violada:** Usability: flexibilidad y eficiencia de uso
+
+**Fuente:** Jorge (Mecánica)
+
+###### Problema
+
+Jorge creó de forma autónoma una orden de mantenimiento, registró una cotización de seiscientos soles y avanzó los estados del servicio. Sin embargo, indicó que la plataforma solo le muestra las unidades averiadas y necesita un buscador y un listado general de toda la flota. Ese listado debería mostrar la antigüedad de cada vehículo, su historial de atenciones y el kilometraje de cada intervención, para anticipar mantenimientos preventivos y revisiones técnicas. Este problema afecta la tarea principal de la Mecánica y obliga a recurrir a medios externos como Excel.
+
+###### Recomendación
+
+Agregar a la vista de la Mecánica un listado de los vehículos afiliados con buscador por placa, y una ficha por vehículo con antigüedad, historial de atenciones y kilometraje por intervención.
+
+<img alt="eu_1.png" src="../assets/images/eu_1_5.png" width="500"/>
+
+---
+
+##### Problema #6: Solicitud de mantenimiento sin datos técnicos del vehículo
+
+**Severidad:** 2
+**Heurística violada:** Information Architecture: is it useful
+
+**Fuente:** Jorge (Mecánica)
+
+###### Problema
+
+Jorge consideró que la solicitud de mantenimiento no incluye la información técnica que necesita para atender el vehículo. Pidió ampliar los campos con placa, marca, tipo de vehículo (sedán, camioneta o pickup) y tipo de motor. También propuso registrar y visualizar las boletas de cada servicio, algo que hoy no existe en la plataforma.
+
+###### Recomendación
+
+Mostrar en cada solicitud los datos técnicos del vehículo, tomados del registro de la flota, y evaluar un campo para adjuntar y consultar la boleta de cada servicio.
+
+<img alt="eu_1.png" src="../assets/images/eu_1_6.png" width="500"/>

@@ -684,3 +684,134 @@ Siguiendo la retrospectiva del Sprint 2, el contrato de repositorio definido par
 > ![Commits por integrante en flotix-webapp](../assets/images/s3-insights-webapp.png)
 > *GitHub Insights: contribuciones en `flotix-webapp`*
 
+
+### 5.2.4. Sprint 4
+
+En esta sección se registra y explica la planificación y el avance del Sprint 4 (último sprint del proyecto, correspondiente al Release Review TB2). A diferencia de los sprints previos, este sprint completa el noveno bounded context de la arquitectura (`Identity, Profiles & Security` — EP10) incorporando la integración con el servicio externo de terceros (**Google Login**), emite y valida tokens JWT por rol para eliminar la persistencia local de usuarios, cierra las historias técnicas pendientes en la integración real (`TS07`, `TS21–TS23`, `TS24` y actualización de `TS31`), incorpora las mejoras de usabilidad derivadas de las entrevistas de validación heurística (`5.3`) y publica la versión final de los productos digitales.
+
+#### 5.2.4.1. Sprint Planning 4
+
+| Campo | Detalle |
+|---|---|
+| **Sprint #** | Sprint 4 |
+| **Sprint Planning Background** | |
+| Date | Pendiente |
+| Time | Pendiente |
+| Location | Reunión virtual (Google Meet) |
+| Prepared By | — |
+| Attendees (to planning meeting) | — |
+| Sprint 3 Review Summary | Durante el Sprint 3 se implementó, documentó en Scalar y desplegó en Railway + Neon PostgreSQL la primera versión del API Application (`flotix-platform`) cubriendo los ocho bounded contexts operativos (`Fleet`, `Fuel`, `Maintenance`, `Incidents`, `Monitoring` con SignalR, `Notifications`, `Commerce` y `Analytics`), y se integraron en `flotix-webapp` (desplegada en Netlify). Asimismo, se realizaron las entrevistas de validación (`5.3`), cuyos hallazgos heurísticos identificaron seis oportunidades concretas de mejora (tres de severidad 3 y tres de severidad 2). Quedó pendiente el bounded context `Identity, Profiles & Security` (autenticación real por rol) y el consumo de un servicio externo de terceros. |
+| Sprint 3 Retrospective Summary | El equipo destacó como fortaleza la arquitectura modular por bounded contexts con OpenAPI (Scalar) y SignalR, que permitió desplegar los ocho módulos operativos de forma estable. Como oportunidades de mejora para el sprint final (TB2), se acordó: (1) incorporar Google Login como servicio externo junto con IAM/JWT para eliminar el último rezago en `localStorage`; (2) cerrar las historias técnicas aún no conectadas con datos reales de usuarios/notificaciones en tiempo real; (3) aplicar las mejoras detectadas en las entrevistas de validación; y (4) mantener coherencia entre la matriz LACX, el Sprint Backlog, las rutas reales de Scalar y los commits de GitHub. |
+| **Sprint Goal & User Stories** | |
+| Sprint 4 Goal | Our focus is on providing fleet owners, drivers, and mechanic workshops with secure one-click Google sign-in and role-based access to the complete Flotix experience—incorporating real driver and affiliated-workshop directories, real-time external browser notifications for speed and anomalous-fuel alerts, IoT catalog availability, validated usability refinements (budget-approval confirmation, direct driver assignment, clear approval status labels, and vehicle technical details in maintenance requests), final product and team videos on the Landing Page, and complete self-service OpenAPI capabilities for developers. We believe it delivers frictionless secure onboarding, error-proof maintenance approvals, proactive alert awareness outside the dashboard, and full role-isolated operational control to fleet owners, drivers, and affiliated mechanic workshops, while giving frontend developers autonomous access to every authenticated endpoint. This will be confirmed when users of all three roles sign in with their Google account, complete their role profile, and operate 100% of their workflows against persisted data without local demo profiles; owners receive browser notifications for critical alerts and confirm maintenance budgets via an explicit summary dialog before approval; visitors watch the final videos and see mobile compatibility on the Landing Page; and developers test all new authentication and directory endpoints in Scalar without backend team intervention. |
+| User Stories incluidas en el Sprint | **Nuevas (`EP10` — Google Login & IAM):** US55: Iniciar sesión con Google (3) · US56: Configurar rol y perfil de usuario (3) · TS32: Implementar autenticación con Google y emisión de JWT vía API (5) · TS33: Implementar autorización por roles y consulta de usuarios vía API (3)<br>**Pendientes reales / cierre API:** TS07: Implementar consulta y búsqueda de conductores vía API (2) · TS21: Implementar generación de alertas de exceso de velocidad (3) · TS22: Implementar consulta de alertas y notificaciones (2) · TS23: Implementar marcado de notificaciones como leídas (1) · TS24: Implementar catálogo de dispositivos IoT vía API (2) · TS31: Documentar el RESTful API con OpenAPI — actualización Escenario 2 (2)<br>**Refinamientos por Validación Heurística (5.3) y cierre TB2:** US05 (asignación desde Conductores — P#3) · US13 (datos técnicos del vehículo en solicitud — P#6) · US15 (confirmación antes de aprobar/rechazar y etiqueta "Presupuesto por aprobar" — P#2 y P#4) · US30 / US32 (notificaciones fuera del dashboard — P#1) · US49 y US51 (versiones finales de videos en Landing Page). |
+| Sprint 4 Velocity | 26 Story Points |
+| Sum of Story Points | 26 Story Points |
+
+#### 5.2.4.2. Aspect Leaders and Collaborators
+
+En esta sección se define la matriz de liderazgo y colaboración (LACX) del Sprint 4. Los aspectos se organizan según los bloques de cierre del último sprint: autenticación externa e IAM (`EP10`), directorios reales y catálogo en API (`TS07`, talleres reales, `TS24`), mejoras de usabilidad derivadas de validación y notificaciones en tiempo real (`P#1–P#4`, `P#6`, `TS21–TS23`), y calidad, documentación OpenAPI (Scalar), pruebas y despliegue final (`TS31`, `US49`, `US51`).
+
+*L = Leader · C = Collaborator*
+
+| Team Member (Last Name, First Name) | GitHub Username | IAM & Google Login (EP10) | Conductores, Talleres y Catálogo API | Mejoras UX de Validación y Notificaciones | Calidad, Pruebas, OpenAPI y Release Final |
+|---|---|:---:|:---:|:---:|:---:|
+| Jaime Forcelledo, Gonzalo Alexander | gonzalojaimeforcelledo | | | | |
+| Jaramillo Mayta, Jhon Jordy | Marklnz1 | | | | |
+| Lechuga Aguilar, Joaquin Andre | joaquin-aguilar | | | | |
+| Munayco Apolaya, Maria Luisa | malumunayco | | | | |
+| Olivares Lao, Gustavo Alonso | GeGuMaGu25 | | | | |
+| Ramirez Rodriguez, Mauricio Joao | MauRicio1321rr | | | | |
+
+#### 5.2.4.3. Sprint Backlog 4
+
+El Sprint 4 tiene como objetivo cerrar el ciclo de vida del producto integrando Google Login como servicio externo junto con el bounded context `Identity, Profiles & Security` (`EP10`), eliminando la dependencia residual de `localStorage` en usuarios/conductores/talleres, aplicando las mejoras de usabilidad obtenidas en las entrevistas de validación (`5.3`) y publicando la versión final de la solución. La gestión de tareas se realiza en Trello con las columnas To-do / In-Process / To-Review / Done.
+
+**URL del Board:** Pendiente
+
+<!-- Insertar capturas del tablero Trello del Sprint 4 (To-do y Done) -->
+
+**Sprint #:** Sprint 4
+
+| Story Id | Story Title | Task Id | Task Title | Task Description | Estimation (Hours) | Assigned To | Status |
+|---|---|:---:|---|---|:---:|---|:---:|
+| TS32 | Implementar autenticación con Google y emisión de JWT vía API | TASK01 | Bounded context IAM y migración `users` | Creación del bounded context `Iam` en `flotix-platform` (entidad `User`, roles `Owner`/`Driver`/`Mechanic`, campos de licencia/empresa/taller e identificador de Google) y nueva migración de EF Core en PostgreSQL | 6 | | To-do |
+| TS32 | Implementar autenticación con Google y emisión de JWT vía API | TASK02 | Validación de Google ID Token y emisión de JWT | Implementación de los endpoints de autenticación externa con Google (`POST /api/v1/auth/google`) y completado de perfil, validando el token contra el servicio externo de Google y emitiendo JWT con claims de rol (`200`/`201`/`400`/`401`) | 6 | | To-do |
+| TS33 | Implementar autorización por roles y consulta de usuarios vía API | TASK03 | Protección de endpoints y consulta de usuarios por rol | Configuración de middleware JWT y políticas por rol (`401`/`403`) junto con el endpoint `GET /api/v1/users?role=` para exponer conductores y talleres afiliados desde base de datos | 5 | | To-do |
+| US55 | Iniciar sesión con Google | TASK04 | Integración de Google Sign-In en `flotix-webapp` | Configuración del proveedor externo de Google en el Frontend (aprovechando `firebase` o Google Identity Services), activación de rutas `/login` y `/register` en `app.router.js` e interceptor `Authorization: Bearer` en `http-client.js` | 5 | | To-do |
+| US56 | Configurar rol y perfil de usuario | TASK05 | Flujo de primer acceso, rol por perfil y cierre de sesión | Conexión de `register.vue` / `session.store.js` con el API de IAM (exigiendo licencia y fecha de expiración para Conductor), guard de navegación por rol, cierre de sesión y retiro de `LocalStorageUserRepository` | 5 | | To-do |
+| TS07 | Implementar consulta y búsqueda de conductores vía API | TASK06 | Integración de Conductores y Talleres desde API | Conectar `drivers-list.vue` y `workshops-list.view.vue` a los usuarios reales del API (`Driver` / `Mechanic`), reemplazando los datos fijos locales (incluyendo la corrección de datos de ejemplo fuera de Lima) | 4 | | To-do |
+| TS24 | Implementar catálogo de dispositivos IoT vía API | TASK07 | Endpoint e integración de catálogo IoT | Exponer `GET /api/v1/iot-catalog` en `flotix-platform` (Rastreador GPS, Odómetro digital y Sensor de combustible con precios) y consumirlo desde `commerce-store.view.vue` | 3 | | To-do |
+| TS21 / TS22 / TS23 | Alertas y notificaciones en tiempo real (P#1) | TASK08 | Suscripción SignalR `/hubs/notifications` y avisos del navegador | Conectar `flotix-webapp` al hub SignalR `/hubs/notifications` existente en el backend e incorporar notificaciones del navegador (Web Notifications API) ante exceso de velocidad o consumo anómalo (`US30`/`US32`) | 5 | | To-do |
+| US15 | Aprobar o rechazar presupuesto (P#2 y P#4) | TASK09 | Confirmación de cotización y etiqueta "Presupuesto por aprobar" | Agregar diálogo de confirmación (`ConfirmDialog`) mostrando vehículo y monto antes de aprobar o rechazar en `maintenance-list.view.vue`, y mostrar el estado "Presupuestado" como "Presupuesto por aprobar" en la vista del Dueño | 3 | | To-do |
+| US05 | Asignar conductor a vehículo (P#3) | TASK10 | Asignación de vehículo desde la vista de Conductores | Incorporar acción directa en `drivers-list.vue` para asignar o cambiar el vehículo de un conductor sin tener que entrar a la edición del vehículo | 3 | | To-do |
+| US13 | Enviar solicitud de mantenimiento (P#6) | TASK11 | Datos técnicos del vehículo en solicitudes de mantenimiento | Mostrar los datos técnicos del vehículo (placa, tipo de vehículo y kilometraje actual desde la flota) en las tarjetas y detalle de solicitudes de mantenimiento | 3 | | To-do |
+| TS31 | Documentar el RESTful API con OpenAPI | TASK12 | Actualización de OpenAPI / Scalar con rutas reales | Registrar `LocalizedOpenApiAssembler` del contexto `Iam` y del catálogo IoT, verificar ejemplos de request/response en inglés por defecto y documentar las rutas reales desplegadas en Scalar | 3 | | To-do |
+| US49 / US51 | Videos finales y visibilidad móvil en Landing Page (P#1) | TASK13 | Actualización final de `flotix-website` | Incrustar las versiones finales (TB2) de los videos *About the Product* y *About the Team* y destacar la compatibilidad móvil de la plataforma en el Landing Page | 3 | | To-do |
+| General | Constraint técnico de pruebas y limpieza | TASK14 | Pruebas unitarias e integración en `flotix-platform` | Creación del proyecto de pruebas en `flotix-platform` cubriendo reglas de dominio y endpoints principales, y eliminación de archivos residuales sin uso en el Frontend (`local-storage-fuel-record.js`) | 5 | | To-do |
+| General | Constraint técnico de despliegue TB2 | TASK15 | Despliegue final y configuración OAuth | Configuración de credenciales OAuth de Google (orígenes autorizados de Netlify y variables de entorno en Railway/Netlify), verificación de migraciones en Neon y validación E2E del release final | 3 | | To-do |
+
+#### 5.2.4.4. Development Evidence for Sprint Review
+
+En esta sección se registrarán los commits integrados durante el Sprint 4 en los repositorios de la solución (`flotix-platform`, `flotix-webapp` y `flotix-website`).
+
+| Repository | Branch | Commit Id | Commit Message | Commit Message Body | Committed on (Date) |
+|---|---|---:|---|---|:---:|
+| — | — | — | — | — | — |
+
+#### 5.2.4.5. Execution Evidence for Sprint Review
+
+En esta sección se documentará la ejecución de la versión final (TB2) de la plataforma, incluyendo el enlace al video de navegación y las capturas de las principales vistas implementadas en el Sprint 4.
+
+**Video de Demostración de Navegación (Versión Final TB2):** Pendiente
+
+**Screenshots de la Versión Final**
+
+<!-- Insertar capturas de Google Login, selección de rol, confirmación de presupuesto, asignación desde Conductores y notificaciones en tiempo real -->
+
+#### 5.2.4.6. Services Documentation Evidence for Sprint Review
+
+En esta sección se documentarán los nuevos endpoints incorporados en el Sprint 4 mediante OpenAPI (Scalar), incluyendo parámetros, códigos de respuesta y ejemplos JSON de response.
+
+**Repositorio de Web Services:** https://github.com/upc-pre-202620-1asi0730-8150-DevsTeam/flotix-platform
+
+**Documentación Scalar desplegada:** https://flotix-platform-production.up.railway.app/scalar
+
+**Commits de documentación OpenAPI (Sprint 4):** Pendiente
+
+Todas las rutas parten de `{baseUrl}/api/v1`.
+
+| Endpoint | Verbo | Sintaxis de llamada | Parámetros | Ejemplo y explicación del Response |
+|---|:---:|---|---|---|
+| — | — | — | — | — |
+
+**Capturas de la interacción con Scalar (Sprint 4)**
+
+<!-- Insertar capturas de Scalar ejecutando los nuevos endpoints del Sprint 4 con datos de muestra -->
+
+#### 5.2.4.7. Software Deployment Evidence for Sprint Review
+
+En esta sección se registrará el proceso de configuración del proveedor externo de Google OAuth, las variables de entorno actualizadas, la aplicación de migraciones en Neon PostgreSQL y el despliegue final de los tres productos digitales.
+
+- **URL Landing Page (GitHub Pages):** https://upc-pre-202620-1asi0730-8150-devsteam.github.io/flotix-website
+- **URL Web Application (Netlify):** https://flotix-app-web.netlify.app
+- **URL Backend API (Railway):** https://flotix-platform-production.up.railway.app
+- **URL Documentación Scalar:** https://flotix-platform-production.up.railway.app/scalar
+
+<!-- Insertar capturas del despliegue final en Railway, Neon, Netlify y GitHub Pages -->
+
+#### 5.2.4.8. Team Collaboration Insights during Sprint
+
+En esta sección se resumirá la colaboración del equipo durante el Sprint 4 junto con las métricas de contribuciones en GitHub para los repositorios del proyecto.
+
+| Team Member | Landing Page (`flotix-website`) | Web Application (`flotix-webapp`) | Web Services (`flotix-platform`) |
+|---|---|---|---|
+| Jaime Forcelledo, Gonzalo Alexander | | | |
+| Jaramillo Mayta, Jhon Jordy | | | |
+| Lechuga Aguilar, Joaquin Andre | | | |
+| Munayco Apolaya, Maria Luisa | | | |
+| Olivares Lao, Gustavo Alonso | | | |
+| Ramirez Rodriguez, Mauricio Joao | | | |
+
+<!-- Insertar capturas de GitHub Insights de flotix-platform, flotix-webapp y flotix-website -->
+

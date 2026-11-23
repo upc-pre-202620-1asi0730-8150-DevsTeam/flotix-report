@@ -1,10 +1,7 @@
 ## 5.2. Landing Page, Services & Applications Implementation
 
 
-En esta sección se describe el proceso de implementación del producto Flotix, incluyendo el desarrollo, pruebas, documentación y despliegue del Landing Page.
-
-
-Para este avance (AV1), se implementó la primera versión del Landing Page, orientada a presentar la propuesta de valor de Flotix a los tres segmentos objetivo (Dueño, Conductor y Mecánica). El desarrollo se realizó utilizando tecnologías web estándar (HTML5, CSS3, JavaScript) y GitHub como herramienta de control de versiones.
+En esta sección se describe y evidencia el proceso de implementación, pruebas, documentación y despliegue progresivo del ecosistema Flotix (Landing Page, Frontend Web Application y RESTful Web Services) a lo largo de los cuatro sprints del proyecto, aplicando tecnologías web estándar (HTML5, CSS3, JavaScript, Vue 3, ASP.NET Core / C# y PostgreSQL) y GitHub bajo el flujo GitFlow.
 
 
 ### 5.2.1. Sprint 1
@@ -27,8 +24,8 @@ En esta sección se presenta el avance del Sprint 1 en términos de desarrollo d
 | Sprint 1 – 1 Review Summary | Al tratarse del primer sprint del proyecto, no se cuenta con una iteración previa. Se tomó como base el Product Backlog priorizado y los principios de diseño definidos en el Capítulo IV (Style Guidelines e Information Architecture). |
 | Sprint 1 – 1 Retrospective Summary | No aplica para este sprint. El equipo acordó enfocarse en una correcta distribución de tareas por sección del Landing Page y en mantener comunicación constante desde el inicio del desarrollo. |
 | **Sprint Goal & User Stories** | |
-| Sprint 1 Goal | Our focus is on developing a functional and responsive landing page that presents the value proposition of Flotix to vehicle owners, drivers, and mechanic workshops. We believe it delivers a clear understanding of the product and a direct path to registration for each segment. This will be confirmed when visitors can view the landing page, navigate between its sections, view it correctly across devices, and reach the registration flow from any call-to-action. |
-| User Stories incluidas en el Sprint | US29: Visualizar Landing Page (3) · US30: Navegar entre secciones del Landing Page (2) · US31: Visualización responsive del Landing Page (5) · US32: Redirigir desde Landing Page a registro (3) |
+| Sprint 1 Goal | Our focus is on offering prospective fleet owners, drivers, and mechanic workshops a clear, responsive presentation of Flotix's value proposition, service benefits, subscription plans, and direct access to the platform across desktop and mobile devices. We believe it delivers immediate understanding of how Flotix optimizes fleet operations and straightforward plan selection to potential customers from all three target segments. This will be confirmed when visitors browse every informational section on desktop and smartphone viewports without layout breaks and reach the Web Application with their chosen plan in no more than two clicks from any call-to-action. |
+| User Stories incluidas en el Sprint | US43: Visualizar sección de inicio (2) · US44: Navegar entre secciones (1) · US45: Visualizar el Landing Page en dispositivos móviles (3) · US46: Consultar beneficios (2) · US47: Consultar planes y precios (3) · US48: Acceder a la Web Application desde el Landing Page (2) |
 | Sprint 1 Velocity | 13 Story Points |
 | Sum of Story Points | 13 Story Points |
 
@@ -52,18 +49,18 @@ En esta sección se define la matriz de liderazgo y colaboración (LACX) del Spr
 
 El Sprint 1 tuvo como objetivo principal la implementación del Landing Page de Flotix, permitiendo presentar la propuesta de valor del sistema mediante una interfaz clara, estructurada y accesible para los tres segmentos objetivo. Para la gestión del Sprint Backlog se utiliza Trello, organizando los User Stories y sus respectivos Work-Items/Tasks en columnas según su estado de avance (To-do / In-Process / To-Review / Done).
 
-![Sección Beneficios|500](../assets/images/trello-demo.png)
+![Tablero Trello del Sprint Backlog 1|500](../assets/images/trello-demo.png)
 
 **URL del Board:** https://trello.com/invite/b/6aa4d8d2372dbba6abaa9614/ATTI169be87b0916b465e22e953638c3ad30AFD2832F/developer-team-sprint-backlog-1
 
 
 | User Story | Work-Item / Task | Descripción | Estimation (Hours) | Assigned To | Status |
 |---|---|---|:---:|---|:---:|
-| US29 - Visualizar Landing Page | TASK01 - Hero + Navbar | Implementación de la sección principal (Hero) y la barra de navegación del Landing Page | 4 | Gonzalo Jaime Forcelledo | Done |
-| US29 - Visualizar Landing Page | TASK02 - Sección Propuesta de Valor | Desarrollo de la sección que presenta la propuesta de valor y los tres segmentos objetivo (Dueño, Conductor, Mecánica) | 4 | Mauricio Ramirez Rodriguez | Done |
-| US30 - Navegar entre secciones del Landing Page | TASK05 - Navegación por scroll | Implementación del desplazamiento suave (smooth scroll) entre secciones desde el menú de navegación | 3 | Gustavo Olivares Lao | Done |
-| US31 - Visualización responsive del Landing Page | TASK06 - Adaptación responsive | Adaptación de todas las secciones del Landing Page a dispositivos móviles y tablets mediante media queries | 5 | Joaquin Lechuga Aguilar | Done |
-| US32 - Redirigir desde Landing Page a registro | TASK07 - Call-to-action por segmento | Implementación de los botones "Comenzar ahora" en cada sección, redirigiendo al registro con el rol correspondiente preseleccionado | 3 | Gonzalo Jaime Forcelledo | Done |
+| US43 - Visualizar sección de inicio | TASK01 - Hero + Navbar | Implementación de la sección principal (Hero) y la barra de navegación del Landing Page | 4 | Gonzalo Jaime Forcelledo | Done |
+| US46 / US47 - Consultar beneficios y planes | TASK02 - Secciones Propuesta de Valor, Beneficios y Planes | Desarrollo de las secciones que presentan beneficios, planes y los tres segmentos objetivo (Dueño, Conductor, Mecánica) | 4 | Mauricio Ramirez Rodriguez | Done |
+| US44 - Navegar entre secciones | TASK03 - Navegación por scroll | Implementación del desplazamiento suave (smooth scroll) entre secciones desde el menú de navegación | 3 | Gustavo Olivares Lao | Done |
+| US45 - Visualizar el Landing Page en dispositivos móviles | TASK04 - Adaptación responsive | Adaptación de todas las secciones del Landing Page a dispositivos móviles y tablets mediante media queries | 5 | Joaquin Lechuga Aguilar | Done |
+| US48 - Acceder a la Web Application desde el Landing Page | TASK05 - Call-to-action por segmento y plan | Implementación de los botones "Comenzar ahora" en cada sección y plan, redirigiendo a la Web Application | 3 | Gonzalo Jaime Forcelledo | Done |
 
 
 #### 5.2.1.4. Development Evidence for Sprint Review
@@ -135,7 +132,7 @@ El despliegue del Landing Page de Flotix se realizó utilizando GitHub Pages, ap
 **Infraestructura de Despliegue**
 
 
-- Repositorio de código fuente: GitHub (`flotix-landing`)
+- Repositorio de código fuente: GitHub (`flotix-website`)
 
 - Plataforma de despliegue: GitHub Pages
 
@@ -147,7 +144,7 @@ El despliegue del Landing Page de Flotix se realizó utilizando GitHub Pages, ap
 **Proceso de Despliegue**
 
 
-1. **Creación del repositorio:** Se creó el repositorio `flotix-landing` conteniendo todos los archivos del Landing Page, asegurando que `index.html` se encuentre en la raíz.
+1. **Creación del repositorio:** Se creó el repositorio `flotix-website` conteniendo todos los archivos del Landing Page, asegurando que `index.html` se encuentre en la raíz.
 
 2. **Subida del código:**
 
@@ -193,7 +190,7 @@ Durante el Sprint 1, el equipo Developers Team trabajó de manera colaborativa e
 
 La integración del trabajo se realizó de manera progresiva, consolidando las distintas secciones en una única versión funcional del Landing Page.
 
-![Sección Beneficios|500](../assets/images/github-demo.png)
+![GitHub Insights del Sprint 1|500](../assets/images/github-demo.png)
 
 ### 5.2.2. Sprint 2
 
@@ -210,11 +207,11 @@ En esta sección se registra y explica el avance en términos de producto y trab
 | Location | Reunión virtual (Google Meet) |
 | Prepared By | Jaime Forcelledo, Gonzalo Alexander |
 | Attendees (to planning meeting) | Jaime Forcelledo, Gonzalo Alexander · Ramirez Rodriguez, Mauricio Joao · Lechuga Aguilar, Joaquin Andre · Olivares Lao, Gustavo Alonso |
-| Sprint 1 Review Summary | Durante el Sprint 1 se implementó y desplegó correctamente el Landing Page responsive de Flotix en GitHub Pages, cumpliendo las 4 User Stories planificadas (US29–US32). El equipo validó la navegación entre secciones y la adaptación a dispositivos móviles, y consolidó GitFlow y Conventional Commits como estándar de trabajo. |
-| Sprint 1 Retrospective Summary | El equipo identificó como fortaleza la división del trabajo por sección del Landing Page. Como oportunidad de mejora, se acordó no bloquear el desarrollo del frontend a la espera del API Application: se definiría una capa de persistencia local que replique el contrato del backend real, permitiendo avanzar con los 9 Bounded Contexts en paralelo y swapear la implementación por un cliente HTTP una vez el API esté disponible. |
+| Sprint 1 Review Summary | Durante el Sprint 1 se implementó y desplegó correctamente el Landing Page responsive de Flotix en GitHub Pages, cumpliendo las historias iniciales planificadas (US43–US48). El equipo validó la navegación entre secciones y la adaptación a dispositivos móviles, y consolidó GitFlow y Conventional Commits como estándar de trabajo. |
+| Sprint 1 Retrospective Summary | El equipo identificó como fortaleza la división del trabajo por sección del Landing Page. Como oportunidad de mejora, se acordó no bloquear el desarrollo del frontend a la espera del API Application: se definiría una capa de persistencia local que replique el contrato del backend real, permitiendo avanzar con los Bounded Contexts en paralelo y reemplazar la implementación por un cliente HTTP una vez el API esté disponible. |
 | **Sprint Goal & User Stories** | |
-| Sprint 2 Goal | Our focus is on delivering the first complete version of the Flotix Web Application covering authentication, fleet and driver management, fuel control, preventive maintenance with workshops, incident reporting, real-time IoT tracking, alerts, the IoT device store, and analytics for the three user roles (Dueño, Conductor, Mecánica), built against a local persistence layer that mirrors the target API Application's contract. We believe it delivers a complete, navigable product experience the team can validate end-to-end before the real backend is integrated. This will be confirmed when each of the three demo accounts (Owner, Driver, Mechanic) can log in and operate every module relevant to their role, with the business rules from Chapters I and III enforced in the UI. |
-| User Stories / Epics incluidos | EP05 Identity, Profiles & Security (login, registro, sesión por rol)<br>EP01 Vehicle & Fleet Management (vehículos, conductores)<br>EP02 Fuel Control (registro e historial de combustible)<br>EP03 Maintenance Management (solicitudes, cotizaciones, talleres) · Incident Management (reporte de incidencias)<br>EP04 Real-Time Monitoring (tracking IoT) · Alerts & Notifications<br>EP06 IoT Commerce (tienda de dispositivos) · Reporting & Analytics |
+| Sprint 2 Goal | Our focus is on enabling fleet owners, drivers, and mechanic workshops to operate end-to-end fleet workflows—covering vehicle and driver administration, fuel efficiency tracking with anomaly detection, workshop maintenance coordination, route incident reporting, real-time monitoring with speed alerts, IoT device ordering, and fleet analytics—through dedicated role views. We believe it delivers centralized operational visibility, faster owner–workshop coordination, and streamlined daily field reporting to fleet owners, drivers, and affiliated mechanic workshops. This will be confirmed when owners register vehicles, approve maintenance quotes, detect anomalous fuel records, and review analytics; drivers log fuel refills and route incidents; and mechanics quote, start, and complete repairs with automatic vehicle-availability updates and alerts across all three roles. |
+| User Stories / Epics incluidos | EP01 Gestión de Flota y Conductores (vehículos, conductores)<br>EP02 Control de Combustible (registro, historial y detección de consumo anómalo)<br>EP03 Gestión de Mantenimiento (solicitudes, cotizaciones, talleres) · EP04 Gestión de Incidencias (reporte y seguimiento)<br>EP05 Monitoreo en Tiempo Real (tracking IoT) · EP06 Alertas y Notificaciones<br>EP07 Comercio de Dispositivos IoT (tienda y pedidos) · EP08 Reportes y Analítica |
 | Sprint 2 Velocity | 33 Story Points |
 | Sum of Story Points | 33 Story Points |
 
@@ -362,7 +359,7 @@ Siguiendo la retrospectiva del Sprint 1, el equipo decidió no esperar al API Ap
 
 ### 5.2.3. Sprint 3
 
-En esta sección se registra y explica el avance en términos de producto y trabajo colaborativo del Sprint 3. A diferencia del Sprint 1, enfocado en el Landing Page, y del Sprint 2, que entregó la Web Application sobre una capa de persistencia local, este sprint entrega la primera versión de los Web Services de Flotix: el API Application en C# con .NET Core Minimal APIs y PostgreSQL, documentado con OpenAPI (Swagger) y desplegado en la nube. El sprint también integra la Web Application con el API en los módulos respaldados por las Technical Stories TS01 a TS04, y completa las historias pendientes del Landing Page (EP09): videos, cambio de idioma y accesibilidad.
+En esta sección se registra y explica el avance en términos de producto y trabajo colaborativo del Sprint 3. A diferencia del Sprint 1, enfocado en el Landing Page, y del Sprint 2, que entregó la Web Application sobre una capa de persistencia local, este sprint entrega la primera versión desplegada de los Web Services de Flotix: el API Application en C# con ASP.NET Core y PostgreSQL, documentado con OpenAPI (Scalar) y desplegado en la nube, junto con la integración de los ocho bounded contexts operativos en la Web Application y las historias pendientes del Landing Page (EP09): videos, cambio de idioma y accesibilidad.
 
 #### 5.2.3.1. Sprint Planning 3
 
@@ -378,11 +375,11 @@ En esta sección se registra y explica el avance en términos de producto y trab
 | Sprint 2 Review Summary | Durante el Sprint 2 se implementó la primera versión de la Web Application de Flotix en Vue 3 con una carpeta independiente por Bounded Context, navegable de extremo a extremo para los tres roles (Dueño, Conductor y Mecánica) y desplegada en Netlify. Los datos se persistieron mediante `LocalStorageRepository`, que replica el contrato del futuro API (`getAll`, `getById`, `findBy`, `add`, `update`, `remove`). No se implementaron Web Services reales. |
 | Sprint 2 Retrospective Summary | El equipo identificó como fortaleza el contrato de repositorio único reutilizado por los cuatro integrantes, que permitió desarrollar los módulos en paralelo sin bloqueos. Como oportunidad de mejora, se acordó implementar el API Application para reemplazar la capa local por un cliente HTTP sin modificar las capas de aplicación ni de presentación, documentar los endpoints con OpenAPI desde el inicio y completar las historias pendientes del Landing Page requeridas para la entrega. |
 | **Sprint Goal & User Stories** | |
-| Sprint 3 Goal | Our focus is on delivering the first deployed version of the Flotix RESTful API, covering vehicle management, IoT telemetry ingestion, the maintenance request lifecycle between owners and workshops, and fuel and maintenance reports, together with the integration of the Web Application with these services and the completion of the Landing Page (videos, language switch and accessibility). We believe it delivers a documented and testable backend that replaces local persistence in the integrated modules, and a Landing Page ready for the product and team videos. This will be confirmed when every endpoint in scope is documented in Swagger and reachable from the deployed environment, the Fleet, Tracking, Maintenance and Analytics modules consume the API, and the Landing Page shows both videos, switches between English and Spanish, and can be used with keyboard and screen reader. |
-| User Stories incluidas en el Sprint | **Web Services:** TS01: Implementar registro y consulta de vehículos vía API (3) · TS02: Implementar ingesta de datos IoT en tiempo real (8) · TS03: Implementar flujo de solicitud de mantenimiento entre Dueño y Mecánica (5) · TS04: Implementar generación de reportes (5)<br>**Landing Page (EP09):** US49: Ver video About the Product (2) · US51: Ver video About the Team (2) · US53: Cambiar idioma (3) · US54: Acceder al contenido de forma accesible (2) |
-| Fuera del alcance del Sprint | Los módulos Fuel Control, Incidents, Alerts e IoT Commerce, y la autenticación por rol mediante JWT (Auth Service), continúan sobre la capa de persistencia local, ya que el capítulo 3 no define Technical Stories para ellos. **[CONFIRMAR]** |
-| Sprint 3 Velocity | 30 Story Points |
-| Sum of Story Points | 30 Story Points |
+| Sprint 3 Goal | Our focus is on providing persistent, synchronized fleet, fuel, maintenance, incident, IoT telemetry, alert, commerce, and reporting capabilities across owners, drivers, and mechanic workshops, offering a bilingual and accessible Landing Page featuring product and team videos, and exposing standardized self-service API capabilities for frontend integration. We believe it delivers reliable shared operational data with automated business-rule validation to fleet owners, drivers, and workshops, an inclusive multilingual overview of Flotix to prospective visitors, and autonomous integration of core fleet workflows to frontend developers. This will be confirmed when vehicle, fuel, maintenance, incident, telemetry, alert, order, and report records persist across user sessions with real-time updates and anomaly detection; frontend developers integrate the core modules via the interactive OpenAPI documentation in Scalar without backend team intervention; and visitors play both videos, switch between English and Spanish, and navigate the Landing Page using keyboard and screen reader controls. |
+| User Stories incluidas en el Sprint | **Web Services:** TS01 (3) · TS02 (8) · TS03 (5) · TS04 (5) · TS05 (2) · TS06 (3) · TS08 (3) · TS09 (3) · TS10 (3) · TS12 (3) · TS13 (3) · TS14 (2) · TS15 (1) · TS16 (3) · TS17 (2) · TS18 (2) · TS28 (3) · TS31 (2)<br>**Landing Page (EP09):** US49: Ver video About the Product (2) · US51: Ver video About the Team (2) · US53: Cambiar idioma (3) · US54: Acceder al contenido de forma accesible (2) |
+| Fuera del alcance del Sprint | El bounded context `Identity, Profiles & Security` (EP10: autenticación externa con Google, gestión de perfiles por rol y autorización con JWT), las consultas de conductores y talleres respaldadas por usuarios reales en base de datos (`TS07`), el catálogo IoT vía API (`TS24`), la suscripción en tiempo real a `/hubs/notifications` en el Frontend (`TS21–TS23`) y las mejoras surgidas de las entrevistas de validación (`5.3`) quedan planificados para el Sprint 4. |
+| Sprint 3 Velocity | 65 Story Points |
+| Sum of Story Points | 65 Story Points |
 
 #### 5.2.3.2. Aspect Leaders and Collaborators
 
@@ -401,7 +398,7 @@ En esta sección se define la matriz de liderazgo y colaboración (LACX) del Spr
 
 El Sprint 3 tuvo como objetivo principal implementar, documentar y desplegar la primera versión del API Application de Flotix, integrarla con los módulos de la Web Application y distribuir el trabajo por bounded context entre los cuatro integrantes. La gestión del Sprint Backlog se realiza en Trello, con las columnas To-do / In-Process / To-Review / Done.
 
-**URL del Board: https://trello.com/invite/b/6adf70a966d4291bccf690d2/ATTIc667f3a211184f0a0f5333d95c73e66c8A418E19/developer-team-sprint-backlog-3
+**URL del Board:** https://trello.com/invite/b/6adf70a966d4291bccf690d2/ATTIc667f3a211184f0a0f5333d95c73e66c8A418E19/developer-team-sprint-backlog-3
 
 > ![Tablero Trello del Sprint 3: tareas en To do](../assets/images/sprint3.png)
 > *Tablero Trello del Sprint 3: tareas en To do*
@@ -645,7 +642,7 @@ En este Sprint se desplegó por primera vez el API Application junto con su base
 
 **Infraestructura utilizada**
 
-- Repositorio del backend: GitHub (`flotix-Platform`).
+- Repositorio del backend: GitHub (`flotix-platform`).
 - Plataforma de hosting del backend: Railway.
 - Base de datos PostgreSQL: Neon Console.
 - Web Application: Netlify.

@@ -199,50 +199,50 @@ local function match_table_widths(headers, ncols)
 
   if ncols == 3 then
     if h1:find("criterio") then return { 0.16, 0.50, 0.34 } end -- Student Outcome
-    if h1 == "preguntas" then return { 0.12, 0.28, 0.60 } end -- 5W+2H
+    if h1 == "preguntas" then return { 0.14, 0.28, 0.58 } end -- 5W+2H
     if h1 == "actividad" then return { 0.24, 0.18, 0.58 } end -- 5.1.1 Dev Env
-    if h1 == "entrega" then return { 0.10, 0.58, 0.32 } end -- Anexo A
+    if h1 == "entrega" then return { 0.11, 0.55, 0.34 } end -- Anexo A
     if h1 == "team member" then return { 0.26, 0.37, 0.37 } end -- S3 insights
     if h1:find("^1%.") or h1:find("^6%.") then return { 0.33, 0.34, 0.33 } end -- Lean UX Canvas
   end
 
   if ncols == 4 then
-    if h1 == "versión" then return { 0.09, 0.11, 0.14, 0.66 } end -- 02-registro-versiones
-    if h1 == "#" then return { 0.05, 0.48, 0.11, 0.36 } end -- 5.3.3 Heurísticas resumen
-    if h1 == "repository" and h3 == "commit message" then return { 0.15, 0.21, 0.51, 0.13 } end -- S3 commits
+    if h1 == "versión" then return { 0.10, 0.12, 0.15, 0.63 } end -- 02-registro-versiones
+    if h1 == "#" then return { 0.05, 0.46, 0.13, 0.36 } end -- 5.3.3 Heurísticas resumen
+    if h1 == "repository" and h3 == "commit message" then return { 0.15, 0.21, 0.50, 0.14 } end -- S3 commits
     if h1 == "repository" and h3 == "committed by" then return { 0.20, 0.34, 0.30, 0.16 } end -- S2 commits
     if h1 == "team member" then return { 0.25, 0.25, 0.25, 0.25 } end -- S4 insights
   end
 
   if ncols == 5 then
-    if h1:find("epic") then return { 0.08, 0.14, 0.24, 0.44, 0.10 } end -- 3.1 User Stories
-    if h1 == "orden" then return { 0.07, 0.10, 0.21, 0.53, 0.09 } end -- 3.3 Product Backlog
+    if h1:find("epic") then return { 0.09, 0.14, 0.23, 0.43, 0.11 } end -- 3.1 User Stories
+    if h1 == "orden" then return { 0.08, 0.11, 0.21, 0.50, 0.10 } end -- 3.3 Product Backlog
     if h1 == "" and h2 == "flotix" then return { 0.20, 0.20, 0.20, 0.20, 0.20 } end -- 2.1 Competidores
-    if h1 == "segmento" then return { 0.11, 0.19, 0.24, 0.26, 0.20 } end -- 2.2 Análisis entrevistas
-    if h1:find("team member") then return { 0.26, 0.20, 0.18, 0.18, 0.18 } end -- S1 LACX
-    if h1 == "repository" then return { 0.15, 0.14, 0.25, 0.34, 0.12 } end -- S1 commits
-    if h1 == "endpoint" then return { 0.19, 0.08, 0.21, 0.21, 0.31 } end -- 5.2.x.6 Services Docs
+    if h1 == "segmento" then return { 0.12, 0.19, 0.23, 0.26, 0.20 } end -- 2.2 Análisis entrevistas
+    if h1:find("team member") then return { 0.25, 0.21, 0.18, 0.18, 0.18 } end -- S1 LACX
+    if h1 == "repository" then return { 0.15, 0.14, 0.25, 0.33, 0.13 } end -- S1 commits
+    if h1 == "endpoint" then return { 0.19, 0.09, 0.21, 0.21, 0.30 } end -- 5.2.x.6 Services Docs
   end
 
   if ncols == 6 then
-    if h1:find("team member") then return { 0.22, 0.18, 0.15, 0.15, 0.15, 0.15 } end -- S2/S3/S4 LACX
-    if h1 == "user story" or h1 == "bounded context" then return { 0.18, 0.18, 0.30, 0.11, 0.15, 0.08 } end -- S1/S2 backlog
-    if h1 == "branch" then return { 0.25, 0.22, 0.14, 0.15, 0.14, 0.10 } end -- S3 ramas
-    if h1 == "repository" then return { 0.14, 0.14, 0.10, 0.20, 0.30, 0.12 } end -- S4 commits
+    if h1:find("team member") then return { 0.21, 0.21, 0.145, 0.145, 0.145, 0.145 } end -- S2/S3/S4 LACX
+    if h1 == "user story" or h1 == "bounded context" then return { 0.17, 0.18, 0.29, 0.12, 0.15, 0.09 } end -- S1/S2 backlog
+    if h1 == "branch" then return { 0.24, 0.22, 0.14, 0.15, 0.14, 0.11 } end -- S3 ramas
+    if h1 == "repository" then return { 0.14, 0.14, 0.10, 0.20, 0.29, 0.13 } end -- S4 commits
   end
 
   if ncols == 7 then
-    if h1 == "tareas" then return { 0.28, 0.12, 0.12, 0.12, 0.12, 0.12, 0.12 } end -- 2.3.2 User Task Matrix
+    if h1 == "tareas" then return { 0.25, 0.125, 0.125, 0.125, 0.125, 0.125, 0.125 } end -- 2.3.2 User Task Matrix
   end
 
   if ncols == 8 then
     if h1 == "story id" then
       if h6:find("assigned") then
         -- Sprint 3 Backlog: Story Id | Story Title | Task Id | Task Title | Task Description | Assigned To | Estimation | Status
-        return { 0.07, 0.13, 0.07, 0.13, 0.31, 0.14, 0.08, 0.07 }
+        return { 0.07, 0.13, 0.07, 0.13, 0.29, 0.14, 0.10, 0.07 }
       else
         -- Sprint 4 Backlog: Story Id | Story Title | Task Id | Task Title | Task Description | Estimation | Assigned To | Status
-        return { 0.07, 0.13, 0.07, 0.13, 0.31, 0.08, 0.14, 0.07 }
+        return { 0.07, 0.13, 0.07, 0.13, 0.29, 0.10, 0.14, 0.07 }
       end
     end
   end
@@ -250,7 +250,7 @@ local function match_table_widths(headers, ncols)
   if ncols == 9 then
     if h1 == "segmento" then
       -- 2.2 Registro entrevistas: Segmento | Foto | Entrevistado | Edad | Distrito | Duración | Enlace | Herramientas | Principal Dolor
-      return { 0.09, 0.10, 0.12, 0.05, 0.09, 0.07, 0.10, 0.18, 0.20 }
+      return { 0.115, 0.09, 0.13, 0.055, 0.09, 0.08, 0.09, 0.17, 0.18 }
     end
   end
 
@@ -281,6 +281,8 @@ function Table(el)
 
   if ncols >= 7 then
     el.classes:insert("table-compact")
+  elseif ncols >= 5 then
+    el.classes:insert("table-medium")
   end
 
   return el

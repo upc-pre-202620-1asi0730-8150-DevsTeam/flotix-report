@@ -139,6 +139,21 @@ th {
     font-weight: 600 !important;
 }
 
+table.table-compact {
+    font-size: 6.3pt !important;
+    line-height: 1.24 !important;
+}
+
+table.table-compact th,
+table.table-compact td {
+    padding: 2.5px 3px !important;
+}
+
+table.table-compact td img {
+    max-width: 16mm !important;
+    max-height: 20mm !important;
+}
+
 code {
     font-family: 'Consolas', 'DejaVu Sans Mono', 'Courier New', monospace;
     font-size: 85%;

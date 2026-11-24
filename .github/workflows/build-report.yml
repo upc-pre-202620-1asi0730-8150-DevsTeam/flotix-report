@@ -1,0 +1,41 @@
+name: Build Project Report PDF (Pandoc + WeasyPrint)
+
+on:
+  push:
+    branches: [ main, develop, "feature/**", "release/**", "hotfix/**" ]
+    tags: [ "v*", "V*" ]
+  pull_request:
+    branches: [ main, develop ]
+
+permissions:
+  contents: write
+
+jobs:
+  build-pdf:
+    name: Compile Markdown Report to PDF
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install Pandoc & WeasyPrint
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y pandoc weasyprint fonts-liberation fonts-dejavu-core
+
+      - name: Compile Report PDF
+        run: |
+          pandoc --defaults=config/build.yaml -o /tmp/upc-pre-202620-1asi0730-8150-devsteam-report-tb2.pdf
+
+      - name: Upload Compiled PDF Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: upc-pre-202620-1asi0730-8150-devsteam-report-tb2
+          path: /tmp/upc-pre-202620-1asi0730-8150-devsteam-report-tb2.pdf
+
+      - name: Publish GitHub Release with PDF (on SemVer tag)
+        if: startsWith(github.ref, 'refs/tags/v') || startsWith(github.ref, 'refs/tags/V')
+        uses: softprops/action-gh-release@v2
+        with:
+          generate_release_notes: true
+          files: /tmp/upc-pre-202620-1asi0730-8150-devsteam-report-tb2.pdf

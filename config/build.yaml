@@ -1,0 +1,68 @@
+# =============================================================================
+# Pandoc Declarative Build Configuration
+# UPC — Carrera de Ingeniería de Software | 1ASI0730 Aplicaciones Web
+# Proyecto: Flotix (Equipo Developer Team)
+# Uso: pandoc --defaults=config/build.yaml -o <ruta-salida.pdf>
+# =============================================================================
+
+from: markdown+gfm_auto_identifiers+pipe_tables+backtick_code_blocks+fenced_code_attributes+fenced_divs+bracketed_spans+footnotes+link_attributes-implicit_figures-tex_math_dollars
+to: html5
+pdf-engine: weasyprint
+standalone: true
+file-scope: true
+
+resource-path:
+  - "."
+  - "report"
+  - "assets"
+  - "assets/images"
+
+metadata:
+  title: "Informe del Trabajo Final (TB2) — Flotix"
+  lang: "es-PE"
+
+input-files:
+  - report/01-caratula.md
+  - report/02-registro-versiones.md
+  - report/project-report.md
+  - report/contenido.md
+  - report/04-student-outcome.md
+  - report/11-startup-profile.md
+  - report/12-solution-profile.md
+  - report/13-segmentos-objetivo.md
+  - report/21-competidores.md
+  - report/22-entrevistas.md
+  - report/23-needfinding.md
+  - report/24-big-picture-eventstorming.md
+  - report/25-ubiquitous-language.md
+  - report/31-user-stories.md
+  - report/32-impact-mapping.md
+  - report/33-product-backlog.md
+  - report/41-style-guidelines.md
+  - report/42-information-architecture.md
+  - report/43-landing-page-ui-design.md
+  - report/44-web-application-ux-ui-design.md
+  - report/45-web-application-prototyping.md
+  - report/46-domain-driven-software-architecture.md
+  - report/47-software-object-oriented-design.md
+  - report/48-batabase-design.md
+  - report/51-software-configuration.md
+  - report/52-landing-page.md
+  - report/53-validation-interviews.md
+  - report/54-video-about-the-product.md
+  - report/conclusiones.md
+  - report/anexos.md
+
+filters:
+  - config/filters/pagebreak-and-tables.lua
+
+css:
+  - config/styles/report.css
+
+number-sections: false
+
+variables:
+  margin-top: 20mm
+  margin-bottom: 20mm
+  margin-left: 15mm
+  margin-right: 15mm

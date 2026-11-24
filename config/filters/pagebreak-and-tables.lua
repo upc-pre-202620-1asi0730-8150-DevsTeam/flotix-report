@@ -323,11 +323,6 @@ function Header(el)
     return { make_pagebreak(), cap5, el }
   end
 
-  if el.level == 3 and lower:match("^anexo%s+[a-z]%.") then
-    is_first_heading = false
-    return { make_pagebreak(), el }
-  end
-
   local needs_break = pagebreak_titles[lower] or (el.level == 1 and not lower:match("^2%.[45]%."))
   if needs_break then
     if is_first_heading then

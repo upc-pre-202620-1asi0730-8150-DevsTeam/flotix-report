@@ -10,7 +10,7 @@ Carrera de Ingeniería de Software
 NRC  
 **8150**
 
-**Informe del Trabajo Final (TB2)**
+**Informe del Trabajo Final**
 
 Docente  
 **Velásquez Núñez, Ángel Augusto**

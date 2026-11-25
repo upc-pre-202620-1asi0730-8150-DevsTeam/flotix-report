@@ -218,20 +218,34 @@ td img, th img {
 .cover-page {
     text-align: center;
     font-family: 'Segoe UI', 'Liberation Sans', Arial, sans-serif;
-    line-height: 1.35;
+    line-height: 1.65;
     page-break-inside: avoid !important;
-    padding-top: 4mm;
+    padding-top: 3mm;
 }
 
 .cover-page p {
-    margin: 0 0 10mm 0;
+    margin: 0 0 7mm 0;
     font-size: 10.5pt;
     color: #0f172a;
 }
 
+.cover-page p:nth-of-type(3) strong {
+    font-size: 11.5pt;
+}
+
 .cover-page p:nth-of-type(4) {
     font-size: 14pt;
-    margin: 2mm 0 10mm 0;
+    margin: 1mm 0 7mm 0;
+}
+
+.cover-page p:nth-of-type(5) strong,
+.cover-page p:nth-of-type(6) strong,
+.cover-page p:nth-of-type(7) strong {
+    font-size: 12pt;
+}
+
+.cover-page p:nth-of-type(8) {
+    margin: 2mm 0 2.5mm 0;
 }
 
 .cover-page img, .cover-page .cover-logo {
@@ -240,23 +254,23 @@ td img, th img {
     max-width: 14mm !important;
     max-height: 14mm !important;
     display: block !important;
-    margin: 0 auto 8mm auto !important;
+    margin: 0 auto 7mm auto !important;
     object-fit: contain !important;
 }
 
 .cover-page table {
     width: auto !important;
     table-layout: auto !important;
-    margin: 0 auto 10mm auto !important;
+    margin: 0 auto 8mm auto !important;
     border: none !important;
     border-collapse: collapse !important;
-    font-size: 9.5pt;
+    font-size: 9.8pt;
 }
 
 .cover-page th, .cover-page td {
     border: none !important;
     background-color: transparent !important;
-    padding: 3px 32px 3px 0 !important;
+    padding: 2.5px 18px 2.5px 0 !important;
     text-align: left !important;
     color: #000000 !important;
 }

@@ -30,7 +30,9 @@ local function normalize_asset_src(src)
 end
 
 local function rewrite_html_src(text)
-  return text:gsub('(src=")((%.%./)+)([^"]+")', '%1%4')
+  return text:gsub('(src=)(["\'])([^"\']+)(["\'])', function(attr, q1, src, q2)
+    return attr .. q1 .. normalize_asset_src(src) .. q2
+  end)
 end
 
 function Div(el)
@@ -89,11 +91,7 @@ function Image(el)
   return el
 end
 
-local anchor_aliases = {
-  ["#212-estrategias-y-tácticas-frente-a-competidores"] = "#212-estrategias-y-tácticas-frente-a-competidoresestrategias",
-  ["#443-web-applications-mock-ups"] = "#442-web-applications-mock-ups",
-  ["#444-web-applications-user-flow-diagrams"] = "#443-web-applications-user-flow-diagrams",
-}
+local anchor_aliases = {}
 
 function Link(el)
   local gh_anchor = el.target:match("^https://github%.com/[^#]+(#.+)$")
@@ -189,6 +187,7 @@ local function match_table_widths(headers, ncols)
 
   if ncols == 2 then
     if h1 == "nivel" then return { 0.10, 0.90 } end
+    if h1:find("^inicio") then return { 0.22, 0.78 } end
     if h1 == "descripción" and h2 == "enlace" then return { 0.38, 0.62 } end
     if h1 == "método del contrato" then return { 0.36, 0.64 } end
     if h1:find("3%. users") then return { 0.50, 0.50 } end
@@ -207,7 +206,7 @@ local function match_table_widths(headers, ncols)
   end
 
   if ncols == 4 then
-    if h1 == "versión" then return { 0.10, 0.12, 0.15, 0.63 } end -- 02-registro-versiones
+    if h1 == "versión" then return { 0.08, 0.13, 0.15, 0.64 } end -- 02-registro-versiones
     if h1 == "#" then return { 0.05, 0.46, 0.13, 0.36 } end -- 5.3.3 Heurísticas resumen
     if h1 == "repository" and h3 == "commit message" then return { 0.15, 0.21, 0.50, 0.14 } end -- S3 commits
     if h1 == "repository" and h3 == "committed by" then return { 0.20, 0.34, 0.30, 0.16 } end -- S2 commits
@@ -291,18 +290,20 @@ end
 local pagebreak_titles = {
   ["registro de versiones del informe"] = true,
   ["project report collaboration insights"] = true,
-  ["tabla de contenido"] = true,
+  ["contenido"] = true,
   ["student outcome"] = true,
-  ["conclusiones y recomendaciones"] = true,
   ["bibliografía"] = true,
   ["anexos"] = true,
 }
 
 local is_first_heading = true
+local prev_heading = ""
 
 function Header(el)
   local text = pandoc.utils.stringify(el.content)
   local lower = pandoc.text.lower(text)
+  local after_heading = prev_heading
+  prev_heading = lower
 
   local explicit_id = el.identifier:match("^.*__(.+)$")
   local computed_slug = gfm_slug(text)
@@ -318,14 +319,9 @@ function Header(el)
     el.level = 2
   end
 
-  if lower:match("^5%.1%.%s+software configuration management") then
-    local cap5 = pandoc.Header(1, { pandoc.Str("Capítulo V: Product Implementation, Validation & Deployment") },
-      pandoc.Attr("capítulo-v-product-implementation-validation--deployment"))
-    is_first_heading = false
-    return { make_pagebreak(), cap5, el }
-  end
-
-  local needs_break = pagebreak_titles[lower] or (el.level == 1 and not lower:match("^2%.[45]%."))
+  -- Cada anexo inicia en una página nueva; el primero comparte página con el título "Anexos"
+  local is_annex = lower:match("^anexo%s+%a%.") ~= nil and after_heading ~= "anexos"
+  local needs_break = pagebreak_titles[lower] or is_annex or (el.level == 1 and not lower:match("^2%.[45]%."))
   if needs_break then
     if is_first_heading then
       is_first_heading = false

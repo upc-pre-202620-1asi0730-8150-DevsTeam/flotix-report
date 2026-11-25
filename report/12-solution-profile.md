@@ -1,6 +1,6 @@
-﻿## 1.2 Solution Profile
+﻿## 1.2. Solution Profile
 
-### 1.2.1 Antecedentes y problemática
+### 1.2.1. Antecedentes y problemática
 
 El Perú enfrenta un problema estructural de gestión vehicular manual y desarticulada. Con un parque automotor de 3.587.451 vehículos livianos y pesados en circulación al cierre de 2025 (Asociación Automotriz del Perú [AAP Perú], 2025) y una concentración estimada de alrededor del 66% en Lima y Callao —cifra que en 2013 ya alcanzaba el 63% del parque nacional según el departamento de Lima (Lima Cómo Vamos, 2014)—, la necesidad de controlar combustible, kilometraje y mantenimiento es considerable. Sin embargo, quienes deberían gestionarse —las MIPYMES, que representan entre el 99,1% y el 99,5% del tejido empresarial nacional— siguen ancladas en procesos manuales. Según el Instituto Nacional de Estadística e Informática (2025), apenas el 28% de las pymes peruanas utiliza herramientas digitales más allá del correo electrónico y las redes sociales, y de acuerdo con reportes de prensa que citan al Gremio de la Pequeña Empresa de la Cámara de Comercio de Lima, cerca del 60% de las pymes aún no ha culminado su proceso de transformación digital: muchas usan WhatsApp o redes sociales para vender, lo cual no equivale a haber digitalizado su gestión (Gestión, n.d.; RCR Perú, n.d.).
 
@@ -20,19 +20,19 @@ Aplicando la técnica de las 5W y 2H para delimitar el problema y sus antecedent
 | **How?** | ¿Cómo se manifiesta? | En sobrecostos de combustible, mantenimientos correctivos de emergencia, kilometraje sin control, y pasajeros sin información confiable sobre el estado de su viaje. |
 | **How Much?** | ¿Cuánto impacto tiene? | Genera pérdidas económicas por combustible mal gestionado, reducción de la vida útil de las unidades, tiempos de inactividad por fallas no previstas y menor competitividad frente a empresas mejor organizadas. |
 
-### 1.2.2 Lean UX Process
+### 1.2.2. Lean UX Process
 
 #### 1.2.2.1. Lean UX Problem Statements
 
-El estado actual de la gestión de flotas de transporte de pasajeros y carga en el Perú (incluyendo taxis) se ha enfocado principalmente en empresas de transporte, operadores de taxi y talleres mecánicos que coordinan sus operaciones mediante procesos manuales — hojas de cálculo, cuadernos físicos y llamadas telefónicas entre dueños, conductores y talleres.
+El estado actual de la gestión de flotas de transporte de pasajeros y carga en el Perú (incluyendo taxis) se ha enfocado principalmente en dueños de flotas (empresas de transporte y operadores de taxi), conductores y talleres mecánicos, que coordinan combustible, kilometraje y mantenimiento mediante hojas de cálculo, cuadernos físicos y llamadas telefónicas, lo que genera sobrecostos de combustible, mantenimientos correctivos imprevistos y falta de visibilidad del estado de cada unidad.
 
-Lo que los productos y servicios existentes no logran resolver es una solución accesible y especializada que integre, mediante tecnología IoT y GPS, el monitoreo en tiempo real de combustible, kilometraje y mantenimiento en una sola plataforma para estos actores.
+Lo que los productos y servicios existentes no logran resolver es la integración accesible, en una sola plataforma con IoT y GPS, del monitoreo en tiempo real de combustible, kilometraje y mantenimiento con la coordinación entre estos tres segmentos.
 
-Nuestro producto abordará esta brecha mediante una plataforma web que centraliza la gestión de flotas, el control de combustible y la coordinación de mantenimiento preventivo entre dueños de vehículos y talleres mecánicos, apoyada en dispositivos IoT de monitoreo en tiempo real.
+Nuestro producto abordará esta brecha mediante una plataforma web que centraliza la gestión de flotas, el registro de combustible e incidencias en ruta y la coordinación de mantenimiento preventivo entre dueños de vehículos, conductores y talleres mecánicos, apoyada en dispositivos IoT de monitoreo en tiempo real.
 
-Nuestro enfoque inicial serán empresas de transporte de pasajeros y carga, así como operadores de taxi, de mediana escala con operaciones activas en Lima Metropolitana.
+Nuestro enfoque inicial serán dueños de pequeñas y medianas flotas de transporte de pasajeros, carga y taxi en Lima Metropolitana, junto con sus conductores y los talleres mecánicos independientes que los atienden.
 
-Sabremos que hemos tenido éxito cuando veamos una reducción del 20% en el gasto de combustible por unidad y una disminución del 30% en mantenimientos correctivos de emergencia durante los primeros 6 meses de uso.
+Sabremos que hemos tenido éxito cuando, durante los primeros seis meses, al menos el 70% de los usuarios registrados de cada segmento use la plataforma cada mes: dueños supervisando su flota y aprobando mantenimientos preventivos, conductores registrando sus recargas e incidencias en cada jornada y talleres registrando cotizaciones y avance de órdenes sin coordinación telefónica.
 
 #### 1.2.2.2. Lean UX Assumptions
 
@@ -49,7 +49,7 @@ Asumimos que:
 Asumimos que:
 - Reduciremos en un 20% el gasto en combustible por unidad durante los primeros seis meses de uso, gracias al control y monitoreo continuo del consumo.
 - Reduciremos en un 30% el tiempo de coordinación de un mantenimiento (desde la solicitud del dueño hasta la aprobación del taller) frente al proceso actual por teléfono.
-- Incrementaremos la retención mensual de dueños y talleres suscritos a la plataforma en al menos un 70% durante el primer semestre.
+- Alcanzaremos una retención mensual de al menos 70% de dueños, conductores y talleres registrados durante el primer semestre.
 - Incrementaremos en un 40% el número de mantenimientos preventivos (frente a correctivos de emergencia) realizados a través de la plataforma.
 
 **User Assumptions**
@@ -107,7 +107,7 @@ Con la opción de compra directa de un dispositivo IoT (GPS, odómetro y sensor 
 
 | 1. Business Problem | 5. Solution Ideas | 2. Business Outcomes |
 |---|---|---|
-| La gestión de flotas de transporte de pasajeros y carga (incluyendo taxis) se realiza de forma manual y desarticulada, sin visibilidad en tiempo real del combustible, kilometraje ni estado mecánico de las unidades. | Aplicación web con: Gestión de flotas y vehículos (Dueño), Control de combustible (Conductor), Mantenimiento preventivo y coordinación con talleres (Dueño–Mecánica), Monitoreo en tiempo real (Empresa), Notificaciones automáticas, y Dashboard de KPIs (Dueño). **Propuesta de valor:** controlar, monitorear y optimizar toda la flota desde una sola plataforma, reduciendo costos operativos y aumentando la confiabilidad del servicio. | - Reducir en 20% el gasto de combustible por unidad.<br>- Reducir en 30% los mantenimientos correctivos de emergencia.<br>- Incrementar en 70% la retención mensual de dueños y talleres.<br>- Incrementar en 40% los mantenimientos preventivos frente a correctivos. |
+| La gestión de flotas de transporte de pasajeros y carga (incluyendo taxis) se realiza de forma manual y desarticulada, sin visibilidad en tiempo real del combustible, kilometraje ni estado mecánico de las unidades. | Aplicación web con: Gestión de flotas y vehículos (Dueño), Control de combustible (Conductor), Mantenimiento preventivo y coordinación con talleres (Dueño–Mecánica), Monitoreo en tiempo real (Empresa), Notificaciones automáticas, y Dashboard de KPIs (Dueño). **Propuesta de valor:** controlar, monitorear y optimizar toda la flota desde una sola plataforma, reduciendo costos operativos y aumentando la confiabilidad del servicio. | - Reducir en 20% el gasto de combustible por unidad.<br>- Reducir en 30% los mantenimientos correctivos de emergencia.<br>- Alcanzar 70% de retención mensual por segmento.<br>- Incrementar en 40% los mantenimientos preventivos frente a correctivos. |
 | | **Modelo:** suscripción mensual por vehículo gestionado, más venta del dispositivo IoT propio (GPS, odómetro y sensor de combustible); se recomienda validar primero la adopción del software antes de invertir en la fabricación y distribución del hardware, dado su mayor riesgo y costo. | |
 
 | 3. Users and Customers | 4. User Benefits |
@@ -120,4 +120,4 @@ Con la opción de compra directa de un dispositivo IoT (GPS, odómetro y sensor 
 |---|---|---|
 | - Creemos que la gestión centralizada reducirá el tiempo de supervisión manual si los dueños acceden a un panel único. | - Los usuarios cuentan con smartphone y conectividad estable. | - Piloto con 3 empresas de transporte y 5 taxistas independientes durante 4 semanas. |
 | - Creemos que el control de combustible reducirá el gasto en 20% si se detectan consumos anómalos vía IoT. | - No existe en el mercado peruano una solución que integre software y hardware IoT para este segmento. | - Medición de consumo de combustible antes/después del piloto (línea base). |
-| - Creemos que el mantenimiento preventivo reducirá en 30% las fallas de emergencia si se programan alertas por kilometraje. | - Empresas y taxistas están dispuestos a adoptar tecnología si reduce costos comprobadamente.<br>- Los talleres mecánicos están dispuestos a coordinar solicitudes por un canal digital en lugar de llamadas. | - Validación de adopción ≥70% de uso activo diario en el primer mes.<br>- Entrevistas post-piloto con dueños, conductores y talleres para evaluar usabilidad y valor percibido. |
+| - Creemos que el mantenimiento preventivo reducirá en 30% las fallas de emergencia si se programan alertas por kilometraje. | - Empresas y taxistas están dispuestos a adoptar tecnología si reduce costos comprobadamente.<br>- Los talleres mecánicos están dispuestos a coordinar solicitudes por un canal digital en lugar de llamadas. | - Medición de uso activo mensual ≥70% por segmento durante el piloto.<br>- Entrevistas post-piloto con dueños, conductores y talleres para evaluar usabilidad y valor percibido. |

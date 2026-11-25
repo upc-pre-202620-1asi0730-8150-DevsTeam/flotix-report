@@ -78,6 +78,6 @@ Administra la generación de informes comparativos e indicadores de rendimiento.
 
 
 
-> **Figura 4.7.1.** Diagrama de Clases resultante, agrupado por Bounded Context.
-
-> ![Diagrama de Clases](../assets/images/Diagrama%20de%20Clases.png)
+> **Figura 40.** Diagrama de Clases resultante, agrupado por Bounded Context.
+>
+> ![Diagrama de Clases resultante, agrupado por Bounded Context](../assets/images/Diagrama%20de%20Clases.png)

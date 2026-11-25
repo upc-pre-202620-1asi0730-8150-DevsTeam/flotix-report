@@ -62,7 +62,9 @@ Aprovecha el uso de colores resaltantes, botones de confirmación y formularios 
 
 - **Gris claro #F8FAFC y Blanco #FFFFFF:** Aportan limpieza, simplicidad y claridad. Sirven como contraste y descanso visual para destacar a los elementos principales.
 
-![Foto Karen Forcelledo](../assets/images/colores.png)
+> **Figura 19.** Paleta de colores de Flotix.
+>
+> ![Paleta de colores de Flotix](../assets/images/colores.png)
 
 ### 4.1.2. Web Style Guidelines
 

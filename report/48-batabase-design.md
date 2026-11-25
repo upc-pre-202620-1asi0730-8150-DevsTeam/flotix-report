@@ -6,9 +6,9 @@
 
 
 
-> **Figura 4.8.1.** Diagrama de Base de Datos — modelo relacional en PostgreSQL.
-
-> ![Diagrama de Base de Datos](../assets/images/Diseño%20de%20Base%20de%20Datos.png)
+> **Figura 41.** Diagrama de Base de Datos — modelo relacional en PostgreSQL.
+>
+> ![Diagrama de Base de Datos — modelo relacional en PostgreSQL](../assets/images/Diseño%20de%20Base%20de%20Datos.png)
 
 
 

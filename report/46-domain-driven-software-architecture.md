@@ -34,7 +34,9 @@ En esta vista general se representó el dominio completo del sistema Flotix, org
 
 Esta representación permite visualizar cómo fluye la información entre los diferentes módulos: desde el registro de usuarios y la gestión de la flota de vehículos, pasando por el control de combustible, la coordinación de mantenimientos y el monitoreo GPS en tiempo real, hasta la generación de alertas, la adquisición de hardware telemático y la analítica gerencial. Asimismo, se establecieron las integraciones inter-contexto, donde los eventos de un módulo (como el registro de un vehículo o la finalización de un mantenimiento) actúan como disparadores para las operaciones de los demás contextos.
 
-> ![User Flow Diagrams](../assets/images/Design%20Level%20Event%20Storming-final.png)
+> **Figura 27.** Design-Level EventStorming general de Flotix.
+>
+> ![Design-Level EventStorming general de Flotix](../assets/images/Design%20Level%20Event%20Storming-final.png)
 
 **Identity, Profiles & Security**
 
@@ -42,7 +44,9 @@ Esta representación permite visualizar cómo fluye la información entre los di
 
 Este bounded context se encarga de administrar la base de usuarios y los accesos diferenciados para el funcionamiento de la plataforma Flotix. Su propósito principal es gestionar la identidad de los actores del sistema (Dueño, Conductor, Mecánica) garantizando la seguridad y el control de accesos mediante autenticación basada en roles. El flujo inicia con el registro de la cuenta (RegisterUser), donde el usuario selecciona su rol y el sistema valida sus credenciales. Durante este proceso, se aplican políticas de negocio específicas, tales como exigir obligatoriamente el número de licencia y la fecha de expiración en caso de que el rol seleccionado sea Conductor. Una vez autenticado (AuthenticateUser), el usuario puede actualizar su perfil de manera segura, asegurando que cada actor interactúe únicamente con las funcionalidades permitidas según sus responsabilidades operativas.
 
-> ![User Flow Diagrams](../assets/images/identity.png)
+> **Figura 28.** Design-Level EventStorming del bounded context Identity, Profiles & Security.
+>
+> ![Design-Level EventStorming del bounded context Identity, Profiles & Security](../assets/images/identity.png)
 
 **Vehicle & Fleet Management**
 
@@ -50,7 +54,9 @@ Este bounded context se encarga de administrar la base de usuarios y los accesos
 
 Este bounded context representa el núcleo operativo de la plataforma, ya que gestiona el parque automotor y la administración centralizada de la flota de transporte. El flujo inicia cuando el propietario registra un nuevo vehículo (RegisterVehicle) ingresando datos clave como placa, tipo y kilometraje inicial. Posteriormente, el sistema permite actualizar su información técnica (UpdateVehicleInfo), consultar el estado operativo (ChangeVehicleStatus) y realizar la asignación de conductores habilitados (AssignDriverToVehicle). Este módulo se integra directamente con el contexto de seguridad al consumir el evento de registro de conductores, asegurando que solo personal autorizado opere las unidades.
 
-> ![User Flow Diagrams](../assets/images/vehicle.png)
+> **Figura 29.** Design-Level EventStorming del bounded context Vehicle & Fleet Management.
+>
+> ![Design-Level EventStorming del bounded context Vehicle & Fleet Management](../assets/images/vehicle.png)
 
 **Fuel Control**
 
@@ -58,7 +64,9 @@ Este bounded context representa el núcleo operativo de la plataforma, ya que ge
 
 Este bounded context se encarga de registrar y auditar el consumo de combustible y el rendimiento por unidad dentro de la flota. El flujo contempla el registro detallado de cada recarga realizada por el conductor (RegisterFuelConsumption), ingresando los litros cargados, el costo asociado y el kilometraje actual en el odómetro. El sistema procesa estos datos de forma constante y aplica reglas de negocio para calcular la eficiencia; si el rendimiento se desvía significativamente por debajo del promedio esperado, el sistema lo cataloga automáticamente como un consumo anómalo. Asimismo, permite registrar los gastos financieros asociados al reabastecimiento (RecordFuelExpense).
 
-> ![User Flow Diagrams](../assets/images/fuel.png)
+> **Figura 30.** Design-Level EventStorming del bounded context Fuel Control.
+>
+> ![Design-Level EventStorming del bounded context Fuel Control](../assets/images/fuel.png)
 
 **Maintenance Management**
 
@@ -66,7 +74,9 @@ Este bounded context se encarga de registrar y auditar el consumo de combustible
 
 Este bounded context gestiona el ciclo de vida completo de los servicios mecánicos preventivos y correctivos de las unidades. El flujo abarca desde la programación de mantenimientos (ScheduleMaintenance) y el envío de solicitudes de servicio (SubmitMaintenanceRequest), hasta el registro de diagnósticos y cotizaciones por parte del taller mecánico afiliar (RegisterDiagnosticAndQuote). Posteriormente, el propietario evalúa y aprueba o rechaza el presupuesto (ApproveOrRejectBudget). Una vez iniciada la reparación, se actualiza el estado del taller (UpdateRepairStatus), lo cual activa una política de negocio automática que cambia el estado del vehículo a "En mantenimiento" para evitar asignaciones en ruta. Finalmente, el proceso culmina al registrar la finalización del servicio (CompleteMaintenance).
 
-> ![User Flow Diagrams](../assets/images/maintenance.png)
+> **Figura 31.** Design-Level EventStorming del bounded context Maintenance Management.
+>
+> ![Design-Level EventStorming del bounded context Maintenance Management](../assets/images/maintenance.png)
 
 **Incident Management**
 
@@ -74,7 +84,9 @@ Este bounded context gestiona el ciclo de vida completo de los servicios mecáni
 
 Este bounded context se enfoca en registrar y dar seguimiento a las fallas o anomalías imprevistas presentadas durante la jornada laboral en ruta. El flujo permite que el conductor reporte incidencias mecánicas o operativas de forma inmediata (ReportVehicleIncident), lo cual activa notificaciones críticas automáticas hacia los administradores. Posteriormente, el equipo de soporte procede a inspeccionar el caso (InspectIncident) y documentar su resolución (ResolveIncident), asegurando una pronta intervención para restablecer la continuidad operativa de la flota.
 
-> ![User Flow Diagrams](../assets/images/incident.png)
+> **Figura 32.** Design-Level EventStorming del bounded context Incident Management.
+>
+> ![Design-Level EventStorming del bounded context Incident Management](../assets/images/incident.png)
 
 **Real-Time Monitoring / Fleet Tracking**
 
@@ -82,7 +94,9 @@ Este bounded context se enfoca en registrar y dar seguimiento a las fallas o ano
 
 Este bounded context gestiona la telemetría en tiempo real y el rastreo satelital de los vehículos mediante dispositivos IoT. El flujo contempla la conexión del dispositivo físico a la unidad (ConnectIoTDevice), permitiendo la recepción continua de paquetes de telemetría (ReceiveTelemetry) que incluyen coordenadas GPS, velocidad y odómetro. A partir de estos datos, el sistema actualiza de manera constante la posición geográfica en el mapa (UpdateVehicleLocation), alimentando a su vez los módulos de alertas y control de rendimiento.
 
-> ![User Flow Diagrams](../assets/images/realtime.png)
+> **Figura 33.** Design-Level EventStorming del bounded context Real-Time Monitoring / Fleet Tracking.
+>
+> ![Design-Level EventStorming del bounded context Real-Time Monitoring / Fleet Tracking](../assets/images/realtime.png)
 
 **Alerts & Notifications**
 
@@ -90,7 +104,9 @@ Este bounded context gestiona la telemetría en tiempo real y el rastreo satelit
 
 Este bounded context monitorea de forma continua las condiciones críticas de la operación y gestiona la mensajería interna para los usuarios. El sistema evalúa constantemente los umbrales operativos (EvaluateThresholds) —tales como el cumplimiento del 90% del kilometraje para revisiones o excesos de velocidad reportados por el telemetraje—. Cuando se detecta una condición fuera de rango, se generan alertas automáticas (MaintenanceAlertGenerated, SpeedLimitExceededAlertGenerated), se despachan notificaciones oportunas a los involucrados (SendNotification) y se gestiona el estado de lectura de las mismas (MarkNotificationAsRead).
 
-> ![User Flow Diagrams](../assets/images/alerts.png)
+> **Figura 34.** Design-Level EventStorming del bounded context Alerts & Notifications.
+>
+> ![Design-Level EventStorming del bounded context Alerts & Notifications](../assets/images/alerts.png)
 
 **Digital Experience / IoT Commerce**
 
@@ -98,7 +114,9 @@ Este bounded context monitorea de forma continua las condiciones críticas de la
 
 Este bounded context soporta el módulo de comercio electrónico orientado a la adquisición de hardware telemático por parte de los propietarios. El flujo permite comprar dispositivos IoT de manera directa (PurchaseIoTDevice), procesar el pago correspondiente a través de pasarelas integradas (ProcessPayment) y actualizar el estado del pedido (UpdateOrderStatus). Una vez confirmado el pago, una regla de negocio automatizada cambia el pedido a estado "En preparación" y programa su logística de entrega para su posterior integración a la flota.
 
-> ![User Flow Diagrams](../assets/images/digital.png)
+> **Figura 35.** Design-Level EventStorming del bounded context Digital Experience / IoT Commerce.
+>
+> ![Design-Level EventStorming del bounded context Digital Experience / IoT Commerce](../assets/images/digital.png)
 
 **Reporting & Analytics**
 
@@ -106,15 +124,17 @@ Este bounded context soporta el módulo de comercio electrónico orientado a la 
 
 Este bounded context consolida los datos operativos e históricos de la plataforma para la generación de reportes gerenciales e indicadores de eficiencia. El flujo permite consolidar los datos de toda la flota (ConsolidateFleetData), generar informes comparativos de rendimiento y consumo (GeneratePerformanceReport) aplicando reglas de filtrado (como la exclusión automática de vehículos con menos de dos registros históricos de combustible), y exportar los resultados en formato documentario (ExportReportToPdf) para apoyar la toma de decisiones estratégicas de los administradores.
 
-> ![User Flow Diagrams](../assets/images/reporting.png)
+> **Figura 36.** Design-Level EventStorming del bounded context Reporting & Analytics.
+>
+> ![Design-Level EventStorming del bounded context Reporting & Analytics](../assets/images/reporting.png)
 
 ### 4.6.2. Software Architecture Context Diagram
 
 
 
-> **Figura 4.6.2.** Diagrama de Contexto (C4 Model) — Flotix Platform y sus interacciones externas.
-
-> ![Diagrama de Contexto](../assets/images/SystemContext-dark%20(1).png)
+> **Figura 37.** Diagrama de Contexto (C4 Model) — Flotix Platform y sus interacciones externas.
+>
+> ![Diagrama de Contexto (C4 Model) — Flotix Platform y sus interacciones externas](../assets/images/SystemContext-dark%20(1).png)
 
 
 
@@ -212,9 +232,9 @@ Nota: Elaboración propia en Structurizr.
 
 
 
-> **Figura 4.6.3.** Diagrama de Contenedores (C4 Model) — Landing Page, Web Application, API Application y Base de Datos.
-
-> ![Diagrama de Contenedores](../assets/images/Containers-dark%20(1).png)
+> **Figura 38.** Diagrama de Contenedores (C4 Model) — Landing Page, Web Application, API Application y Base de Datos.
+>
+> ![Diagrama de Contenedores (C4 Model) — Landing Page, Web Application, API Application y Base de Datos](../assets/images/Containers-dark%20(1).png)
 
 
 
@@ -292,9 +312,9 @@ Nota: Elaboración propia en Structurizr.
 
 
 
-> **Figura 4.6.4.** Diagramas de Componentes — estructura interna de la API Application.
-
-> ![Diagramas de Componentes](../assets/images/Components-dark%20(1).png)
+> **Figura 39.** Diagramas de Componentes — estructura interna de la API Application.
+>
+> ![Diagramas de Componentes — estructura interna de la API Application](../assets/images/Components-dark%20(1).png)
 
 
 

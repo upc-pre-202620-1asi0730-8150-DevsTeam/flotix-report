@@ -6,18 +6,18 @@
 
 
 
-> **Figura 4.4.1.** Wireframes de baja fidelidad de la Web Application (Dashboard, Vehículos, Conductores, Combustible, Mantenimiento, Monitoreo GPS, Talleres, Reportes).
-
-> ![Wireframes — Web Application](../assets/images/wireframe-login.png)
-> ![Wireframes — Web Application](../assets/images/wireframe-dashboard.png)
-> ![Wireframes — Web Application](../assets/images/wireframe-flota.png)
-> ![Wireframes — Web Application](../assets/images/wireframe-conductores.png)
-> ![Wireframes — Web Application](../assets/images/wireframe-mantenimiento.png)
-> ![Wireframes — Web Application](../assets/images/wireframe-incidencias.png)
-> ![Wireframes — Web Application](../assets/images/wireframe-monitoreo.png)
-> ![Wireframes — Web Application](../assets/images/wireframe-talleres.png)
-> ![Wireframes — Web Application](../assets/images/wireframe-iot.png)
-> ![Wireframes — Web Application](../assets/images/wireframe-configuracion.png)
+> **Figura 22.** Wireframes de baja fidelidad de la Web Application (Dashboard, Vehículos, Conductores, Combustible, Mantenimiento, Monitoreo GPS, Talleres, Reportes).
+>
+> ![Wireframes de baja fidelidad de la Web Application (Dashboard, Vehículos, Conductores, Combustible, Mantenimiento, Monitoreo GPS, Talleres, Reportes)](../assets/images/wireframe-login.png)
+> ![Wireframes de baja fidelidad de la Web Application (Dashboard, Vehículos, Conductores, Combustible, Mantenimiento, Monitoreo GPS, Talleres, Reportes)](../assets/images/wireframe-dashboard.png)
+> ![Wireframes de baja fidelidad de la Web Application (Dashboard, Vehículos, Conductores, Combustible, Mantenimiento, Monitoreo GPS, Talleres, Reportes)](../assets/images/wireframe-flota.png)
+> ![Wireframes de baja fidelidad de la Web Application (Dashboard, Vehículos, Conductores, Combustible, Mantenimiento, Monitoreo GPS, Talleres, Reportes)](../assets/images/wireframe-conductores.png)
+> ![Wireframes de baja fidelidad de la Web Application (Dashboard, Vehículos, Conductores, Combustible, Mantenimiento, Monitoreo GPS, Talleres, Reportes)](../assets/images/wireframe-mantenimiento.png)
+> ![Wireframes de baja fidelidad de la Web Application (Dashboard, Vehículos, Conductores, Combustible, Mantenimiento, Monitoreo GPS, Talleres, Reportes)](../assets/images/wireframe-incidencias.png)
+> ![Wireframes de baja fidelidad de la Web Application (Dashboard, Vehículos, Conductores, Combustible, Mantenimiento, Monitoreo GPS, Talleres, Reportes)](../assets/images/wireframe-monitoreo.png)
+> ![Wireframes de baja fidelidad de la Web Application (Dashboard, Vehículos, Conductores, Combustible, Mantenimiento, Monitoreo GPS, Talleres, Reportes)](../assets/images/wireframe-talleres.png)
+> ![Wireframes de baja fidelidad de la Web Application (Dashboard, Vehículos, Conductores, Combustible, Mantenimiento, Monitoreo GPS, Talleres, Reportes)](../assets/images/wireframe-iot.png)
+> ![Wireframes de baja fidelidad de la Web Application (Dashboard, Vehículos, Conductores, Combustible, Mantenimiento, Monitoreo GPS, Talleres, Reportes)](../assets/images/wireframe-configuracion.png)
 
 
 
@@ -26,36 +26,34 @@
 
 
 
-> **Figura 4.4.2a.** Wireflow diagrams de la Web Application.
-
-> ![Wireflow — Web Application](../assets/images/1-vistas-admin.png)
-
-> ![Wireflow — Web Application](../assets/images/2-vistas-conductor.png)
-
-> ![Wireflow — Web Application](../assets/images/3-vistas-mecanico.png)
+> **Figura 23.** Wireflow diagrams de la Web Application.
+>
+> ![Wireflow diagrams de la Web Application](../assets/images/1-vistas-admin.png)
+> ![Wireflow diagrams de la Web Application](../assets/images/2-vistas-conductor.png)
+> ![Wireflow diagrams de la Web Application](../assets/images/3-vistas-mecanico.png)
 
 
 
 
-### 4.4.2. Web Applications Mock-ups
+### 4.4.3. Web Applications Mock-ups
 
 
 
-> **Figura 4.4.2b.** Mock-ups de alta fidelidad de la Web Application.
+> **Figura 24.** Mock-ups de alta fidelidad de la Web Application.
+>
+> ![Mock-ups de alta fidelidad de la Web Application](../assets/images/mockup-login.png)
+> ![Mock-ups de alta fidelidad de la Web Application](../assets/images/mockup-dashboard.png)
+> ![Mock-ups de alta fidelidad de la Web Application](../assets/images/mockup-flota.png)
+> ![Mock-ups de alta fidelidad de la Web Application](../assets/images/mockup-conductores.png)
+> ![Mock-ups de alta fidelidad de la Web Application](../assets/images/mockup-mantenimiento.png)
+> ![Mock-ups de alta fidelidad de la Web Application](../assets/images/mockup-incidencias.png)
+> ![Mock-ups de alta fidelidad de la Web Application](../assets/images/mockup-monitoreo.png)
+> ![Mock-ups de alta fidelidad de la Web Application](../assets/images/mockup-talleres.png)
+> ![Mock-ups de alta fidelidad de la Web Application](../assets/images/mockup-iot.png)
+> ![Mock-ups de alta fidelidad de la Web Application](../assets/images/mockup-configuracion.png)
 
-> ![Wireframes — Web Application](../assets/images/mockup-login.png)
-> ![Wireframes — Web Application](../assets/images/mockup-dashboard.png)
-> ![Wireframes — Web Application](../assets/images/mockup-flota.png)
-> ![Wireframes — Web Application](../assets/images/mockup-conductores.png)
-> ![Wireframes — Web Application](../assets/images/mockup-mantenimiento.png)
-> ![Wireframes — Web Application](../assets/images/mockup-incidencias.png)
-> ![Wireframes — Web Application](../assets/images/mockup-monitoreo.png)
-> ![Wireframes — Web Application](../assets/images/mockup-talleres.png)
-> ![Wireframes — Web Application](../assets/images/mockup-iot.png)
-> ![Wireframes — Web Application](../assets/images/mockup-configuracion.png)
 
-
-### 4.4.3. Web Applications User Flow Diagrams
+### 4.4.4. Web Applications User Flow Diagrams
 
 
 
@@ -87,12 +85,9 @@ Como administrador, quiero consultar talleres disponibles, para gestionar servic
 
 
 
-> **Figura 4.4.3.** User Flow Diagrams de los cuatro objetivos anteriores.
-
-> ![User Flow Diagrams](../assets/images/goal1.png)
-
-> ![User Flow Diagrams](../assets/images/goal2.png)
-
-> ![User Flow Diagrams](../assets/images/goal3.png)
-
-> ![User Flow Diagrams](../assets/images/goal4.png)
+> **Figura 25.** User Flow Diagrams de los cuatro objetivos anteriores.
+>
+> ![User Flow Diagrams de los cuatro objetivos anteriores](../assets/images/goal1.png)
+> ![User Flow Diagrams de los cuatro objetivos anteriores](../assets/images/goal2.png)
+> ![User Flow Diagrams de los cuatro objetivos anteriores](../assets/images/goal3.png)
+> ![User Flow Diagrams de los cuatro objetivos anteriores](../assets/images/goal4.png)

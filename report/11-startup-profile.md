@@ -1,8 +1,8 @@
-## Capítulo I: Introducción
+# Capítulo I: Introducción
 
-### 1.1 Startup Profile
+## 1.1. Startup Profile
 
-#### 1.1.1 Descripción de la Startup
+### 1.1.1. Descripción de la Startup
 
 Nuestro startup, denominada "Developer Team", surge con el objetivo de resolver la falta de digitalización y visibilidad en la gestión de flotas de transporte en el Perú, un problema que afecta tanto a empresas de transporte de carga y pasajeros como a operadores de taxi.
 
@@ -12,7 +12,7 @@ La misión de Developer Team es centralizar en una sola plataforma inteligente e
 
 A futuro, Developer Team proyecta evolucionar hacia funcionalidades de optimización de rutas asistida por datos históricos de consumo y mantenimiento, así como hacia la venta directa de un kit de hardware propio (dispositivo IoT con GPS, odómetro y sensor de combustible), consolidándose como una solución integral software y hardware para la gestión de flotas en Latinoamérica.
 
-#### 1.1.2 Perfiles de integrantes del equipo
+### 1.1.2. Perfiles de integrantes del equipo
 
 | | |
 |---|---|

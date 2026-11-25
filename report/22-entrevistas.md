@@ -47,11 +47,11 @@ El objetivo de las entrevistas es comprender las necesidades, problemas, frustra
 - ¿Te gustaría acceder al historial del vehículo antes de realizar un diagnóstico?
 - ¿Qué funciones debería tener una plataforma para facilitar la gestión de tu taller?
 
-## 2.2.2. Registro de entrevistas
+### 2.2.2. Registro de entrevistas
 
 **Enlace general de entrevistas:** [Registro](https://n9.cl/i1lrrRegistro)
 
-### 1. Dueños de vehículos
+#### 1. Dueños de vehículos
 
 | Campo        | Detalle                                                                         |
 | ------------ | ------------------------------------------------------------------------------- |
@@ -68,7 +68,7 @@ Para Karen, la principal dificultad radica en los mantenimientos correctivos de 
 
 Ella considera muy útil disponer del historial completo de sus carros en una plataforma y recibir alertas automáticas sobre combustible, kilometraje y mantenimientos para evitar la revisión manual constante. Asimismo, destaca su disposición a pagar una suscripción mensual por vehículo si el sistema le ayuda a reducir costos operativos.
 
-### 2. Conductores
+#### 2. Conductores
 
 | Campo        | Detalle                                                                             |
 | ------------ | ----------------------------------------------------------------------------------- |
@@ -87,7 +87,7 @@ Para Ronald, las principales dificultades radican en la demora de respuesta por 
 
 Asimismo, destaca que el sistema de comunicación mejoraría si fuera más directo y dejara una evidencia registrada que confirme que los reportes se realizaron adecuadamente y a tiempo.
 
-### 3. Mecánico
+#### 3. Mecánicas
 
 | Campo        | Detalle                                                                               |
 | ------------ | ------------------------------------------------------------------------------------- |
@@ -108,7 +108,7 @@ Para Jorge, el principal problema operativo aparece cuando existe alta demanda d
 
 ---
 
-## Cuadro Consolidado de Registro de Entrevistas
+#### Cuadro Consolidado de Registro de Entrevistas
 
 | Segmento                | Foto                                                            | Entrevistado(a)          | Edad | Distrito        | Duración         | Enlace                                   | Herramientas Actuales                                  | Principal Dolor                                                     |
 | ----------------------- | --------------------------------------------------------------- | ------------------------ | ---: | --------------- | ---------------- | ---------------------------------------- | ------------------------------------------------------ | ------------------------------------------------------------------- |
@@ -118,11 +118,11 @@ Para Jorge, el principal problema operativo aparece cuando existe alta demanda d
 
 ---
 
-## 2.2.3. Análisis de entrevistas
+### 2.2.3. Análisis de entrevistas
 
-### Texto Descriptivo de Patrones
+#### Texto Descriptivo de Patrones
 
-#### Dueños de vehículos
+##### Dueños de vehículos
 
 A partir de las entrevistas realizadas a dueños de flotas de vehículos, se identifican patrones claros en la gestión de unidades, control de costos y relación con talleres mecánicos.
 
@@ -136,7 +136,7 @@ Sobre las oportunidades de mejora, el 100% de los entrevistados considera altame
 
 Finalmente, el 100% manifiesta una clara disposición a pagar una suscripción mensual por vehículo si la herramienta le ayuda a reducir costos operativos y optimizar el control de su flota.
 
-#### Conductores
+##### Conductores
 
 A partir de las entrevistas realizadas a conductores, se identifican patrones recurrentes en el registro de datos del vehículo, el reporte de incidencias y la comunicación con la administración.
 
@@ -150,7 +150,7 @@ Sobre las necesidades del segmento, el 100% considera de gran utilidad contar co
 
 Asimismo, el 100% destaca que el sistema de comunicación mejoraría significativamente si permitiera dejar una evidencia registrada del reporte, asegurando que se informó la incidencia adecuadamente y en el tiempo correcto.
 
-#### Mecánicas
+##### Mecánicas
 
 A partir de las entrevistas realizadas a talleres automotrices, se identifican patrones clave en la recepción de solicitudes, la organización del trabajo y el manejo del historial mecánico.
 
@@ -166,7 +166,7 @@ Finalmente, el 100% recalca que el diagnóstico vehicular debe ser realizado exc
 
 ---
 
-## Cuadro Comparativo del Análisis de Entrevistas
+#### Cuadro Comparativo del Análisis de Entrevistas
 
 | Segmento             | Herramientas Actuales                                                 | Cuellos de Botella / Dolores                                                               | Necesidades y Soluciones Valoradas                                                                                      | Disposición / Posición Clave                                                                                                               |
 | -------------------- | --------------------------------------------------------------------- | ------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |

@@ -31,7 +31,9 @@ Se realiza este análisis para identificar las principales características, ven
 | **Oportunidades** | Crecimiento de la digitalización del transporte y necesidad de reducir costos de combustible y mantenimiento. | Ampliar sus servicios hacia una gestión integral de flotas. | Incorporar nuevas funciones de gestión y mantenimiento. | Expansión del mercado de telemática y análisis de datos. |
 | **Amenazas** | Competidores consolidados, resistencia al cambio tecnológico y costos del hardware IoT. | Competidores con plataformas más completas e integrales. | Nuevas soluciones de gestión de flotas con más funcionalidades. | Competidores locales con precios más accesibles y mayor adaptación al mercado peruano. |
 
-### 2.1.2. Estrategias y tácticas frente a competidores**Estrategias:**
+### 2.1.2. Estrategias y tácticas frente a competidores
+
+**Estrategias:**
 
 **Diferenciación mediante la integración de la gestión de flotas**
 - **Objetivo:** Posicionar a Flotix como una plataforma integral que permita controlar en un mismo sistema el estado de los vehículos, combustible, kilometraje, mantenimiento y ubicación.

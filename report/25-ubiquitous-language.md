@@ -1,10 +1,10 @@
-# 2.5. Ubiquitous Language
+## 2.5. Ubiquitous Language
 
 El Ubiquitous Language define un conjunto de términos compartidos entre todos los actores del dominio de negocio de FLOTIX (dueños de vehículos, conductores, mecánicas y pasajeros), con el objetivo de reducir ambigüedades y establecer una comunicación clara entre los usuarios, el equipo de desarrollo y los demás stakeholders.
 
 A continuación, se presenta el glosario de términos clave del dominio de la gestión y mantenimiento de vehículos utilizado en FLOTIX. Incluye tanto los términos del proceso actual (manual, basado en hojas de cálculo, cuadernos, llamadas y mensajería instantánea) como los de la solución propuesta.
 
-## Glosario de términos
+### Glosario de términos
 
 **Vehicle (Vehículo):**
 Unidad utilizada para realizar actividades de transporte y que es gestionada dentro de FLOTIX. Puede pertenecer a un propietario o formar parte de una pequeña flota.

@@ -1,6 +1,6 @@
-﻿## Anexos
+﻿# Anexos
 
-### Anexo A. Videos de Exposiciones
+## Anexo A. Videos de Exposiciones
 
 | Entrega | Título                                                                                                | Enlace |
 |---------|-------------------------------------------------------------------------------------------------------|---|
@@ -9,7 +9,7 @@
 | AV2     | Entrega del Sprint 3                                                                                  | https://acortar.link/aWBVLc |
 
 
-### Anexo B. Repositorios del Proyecto
+## Anexo B. Repositorios del Proyecto
 
 | Descripción                                  | Enlace |
 |----------------------------------------------|--|
@@ -19,7 +19,7 @@
 | Repositorio de la Web Application (Backend)  | https://github.com/upc-pre-202620-1asi0730-8150-DevsTeam/flotix-platform |
 | Repositorio de la Responsabilidad Social     | https://github.com/upc-pre-202620-1asi0730-8150-DevsTeam/webdev-course-developer-team |
 
-### Anexo C. Enlaces de Despliegue (Deployment)
+## Anexo C. Enlaces de Despliegue (Deployment)
 
 | Descripción                                        | Enlace |
 |----------------------------------------------------|--|
@@ -28,19 +28,19 @@
 | Deployment de Flotix Platform (Backend) con scalar | https://flotix-platform-production.up.railway.app/scalar |
 
 
-### Anexo D. Diseño
+## Anexo D. Diseño
 
 | Descripción | Enlace |
 |---|---|
 | Link del Figma del Trabajo | https://www.figma.com/design/b08HmUxXslu5AwKtqHFQLL/Flotix--application-web?node-id=0-1&t=1aeiK3BaHcf2sPid-1 |
 
-### Anexo E. About The Team
+## Anexo E. About The Team
 
 | Descripción             | Enlace                       |
 |-------------------------|------------------------------|
 | Video de about the team | https://youtu.be/fcqzHAoZHaU |
 
-### Anexo F. About The Product
+## Anexo F. About The Product
 
 | Descripción                | Enlace |
 |----------------------------|---|

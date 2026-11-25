@@ -20,7 +20,9 @@ Durante la elaboración de la entrega AV1, el equipo se organizó asignando a ca
 | Lechuga Aguilar, Joaquin Andre | Desarrolló el Capítulo III (Requirements Specification) con los User Stories y Epics completos con Acceptance Criteria en formato Gherkin, el Impact Mapping y el Product Backlog priorizado. Adicionalmente elaboró las secciones de Style Guidelines y gran parte del Capítulo IV. |
 | Olivares Lao, Gustavo Alonso | Completó el Capítulo IV (Product Design) con la propuesta de Information Architecture, Landing Page Wireframes y Mockups, Web Application Wireframes, Wireflow Diagrams y Mockups. Configuró el repositorio de la Landing Page e implementó el Sprint 1 completo (sección 5.2.1). |
 
-![foto](../assets/images/commit-report.png)
+> **Figura 1.** Analíticos de commits del repositorio del informe en AV1.
+>
+> ![Analíticos de commits del repositorio del informe en AV1](../assets/images/commit-report.png)
 
 ## TB1 – Stage Review (Semana 7)
 
@@ -32,7 +34,9 @@ Durante la elaboración de la entrega TB1, el equipo corrigió y mejoró los art
 | Ramirez Rodriguez, Mauricio Joao | Lideró la actualización del Capítulo II, mejorando las secciones de Needfinding y Big Picture EventStorming, y actualizó el Ubiquitous Language del dominio. En el Capítulo III reorganizó las User Stories y el Product Backlog en función de los bounded contexts de la solución, coordinando con el equipo la priorización por valor de negocio. |
 | Lechuga Aguilar, Joaquin Andre | Lideró las correcciones del Capítulo IV: actualizó los wireframes y mock-ups del Landing Page, incorporando las secciones "Flotix in action" y "Team behind Flotix", y los de la Web Application. Corrigió los prototipos de la Web Application y las rutas de sus archivos en la sección 4.5 Web Applications Prototyping. |
 
-![foto](../assets/images/commit_tb2_report.png)
+> **Figura 2.** Analíticos de commits del repositorio del informe en TB1.
+>
+> ![Analíticos de commits del repositorio del informe en TB1](../assets/images/commit_tb2_report.png)
 
 ## AV2 – Sprint Review (Semana 12)
 
@@ -42,4 +46,6 @@ Durante la elaboración de la entrega AV2, Jaime Forcelledo, Gonzalo Alexander s
 |---|---|
 | Jaime Forcelledo, Gonzalo Alexander | Elaboró íntegramente la sección 5.2.3 (Sprint 3): Sprint Planning 3, Aspect Leaders and Collaborators, Sprint Backlog 3, Development Evidence, Execution Evidence, Services Documentation Evidence (endpoints, parámetros, respuestas y ejemplos de request/response), Software Deployment Evidence y Team Collaboration Insights during Sprint. Elaboró también la sección 5.4 (Video About-the-Product). Actualizó la Carátula, el Registro de Versiones del Informe, la sección Student Outcome y la presente sección Project Report Collaboration Insights con las acciones de AV2. Coordinó la integración en la rama `develop` y realizó el merge final a `main`. |
 
-![foto](../assets/images/commit_av2_report.png)
+> **Figura 3.** Analíticos de commits del repositorio del informe en AV2.
+>
+> ![Analíticos de commits del repositorio del informe en AV2](../assets/images/commit_av2_report.png)

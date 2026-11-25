@@ -1,4 +1,4 @@
-# 2.4. Big Picture EventStorming
+## 2.4. Big Picture EventStorming
 
 
 
@@ -12,7 +12,7 @@ El propósito de esta actividad no fue definir detalles técnicos, sino obtener 
 
 
 
-## Resultados y Hallazgos
+### Resultados y Hallazgos
 
 
 
@@ -31,7 +31,7 @@ A través del proceso de Big Picture EventStorming, logramos identificar los pri
 
 
 
-## Paso 1: Exploración Desestructurada (Unstructured Exploration)
+### Paso 1: Exploración Desestructurada (Unstructured Exploration)
 
 Esta primera fase consistió en una lluvia de ideas para identificar los Eventos de Dominio del proceso actual. El equipo identificó 22 eventos, agrupados por actividad:
 
@@ -48,7 +48,9 @@ Esta primera fase consistió en una lluvia de ideas para identificar los Eventos
 
 
 
-![Step 1 - Unstructured Exploration](../assets/images/step-1.png)
+> **Figura 13.** Big Picture EventStorming, paso 1: exploración desestructurada.
+>
+> ![Big Picture EventStorming, paso 1: exploración desestructurada](../assets/images/step-1.png)
 
 
 
@@ -56,7 +58,7 @@ Esta primera fase consistió en una lluvia de ideas para identificar los Eventos
 
 
 
-## Paso 2: Líneas de Tiempo (Timelines)
+### Paso 2: Líneas de Tiempo (Timelines)
 
 Los eventos fueron organizados cronológicamente para representar el flujo actual de operaciones, en cuatro carriles:
 
@@ -64,7 +66,9 @@ Los eventos fueron organizados cronológicamente para representar el flujo actua
 - **Operación diaria:** el conductor inicia la ruta (Route Started) y avisa por WhatsApp (Departure Reported by WhatsApp). Anota el kilometraje en un cuaderno (Mileage Noted in Notebook), compra combustible (Fuel Purchased), registra el gasto (Fuel Expense Recorded in Notebook) y entrega el comprobante al dueño (Fuel Receipt Delivered to Owner), quien lo digita en la hoja de cálculo (Fuel Expenses Entered in Spreadsheet). Mientras tanto, el pasajero espera sin información (Passenger Waited for Vehicle) y llama al conductor para saber dónde está (Passenger Called Driver for Location).
 - **Incidencias y mantenimiento:** el conductor detecta una falla (Vehicle Failure Detected by Driver) y la reporta por teléfono (Incident Reported by Phone Call). El dueño llama al taller (Owner Called Workshop), el vehículo es llevado (Vehicle Taken to Workshop) y el taller da una cotización verbal (Repair Quote Given Verbally), que el dueño aprueba por teléfono (Repair Approved by Phone). Se realiza la reparación de emergencia (Emergency Repair Performed) y se paga en efectivo (Repair Paid in Cash).
 - **Control y análisis:** el dueño revisa manualmente los gastos del mes (Monthly Expenses Reviewed Manually), nota tarde el sobrecosto (Fuel Overspending Noticed Late) y recuerda un mantenimiento pendiente solo por memoria (Maintenance Remembered by Owner).
-![Step 2 - Timelines](../assets/images/step-2.png)
+> **Figura 14.** Big Picture EventStorming, paso 2: líneas de tiempo.
+>
+> ![Big Picture EventStorming, paso 2: líneas de tiempo](../assets/images/step-2.png)
 
 
 
@@ -72,7 +76,7 @@ Los eventos fueron organizados cronológicamente para representar el flujo actua
 
 
 
-## Paso 3: Líneas de Tiempo con Puntos Críticos (Timelines with Hotspots)
+### Paso 3: Líneas de Tiempo con Puntos Críticos (Timelines with Hotspots)
 
 En la última etapa se incorporaron los Hotspots (púrpura) para identificar los puntos de dolor y riesgos del proceso actual:
 
@@ -91,7 +95,9 @@ En la última etapa se incorporaron los Hotspots (púrpura) para identificar los
 - **Sobrecostos detectados semanas después:** la revisión es manual y tardía (Fuel Overspending Noticed Late).
 
 Estos hallazgos evidencian las necesidades que FLOTIX debe abordar: centralizar la información de la flota, automatizar el registro de combustible y kilometraje mediante IoT/GPS, habilitar alertas de mantenimiento preventivo y mantener un historial trazable de cada vehículo.
-![Step 3 - Timelines with Hotspots](../assets/images/step-3.png)
+> **Figura 15.** Big Picture EventStorming, paso 3: líneas de tiempo con puntos críticos.
+>
+> ![Big Picture EventStorming, paso 3: líneas de tiempo con puntos críticos](../assets/images/step-3.png)
 
 
 

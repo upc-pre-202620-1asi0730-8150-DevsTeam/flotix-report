@@ -1,7 +1,5 @@
 ## 5.3. Validation Interviews
 
-> Los campos marcados como corresponden a datos de las sesiones reales (entrevistados, tiempos en el video, resúmenes y hallazgos). No se redactaron hallazgos ni resúmenes de entrevistas que aún no se realizaron. Los bullets de "Características del arquetipo" se tomaron de las User Personas del capítulo 2.3 y deben ajustarse a cada entrevistado.
-
 ### 5.3.1. Diseño de Entrevistas
 
 Se diseñaron entrevistas semiestructuradas con el objetivo de validar la propuesta de solución y evaluar la experiencia de los usuarios al interactuar con el Landing Page y la Web Application de Flotix. Las preguntas fueron elaboradas considerando las necesidades y responsabilidades de cada segmento identificado: dueños de vehículos, conductores y mecánicas. En cada sesión, el entrevistado ejecutó tareas del producto mientras expresaba en voz alta lo que pensaba, y la sesión se grabó en video con su autorización.
@@ -42,9 +40,9 @@ Las entrevistas tuvieron como finalidad validar la comprensión de la propuesta 
 
 ### 5.3.2. Registro de Entrevistas
 
-**Link del video consolidado de entrevistas:https://acortar.link/Y2NB9J**
+**Link del video consolidado de entrevistas:** https://acortar.link/Y2NB9J
 
-### Entrevista 1
+#### Entrevista 1
 
 | Campo | Información                    |
 |---------|--------------------------------|
@@ -53,7 +51,7 @@ Las entrevistas tuvieron como finalidad validar la comprensión de la propuesta 
 | Duración | 10 min 35 s                    |
 | Nombre completo | Mabel |
 | Distrito | Comas                          |
-#### Características del arquetipo
+##### Características del arquetipo
 
 - Dueño de uno o varios vehículos de transporte particular, de pasajeros o de carga.
 - Coordina con conductores y talleres mediante WhatsApp, llamadas y hojas de cálculo.
@@ -61,13 +59,13 @@ Las entrevistas tuvieron como finalidad validar la comprensión de la propuesta 
 - Le preocupan los mantenimientos correctivos inesperados.
 - Valora contar con información centralizada para tomar decisiones.
 
-#### Resumen de la entrevista
+##### Resumen de la entrevista
 
 Mabel, dueña de una pequeña empresa de reparto en Lima con seis camionetas y cinco choferes, participó en una demostración guiada con pantalla compartida y un cuestionario estructurado. Actualmente controla unidades, combustible y mantenimientos con Excel, llamadas y WhatsApp, por donde recibe fotos de vouchers y cotizaciones de talleres, por lo que pierde visibilidad de qué conductor maneja cada camioneta. Comprendió de inmediato la propuesta de valor de Flotix y la consideró muy relevante, aunque habría querido ver más rápido si funciona desde el celular, pues pasa casi todo el día en la calle. Registró un vehículo con rapidez gracias a la visibilidad del botón, pero no habría encontrado a tiempo cómo asignar un conductor, ya que intuitivamente lo buscaría en la sección de conductores. Entendió sin dificultad los estados de flota y mantenimiento y sus colores, y sugirió renombrar "presupuestado" a "presupuesto por aprobar". Identificó al instante el consumo anómalo de combustible de la camioneta MTX 556 y la alerta de exceso de velocidad en la Panamericana, y pidió recibir esas alertas como notificaciones en el teléfono. Juzgó el flujo de solicitud al taller y aprobación de cotización (por ejemplo, 2,500 soles por pastillas de freno) más ordenado que WhatsApp, y propuso desglosar repuestos y mano de obra y agregar una confirmación antes de aprobar para evitar clics accidentales. Afirmó que reemplazaría Excel por la plataforma y le dio 8 sobre 10, que subiría a 9 o 10 con notificaciones móviles.
 
 ---
 
-### Entrevista 2
+#### Entrevista 2
 
 | Campo | Información                     |
 |---------|---------------------------------|
@@ -76,7 +74,7 @@ Mabel, dueña de una pequeña empresa de reparto en Lima con seis camionetas y c
 | Duración | 5 min 14 s                      |
 | Nombre completo | Ronald |
 | Distrito | San Juan del Lurigancho         |
-#### Características del arquetipo
+##### Características del arquetipo
 
 - Opera diariamente un vehículo de la flota.
 - Se comunica con el dueño mediante WhatsApp y llamadas.
@@ -84,13 +82,13 @@ Mabel, dueña de una pequeña empresa de reparto en Lima con seis camionetas y c
 - Necesita herramientas rápidas y sencillas desde el smartphone.
 - Valora poder reportar fallas sin intercambios largos de mensajes.
 
-#### Resumen de la entrevista
+##### Resumen de la entrevista
 
 Ronald, conductor operativo acostumbrado a registrar sus datos en papel o a enviar reportes sueltos por mensajería, participó en un recorrido guiado por las cuatro secciones principales de Flotix (Dashboard, Combustible, Incidencias y Configuración), seguido de un cuestionario estructurado de siete preguntas. Comprendió con claridad la propuesta de valor desde el primer contacto: una herramienta centralizada para conocer la unidad asignada en su turno, verificar kilometraje y próximos mantenimientos, registrar abastecimientos y reportar fallas en ruta. Calificó la navegación desde el celular como intuitiva y ágil, y valoró el botón azul de acceso directo para registrar combustible, cuyos campos (litros, costo en soles y kilometraje) le resultaron familiares porque coinciden con el ticket del grifo y el odómetro. Consideró práctico y rápido el módulo de incidencias, en especial poder ver en tiempo real si un reporte sigue abierto o ya fue solucionado. No reportó dificultades ni sugirió cambios, y afirmó que reemplazaría WhatsApp y las llamadas por la plataforma porque deja la información ordenada y accesible para el conductor y el personal administrativo.
 
 ---
 
-### Entrevista 3
+#### Entrevista 3
 
 | Campo | Información     |
 |---------|-----------------|
@@ -100,7 +98,7 @@ Ronald, conductor operativo acostumbrado a registrar sus datos en papel o a envi
 | Nombre completo | Jorge           |
 | Distrito | La victoria     |
 
-#### Características del arquetipo
+##### Características del arquetipo
 
 - Mecánico o taller que atiende vehículos particulares y de empresas.
 - Recibe solicitudes mediante llamadas y WhatsApp, y se organiza con Word y calendarios.
@@ -108,7 +106,7 @@ Ronald, conductor operativo acostumbrado a registrar sus datos en papel o a envi
 - Enfrenta saturación cuando hay alta demanda y pocos mecánicos.
 - Prefiere que el diagnóstico lo realice el equipo de mecánicos.
 
-#### Resumen de la entrevista
+##### Resumen de la entrevista
 
 Jorge, mecánico con poca afinidad tecnológica que gestiona su trabajo en hojas de cálculo de Excel, participó en una prueba de usabilidad moderada con pantalla compartida y una entrevista semiestructurada. Sin ayuda creó una nueva orden de mantenimiento (New Request), registró una cotización de seiscientos soles y avanzó los estados del servicio tras simular la aceptación del presupuesto por el cliente. Confirmó que la interfaz se entiende a primera vista y que la secuencia de estados (revisión inicial, aprobación de cotización, ejecución de la reparación y entrega final) refleja el flujo real de su taller. Identificó el indicador de solicitudes pendientes del dashboard como el dato más útil, porque le permite conocer su carga de trabajo antes de aceptar nuevas órdenes, y validó que el alta de vehículos sea responsabilidad de los dueños de la flota. Propuso tres mejoras: registrar y visualizar boletas por servicio; ampliar los campos técnicos de la solicitud (placa, marca, tipo de vehículo y tipo de motor); y añadir un buscador y un listado de toda la flota, no solo de las unidades averiadas, con antigüedad, historial de atenciones y kilometraje por intervención, para anticipar mantenimientos preventivos y revisiones técnicas.
 

@@ -1,18 +1,18 @@
-﻿## Conclusiones y recomendaciones
+﻿# Conclusiones
 
-### Conclusiones
+## Conclusiones y recomendaciones
 
-#### AV1 – Sprint 1
+### AV1 – Sprint 1
 
-Para la primera entrega (AV1), el equipo Developers Team completó la definición inicial del problema, la propuesta de valor y el primer incremento de producto de Flotix, sentando las bases del ciclo de vida del proyecto conforme al proceso Lean UX.
+Para la primera entrega (AV1), el equipo Developer Team completó la definición inicial del problema, la propuesta de valor y el primer incremento de producto de Flotix, sentando las bases del ciclo de vida del proyecto conforme al proceso Lean UX.
 
 Respecto al Problem Statement planteado en el Capítulo I, el análisis documental y competitivo confirma que la gestión de vehículos y flotas en el Perú sigue apoyada mayoritariamente en procesos manuales —hojas de cálculo, cuadernos, llamadas y mensajería instantánea—, tanto para el control de combustible y mantenimiento como para la coordinación entre dueños y talleres mecánicos.
 
 Asimismo, dado que el alcance técnico de esta entrega se limitó a la primera versión del Landing Page, los criterios de éxito definidos en el proceso Lean UX —como la reducción del 20% en el gasto de combustible por unidad o la disminución del 30% en el tiempo de coordinación de un mantenimiento— aún no pueden contrastarse contra resultados reales de uso.
 
-En cuanto al trabajo técnico realizado durante el Sprint 1, se logró implementar y desplegar exitosamente la primera versión del Landing Page de Flotix mediante GitHub Pages, cumpliendo las cuatro User Stories planificadas y validando la viabilidad del flujo de trabajo GitFlow con Conventional Commits definido en el Capítulo V. Esto permite al equipo contar con una base técnica y de proceso ordenada para escalar el desarrollo en los siguientes sprints.
+En cuanto al trabajo técnico realizado durante el Sprint 1, se logró implementar y desplegar exitosamente la primera versión del Landing Page de Flotix mediante GitHub Pages, cumpliendo las seis User Stories planificadas (US43–US48) y validando la viabilidad del flujo de trabajo GitFlow con Conventional Commits definido en el Capítulo V. Esto permite al equipo contar con una base técnica y de proceso ordenada para escalar el desarrollo en los siguientes sprints.
 
-#### TB1 – Sprint 2
+### TB1 – Sprint 2
 
 Para la entrega TB1, el equipo corrigió y mejoró los artefactos presentados en AV1 a partir de la retroalimentación recibida. Se actualizaron los wireframes y mock-ups del Landing Page y de la Web Application. Además, se reorganizó la especificación de requisitos: las User Stories se agruparon en Epics alineadas con los bounded contexts de la solución, se reordenó el Product Backlog según el valor para el negocio y se elaboró el Impact Mapping para los tres segmentos objetivo (Dueño, Conductor y Mecánica).
 
@@ -22,22 +22,43 @@ En cuanto al trabajo técnico del Sprint 2, se publicó una nueva versión del L
 
 Los Hypothesis Statements y los criterios de éxito definidos en el proceso Lean UX aún no pueden contrastarse con resultados reales, ya que la solución todavía no ha sido utilizada por usuarios de los segmentos objetivo. Esa comprobación se realizará mediante las entrevistas de validación programadas para AV2.
 
-#### AV2 – Sprint 3
+### AV2 – Sprint 3
 
-Para la entrega AV2, el equipo Developers Team entregó la primera versión desplegada de los Web Services de Flotix y la integró con la Web Application, reemplazando en los módulos cubiertos la persistencia local del Sprint 2 por consumo del API.
+Para la entrega AV2, el equipo Developer Team entregó la primera versión desplegada de los Web Services de Flotix y la integró con la Web Application, reemplazando en los módulos cubiertos la persistencia local del Sprint 2 por consumo del API.
 
 Respecto al Problem Statement del Capítulo I, el problema se mantiene vigente. El API Application concreta la estrategia propuesta al centralizar en un backend único la gestión de vehículos, el registro y la detección de consumo anómalo de combustible, el ciclo de solicitudes de mantenimiento entre Dueño y Mecánica, el ciclo de vida de las incidencias, la ingesta de telemetría IoT y la generación de reportes. Las reglas de negocio definidas en los Capítulos I y III ya se verifican en el servidor: validación de datos de vehículos y recargas, rendimiento en km/L, marcado de consumo inferior al 70% del promedio histórico, transiciones válidas e inválidas de estado (respuesta 409), sincronización del estado del vehículo con el mantenimiento y descarte de paquetes de telemetría corruptos.
 
 En cuanto al trabajo técnico del Sprint 3, se implementó el API en C# con ASP.NET Core sobre .NET 10, organizado por bounded contexts con capas de dominio, aplicación, infraestructura e interfaces, con PostgreSQL mediante Entity Framework Core y notificación de ubicación en tiempo real con SignalR. Los endpoints se documentaron con OpenAPI mediante Scalar, con parámetros, códigos de respuesta y ejemplos de request y response. El API se desplegó en Railway con su base de datos en Neon, y la Web Application se republicó en Netlify consumiendo el API. Se completaron además las historias pendientes del Landing Page (EP09): videos About the Product y About the Team, cambio de idioma y accesibilidad. El trabajo siguió GitFlow y Conventional Commits, con 28 Pull Requests integrados y 94 commits de trabajo en `flotix-platform` entre el 21 de octubre y el 11 de noviembre de 2026.
 
-Como limitación, la autenticación por rol mediante JWT y los módulos continúan sobre la capa de persistencia local, por lo que la integración completa de la Web Application con el API queda para el siguiente sprint. Asimismo, los Hypothesis Statements y los criterios de éxito del proceso Lean UX aún no pueden contrastarse con resultados reales, ya que la solución no ha sido validada con usuarios de los segmentos objetivo.
-
+Como limitación, la gestión de usuarios y roles continúa sobre la capa de persistencia local; la autenticación con JWT y la integración de identidad con el API quedan para el Sprint 4. Las entrevistas de validación y la evaluación heurística con un representante de cada segmento (sección `5.3`) respaldan los User Assumptions sobre la coordinación manual y la necesidad de un canal digital con los talleres, e identificaron seis problemas de usabilidad (tres de severidad 3 y tres de severidad 2) que pasan al Sprint 4. Los Hypothesis Statements y el criterio de éxito del Problem Statement aún no pueden contrastarse cuantitativamente, porque se requieren datos de uso real.
 
 ### Recomendaciones
 
-- Integrar al menos un servicio externo de terceros; por ejemplo, un servicio de mapas para el monitoreo de la flota.
+- Integrar servicios externos de terceros adicionales; por ejemplo, un servicio de mapas con geocercas y tráfico en tiempo real para el monitoreo de la flota.
+- Complementar la Web Application adaptable con una aplicación móvil nativa (Android/iOS) con soporte *offline* para que los conductores registren combustible e incidencias en zonas sin cobertura celular.
+- Evolucionar el dispositivo IoT hacia lectura directa del puerto OBD-II / CAN-Bus del vehículo para capturar odómetro electrónico y códigos de diagnóstico mecánico de forma automática.
+- Incorporar pasarela de pagos recurrentes y facturación electrónica para automatizar las suscripciones mensuales por vehículo gestionado y la compra de dispositivos IoT.
 
-## Bibliografía
+## Video About-the-Team
+
+El video *About-the-Team* inicia con la presentación de **Flotix** correspondiente al Sprint 3 y continúa con los testimonios ante cámara de los cuatro integrantes de **Developer Team** que ejecutaron las entregas AV1, TB1 y AV2. En sus intervenciones individuales, Mauricio, Joaquín, Gonzalo y Gustavo exponen sus aportes en el descubrimiento del negocio, User Stories, diseño UX/UI, desarrollo frontend en Vue y backend en C# bajo Domain-Driven Design (bounded contexts, endpoints y telemetría con SignalR), destacando el trabajo colaborativo, el liderazgo compartido y el cumplimiento del *ABET Student Outcome 5*.
+
+- **URL del video:** https://youtu.be/fcqzHAoZHaU
+- **Duración (timing):** `00:04:56`
+
+| Inicio (`hh:mm:ss`) | Sección / Secuencia de contenido |
+|---|---|
+| `00:00:00` | Portada inicial de **Flotix** (*ABOUT THE TEAM – SPRINT 3*) |
+| `00:00:05` | Testimonio individual — Ramirez Rodriguez, Mauricio Joao: needfinding, Big Picture EventStorming, backend de *Fuel* e *Incidents* y cumplimiento de 5.c.1 y 5.c.2 |
+| `00:01:20` | Testimonio individual — Lechuga Aguilar, Joaquín Andre: liderazgo proactivo, decisiones de arquitectura backend, diseño de endpoints y colaboración en equipo |
+| `00:02:29` | Testimonio individual — Jaime Forcelledo, Gonzalo Alexander: coordinación como *team leader*, repaso de los tres sprints y aprendizajes en User Stories, EventStorming, GitFlow, Vue, C# y consumo de endpoints |
+| `00:03:54` | Testimonio individual — Olivares Lao, Gustavo Alonso: User Stories, Product Backlog, diseño UX/UI e implementación de monitoreo con SignalR, alertas y tienda IoT bajo DDD |
+
+> **Figura 68.** Presentación del equipo Developer Team asociada a la sección About-the-Team.
+>
+> ![Presentación del equipo Developer Team asociada a la sección About-the-Team](../assets/images/about-the-team-landing.png)
+
+# Bibliografía
 
 América Televisión. (n.d.). *El 67% del transporte en Lima es informal.* https://www.americatv.com.pe/noticitransporte-lima-informal-n496993
 

@@ -5,7 +5,7 @@
 # Uso: pandoc --defaults=config/build.yaml -o <ruta-salida.pdf>
 # =============================================================================
 
-from: markdown+gfm_auto_identifiers+pipe_tables+backtick_code_blocks+fenced_code_attributes+fenced_divs+bracketed_spans+footnotes+link_attributes-implicit_figures-tex_math_dollars
+from: markdown+gfm_auto_identifiers+pipe_tables+backtick_code_blocks+fenced_code_attributes+fenced_divs+bracketed_spans+footnotes+link_attributes+autolink_bare_uris+lists_without_preceding_blankline-implicit_figures-tex_math_dollars
 to: html5
 pdf-engine: weasyprint
 standalone: true

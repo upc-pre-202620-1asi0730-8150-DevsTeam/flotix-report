@@ -146,7 +146,7 @@ El Context Diagram es el nivel más alto de abstracción del C4 Model. Su objeti
 
 
 
-Owner (Dueño):
+**Owner (Dueño):**
 
 
 
@@ -162,7 +162,7 @@ Operador de las unidades móviles en campo. Se encarga de conducir el vehículo,
 
 
 
-Mechanic (Mecánica):
+**Mechanic (Mecánica):**
 
 
 
@@ -174,7 +174,7 @@ Talleres o mecánicos afiliados a la plataforma. Su interacción consiste en rec
 
 
 
-Email System:
+**Email System:**
 
 
 
@@ -182,7 +182,7 @@ Servicio externo (ej. SendGrid) que provee infraestructura SMTP para el envío a
 
 
 
-Payment Gateway:
+**Payment Gateway:**
 
 
 
@@ -190,7 +190,7 @@ Proveedor externo (ej. Stripe / Culqi) que procesa pagos de forma segura mediant
 
 
 
-IoT Device:
+**IoT Device:**
 
 
 
@@ -334,7 +334,7 @@ Este último componente se encarga de procesar la lógica de negocio comercial y
 
 
 
-- **Diagrama de Componentes: Telemetría y Control de Combustible (Telemetry & Fuel)**
+**Diagrama de Componentes: Telemetría y Control de Combustible (Telemetry & Fuel)**
 
 El diseño tiene como fin automatizar la ingesta masiva de datos y el análisis de rendimiento de la flota. A través del IoT Telemetry Processor, el sistema procesa en segundo plano los flujos de datos crudos provenientes de los dispositivos IoT externos (GPS y sensores de combustible). Este componente sirve como puente para registrar las coordenadas y métricas operativas.
 

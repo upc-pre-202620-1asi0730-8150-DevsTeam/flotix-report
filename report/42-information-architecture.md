@@ -126,7 +126,9 @@ Esto facilita la comparación de información y la toma de decisiones por parte 
 
 
 
-La plataforma utiliza diferentes esquemas de categorización para organizar la información de manera eficiente. Categorización por tópicos
+La plataforma utiliza diferentes esquemas de categorización para organizar la información de manera eficiente.
+
+**Categorización por tópicos**
 
 
 
@@ -882,7 +884,9 @@ Dashboard → Monitoreo GPS → Seleccionar vehículo → Visualizar ubicación 
 
 
 
-Estos flujos representan los principales procesos de operación de Flotix y permiten que las tareas se realicen de manera ordenada y predecible. Navegación responsive
+Estos flujos representan los principales procesos de operación de Flotix y permiten que las tareas se realicen de manera ordenada y predecible.
+
+**Navegación responsive**
 
 
 

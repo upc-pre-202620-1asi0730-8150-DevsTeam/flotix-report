@@ -54,7 +54,7 @@ Aprovecha el uso de colores resaltantes, botones de confirmación y formularios 
 
 
 
-- Colores
+**Colores**
 
 - **Azul marino #0B1F33:** Aporta confianza, estabilidad y profesionalismo y contraste con colores azulados claros y blanco.
 

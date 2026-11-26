@@ -149,30 +149,21 @@ El despliegue del Landing Page de Flotix se realizó utilizando GitHub Pages, ap
 1. **Creación del repositorio:** Se creó el repositorio `flotix-website` conteniendo todos los archivos del Landing Page, asegurando que `index.html` se encuentre en la raíz.
 
 2. **Subida del código:**
-
-- Se realizó el push del proyecto a la rama principal (`main`) del repositorio.
-
-- Se verificó que todos los recursos estén correctamente enlazados (rutas relativas).
+   - Se realizó el push del proyecto a la rama principal (`main`) del repositorio.
+   - Se verificó que todos los recursos estén correctamente enlazados (rutas relativas).
 
 3. **Configuración de GitHub Pages:**
-
-- En la sección Settings del repositorio, se habilitó GitHub Pages.
-
-- Se seleccionó la rama `main` como fuente de despliegue.
-
-- Se definió la carpeta raíz (`/root`) como directorio de publicación.
+   - En la sección Settings del repositorio, se habilitó GitHub Pages.
+   - Se seleccionó la rama `main` como fuente de despliegue.
+   - Se definió la carpeta raíz (`/root`) como directorio de publicación.
 
 4. **Publicación automática:**
-
-- GitHub Pages procesó automáticamente el contenido del repositorio.
-
-- En pocos minutos, generó una URL pública donde la Landing Page quedó disponible.
+   - GitHub Pages procesó automáticamente el contenido del repositorio.
+   - En pocos minutos, generó una URL pública donde la Landing Page quedó disponible.
 
 5. **Actualizaciones:**
-
-- Cada vez que se realiza un nuevo push a la rama `main`, GitHub Pages actualiza automáticamente la página.
-
-- Esto permite mantener la Landing Page sincronizada con los cambios del repositorio sin intervención manual adicional.
+   - Cada vez que se realiza un nuevo push a la rama `main`, GitHub Pages actualiza automáticamente la página.
+   - Esto permite mantener la Landing Page sincronizada con los cambios del repositorio sin intervención manual adicional.
 
 
 **Resultado**
@@ -670,6 +661,7 @@ En este Sprint se desplegó por primera vez el API Application junto con su base
 4. **Publicación automática:** cada push a la rama `main` dispara el build y la publicación del servicio.
 5. **Web Application:** se configuró la URL del API en el build de producción y se volvió a publicar en Netlify.
 6. **Verificación:** se comprobó el acceso a la documentación en Scalar y la respuesta de los endpoints desde el entorno desplegado.
+
 > **Figura 62.** Servicio del backend desplegado.
 >
 > ![Servicio del backend desplegado](../assets/images/s3-deploy-backend.png)

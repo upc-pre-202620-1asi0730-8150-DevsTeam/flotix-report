@@ -226,12 +226,11 @@ Agregar un diálogo de confirmación antes de aprobar o rechazar una cotización
 
 Mabel registró un vehículo nuevo con rapidez gracias a la visibilidad del botón. Sin embargo, señaló que no habría encontrado tan rápido la opción para asignar un conductor, porque está dentro de la edición del vehículo y ella la buscaría de forma intuitiva en la sección de conductores. Esto contradice el modelo mental del Dueño, cuya prioridad es saber qué conductor maneja cada unidad.
 
-<img alt="eu_1.png" src="../assets/images/eu_1_3.png" width="500"/>
-
-
 ###### Recomendación
 
 Permitir asignar o cambiar el vehículo también desde la sección de conductores, y mostrar el conductor asignado de forma visible en el listado de vehículos.
+
+<img alt="eu_1.png" src="../assets/images/eu_1_3.png" width="500"/>
 
 ---
 

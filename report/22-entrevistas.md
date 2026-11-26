@@ -19,7 +19,8 @@ El objetivo de las entrevistas es comprender las necesidades, problemas, frustra
 - ¿Qué tan útil sería recibir alertas automáticas sobre combustible, kilometraje y mantenimiento?
 - ¿Estarías dispuesto a pagar una suscripción mensual por vehículo si te ayudara a reducir costos?
 
-**Conductores**- ¿Cómo registras actualmente el combustible que utilizas durante tu jornada?
+**Conductores**
+- ¿Cómo registras actualmente el combustible que utilizas durante tu jornada?
 - ¿Cómo controlas el kilometraje del vehículo que conduces?
 - ¿Cómo reportas actualmente una falla o incidencia al dueño o administrador?
 - ¿Qué problemas tienes al momento de reportar una falla del vehículo?

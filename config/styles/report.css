@@ -1,6 +1,6 @@
 @page {
     size: A4 portrait;
-    margin: 20mm 15mm 20mm 15mm;
+    margin: 16mm 15mm 16mm 15mm;
     @bottom-right {
         content: counter(page);
         font-family: 'Segoe UI', 'Liberation Sans', Arial, sans-serif;
@@ -23,18 +23,53 @@
 .page-break {
     page-break-after: always;
     break-after: page;
+    height: 0;
+    margin: 0;
+    padding: 0;
+}
+
+.portrait-full-page {
+    page-break-inside: avoid;
+    break-inside: avoid;
+    page-break-after: always;
+    break-after: page;
 }
 
 body {
+    margin: 0;
+    padding: 0;
     font-family: 'Segoe UI', 'Liberation Sans', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;
     font-size: 10pt;
-    line-height: 1.45;
+    line-height: 1.44;
     color: #1e293b;
 }
 
 /* Hide Pandoc standalone HTML title block since 01-caratula.md provides the full UPC cover page */
 #title-block-header {
     display: none !important;
+}
+
+p {
+    margin: 0 0 5.5pt 0;
+    orphans: 2;
+    widows: 2;
+}
+
+ul, ol {
+    margin: 3pt 0 6pt 0;
+    padding-left: 16pt;
+    orphans: 2;
+    widows: 2;
+}
+
+li {
+    margin: 1.2pt 0;
+    orphans: 2;
+    widows: 2;
+}
+
+li > p {
+    margin: 1pt 0;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -52,27 +87,62 @@ h1 {
 
 h2 {
     font-size: 13pt;
-    margin: 14px 0 6px 0;
+    margin: 13px 0 6px 0;
 }
 
 h3 {
     font-size: 11pt;
-    margin: 12px 0 5px 0;
+    margin: 11px 0 5px 0;
 }
 
 h4 {
     font-size: 10pt;
-    margin: 10px 0 4px 0;
+    margin: 9px 0 4px 0;
 }
 
 h5 {
     font-size: 9.5pt;
-    margin: 8px 0 4px 0;
+    margin: 7px 0 3px 0;
 }
 
 h6 {
     font-size: 9pt;
-    margin: 6px 0 3px 0;
+    margin: 5px 0 2px 0;
+}
+
+/* Collapse uncollapsed top margins right after forced page breaks */
+.page-break + h1,
+.page-break + h2,
+.page-break + h3,
+.page-break + h4,
+.page-break + div > h1:first-child,
+.page-break + div > h2:first-child,
+.page-break + div > h3:first-child,
+.page-break + div > h4:first-child,
+.portrait-full-page + h1,
+.portrait-full-page + h2,
+.portrait-full-page + h3,
+.portrait-full-page + h4,
+.portrait-full-page > h2:first-child,
+.portrait-full-page > h3:first-child,
+.gallery-head > h2:first-child,
+.gallery-head > h3:first-child,
+.wireflow-page > h2:first-child,
+.wireflow-page > h3:first-child,
+.userflow-page > div:first-child {
+    margin-top: 0 !important;
+}
+
+.lead-in {
+    page-break-after: avoid;
+    break-after: avoid;
+    margin: 7pt 0 2.5pt 0;
+}
+
+.lead-in p {
+    margin: 0;
+    page-break-after: avoid;
+    break-after: avoid;
 }
 
 a {
@@ -87,14 +157,15 @@ hr {
     margin: 8px 0;
 }
 
+/* Genuine prose blockquotes (if any remain outside figures) */
 blockquote {
     margin: 4mm 0;
     padding: 2mm 3mm;
     border-left: 2pt solid #cbd5e1;
     background-color: #f8fafc;
     color: #334155;
-    page-break-inside: auto;
-    break-inside: auto;
+    page-break-inside: avoid;
+    break-inside: avoid;
 }
 
 blockquote p {
@@ -102,23 +173,79 @@ blockquote p {
     font-size: 9.2pt;
 }
 
-blockquote img {
-    margin: 2mm auto;
+/* ============================================================================
+   Table of Contents (Full 10pt + Live Dotted Leaders & Page Numbers)
+   ============================================================================ */
+.toc-block {
+    font-size: 10pt;
+    line-height: 1.13;
 }
 
+.toc-block ul {
+    list-style: none;
+    margin: 0;
+    padding-left: 11pt;
+}
+
+.toc-block > ul {
+    padding-left: 0;
+}
+
+.toc-block li {
+    margin: 0;
+}
+
+.toc-block a {
+    display: block;
+    color: #1e293b;
+    text-decoration: none;
+}
+
+.toc-block > ul > li > a {
+    font-weight: 600;
+    color: #0f172a;
+    margin-top: 1.4pt;
+}
+
+.toc-block > ul > li > ul > li > a {
+    font-weight: 500;
+    color: #1e293b;
+}
+
+.toc-block a::after {
+    content: " " leader('.') " " target-counter(attr(href), page);
+    color: #64748b;
+    font-weight: 400;
+}
+
+/* ============================================================================
+   Tables
+   ============================================================================ */
 table {
     width: 100% !important;
     table-layout: fixed !important;
     border-collapse: collapse !important;
-    margin: 10px 0 14px 0 !important;
+    margin: 8px 0 11px 0 !important;
     font-size: 9pt;
-    line-height: 1.38;
+    line-height: 1.36;
     page-break-inside: auto;
 }
 
 tr {
     page-break-inside: avoid;
+    break-inside: avoid;
     page-break-after: auto;
+}
+
+tr.table-subheader {
+    page-break-after: avoid !important;
+    break-after: avoid !important;
+    background-color: #f8fafc !important;
+}
+
+tr.table-subheader td {
+    background-color: #f8fafc !important;
+    color: #0f172a !important;
 }
 
 thead {
@@ -127,7 +254,7 @@ thead {
 
 th, td {
     border: 0.5pt solid #cbd5e1 !important;
-    padding: 4.5px 6px !important;
+    padding: 4px 5.5px !important;
     vertical-align: top !important;
     overflow-wrap: break-word !important;
     word-wrap: break-word !important;
@@ -139,35 +266,102 @@ th {
     font-weight: 600 !important;
 }
 
+table.table-keep {
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+}
+
 table.table-medium {
     font-size: 8.2pt !important;
-    line-height: 1.32 !important;
+    line-height: 1.30 !important;
 }
 
 table.table-medium th,
 table.table-medium td {
-    padding: 4px 5px !important;
+    padding: 3.5px 4.8px !important;
 }
 
 table.table-compact {
     font-size: 7.5pt !important;
-    line-height: 1.26 !important;
+    line-height: 1.24 !important;
 }
 
 table.table-compact th,
 table.table-compact td {
-    padding: 3px 3.5px !important;
-}
-
-table.table-compact td img {
-    max-width: 15mm !important;
-    max-height: 19mm !important;
+    padding: 2.6px 3.5px !important;
 }
 
 table.table-compact code {
-    font-size: 95%;
+    font-size: 94%;
 }
 
+/* Student Outcome mega-row table: keep full 9pt table minimum, allow clean cross-page breaking without orphaned lines */
+table.table-student-outcome {
+    font-size: 9pt !important;
+    line-height: 1.20 !important;
+}
+
+table.table-student-outcome th,
+table.table-student-outcome td {
+    padding: 2.5px 4.5px !important;
+}
+
+table.table-student-outcome .so-entry {
+    margin: 0 0 2pt 0;
+    page-break-inside: avoid;
+    break-inside: avoid;
+}
+
+table.table-student-outcome .so-entry:last-child {
+    margin-bottom: 0;
+}
+
+table.table-student-outcome .so-entry p {
+    margin: 0;
+}
+
+table.table-sprint-planning th,
+table.table-sprint-planning td {
+    padding: 2.6px 5px !important;
+    line-height: 1.27 !important;
+}
+
+table.table-user-stories th,
+table.table-user-stories td {
+    padding: 2.2px 4.5px !important;
+    line-height: 1.23 !important;
+}
+
+table.table-user-stories td:nth-child(4) {
+    padding-right: 6.5px !important;
+}
+
+table.table-user-stories th:nth-child(5),
+table.table-user-stories td:nth-child(5) {
+    text-align: center !important;
+}
+
+table.table-breakable tr {
+    page-break-inside: auto !important;
+    break-inside: auto !important;
+}
+
+/* Generic table-cell image fallback */
+td img, th img {
+    max-width: 34mm !important;
+    max-height: 38mm !important;
+    margin: 2px auto !important;
+    border-radius: 3px;
+}
+
+.short-list {
+    page-break-inside: avoid;
+    break-inside: avoid;
+}
+
+/* ============================================================================
+   Code Blocks
+   ============================================================================ */
 code {
     font-family: 'Consolas', 'DejaVu Sans Mono', 'Courier New', monospace;
     font-size: 88%;
@@ -197,24 +391,362 @@ pre code {
     font-size: 100%;
 }
 
+/* ============================================================================
+   Images & Publication-Grade Semantic Figures (100% Portrait, 1-Column, Max Size)
+   ============================================================================ */
 img {
     max-width: 100% !important;
-    max-height: 165mm !important;
+    max-height: 246mm !important;
     width: auto !important;
     height: auto !important;
     display: block;
-    margin: 3.5mm auto;
+    margin: 3mm auto;
     object-fit: contain;
 }
 
-td img, th img {
-    max-width: 34mm !important;
-    max-height: 38mm !important;
-    margin: 2px auto !important;
-    border-radius: 3px;
+.report-figure {
+    margin: 3mm 0 4mm 0;
+    text-align: center;
+    page-break-inside: avoid;
+    break-inside: avoid;
 }
 
-/* Cover page specific styles (Pure Pandoc Fenced Div) */
+.report-figure p {
+    margin: 0;
+}
+
+.figure-caption,
+.gallery-caption {
+    margin: 0 0 2mm 0;
+    font-size: 9.2pt;
+    line-height: 1.32;
+    color: #334155;
+    text-align: center;
+    page-break-after: avoid;
+    break-after: avoid;
+}
+
+.figure-caption p,
+.gallery-caption p {
+    margin: 0;
+}
+
+/* Default for ALL width-limited figures (AR >= 0.75): 100% full printable width (180mm), zero distortion */
+.report-figure img {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    max-height: 244mm !important;
+    margin: 0 auto !important;
+    border: 0.5pt solid #e2e8f0;
+    border-radius: 2.5px;
+    box-sizing: border-box;
+}
+
+/* Height-limited tall portrait figures (AR < 0.72): maximize vertical page height cleanly without distortion */
+.figure-persona img        { width: auto !important; height: 244mm !important; max-height: 244mm !important; }
+.figure-empathy img        { width: auto !important; height: 244mm !important; max-height: 244mm !important; }
+.figure-impact-1 img       { width: auto !important; height: 222mm !important; max-height: 222mm !important; }
+.figure-palette img        { width: auto !important; height: 194mm !important; max-height: 194mm !important; }
+.figure-landing-tall-1 img { width: auto !important; height: 236mm !important; max-height: 236mm !important; }
+.figure-landing-tall-2 img { width: auto !important; height: 246mm !important; max-height: 246mm !important; }
+
+/* Balanced vertical framing for standalone full-width plates (pure padding, zero flex/grid) */
+.figure-impact-2 .report-figure {
+    margin-top: 24mm;
+}
+
+.figure-solo-plate {
+    page-break-before: always;
+    break-before: page;
+    page-break-inside: avoid;
+    break-inside: avoid;
+    padding-top: 28mm;
+}
+
+.figure-with-heading {
+    page-break-inside: avoid;
+    break-inside: avoid;
+}
+
+/* Section 4.2 micro-margin trim (strictly preserves full 10pt font & 1.44 line-height) */
+.ia-section ul {
+    margin: 1.8pt 0 4.2pt 0;
+}
+
+.ia-section li {
+    margin: 0.7pt 0;
+}
+
+.ia-section p {
+    margin: 0 0 4.6pt 0;
+}
+
+/* ============================================================================
+   1-Column Multi-Image Galleries (Wireframes, Mockups, Prototypes, Wireflows, User Flows)
+   ============================================================================ */
+.gallery-head {
+    page-break-inside: avoid;
+    break-inside: avoid;
+}
+
+/* Fig 24 & Fig 26 Page 1: Screen #1 (180x105mm) + Screen #2 (180x127mm) both at 100% full width */
+.gallery-head .gallery-img img {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    max-height: 128mm !important;
+    margin: 2.5mm auto !important;
+    border: 0.6pt solid #cbd5e1;
+    border-radius: 3px;
+    box-sizing: border-box;
+}
+
+/* Fig 22 Page 1 (two headings 4.4 + 4.4.1 + 2-line caption): 2 screens at 114mm tall (162mm = 90% width) */
+.gallery-head-dense .gallery-img img {
+    width: auto !important;
+    height: 114mm !important;
+    max-height: 114mm !important;
+    max-width: 100% !important;
+    margin: 2.5mm auto !important;
+}
+
+/* Continuation pages (#3+#4, #5+#6, #7+#8, #9+#10): 2 screens at 100% FULL WIDTH (180x126.6mm each!) */
+.gallery-pair {
+    page-break-before: always;
+    break-before: page;
+    page-break-inside: avoid;
+    break-inside: avoid;
+    padding-top: 1mm;
+}
+
+.gallery-pair .gallery-img img {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    max-height: 127.5mm !important;
+    margin: 2.5mm auto !important;
+    border: 0.6pt solid #cbd5e1;
+    border-radius: 3px;
+    box-sizing: border-box;
+}
+
+/* Wireflows (Fig 23): 1 full-width Portrait page per role (Admin, Conductor, Mecanico), balanced vertically */
+.wireflow-page {
+    page-break-before: always;
+    break-before: page;
+    page-break-inside: avoid;
+    break-inside: avoid;
+}
+
+.wireflow-page-2 {
+    padding-top: 22mm;
+}
+
+.wireflow-page-3 {
+    padding-top: 56mm;
+}
+
+.wireflow-page-first {
+    page-break-inside: avoid;
+    break-inside: avoid;
+}
+
+.wireflow-page-first .gallery-img {
+    margin-top: 18mm;
+}
+
+.wireflow-page .gallery-img img,
+.wireflow-page-first .gallery-img img {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    max-height: 242mm !important;
+    margin: 3mm auto !important;
+    border: 0.6pt solid #cbd5e1;
+    border-radius: 3px;
+    box-sizing: border-box;
+}
+
+/* 1-column User Flow diagrams (Figura 25): 1 Goal + full-size diagram per page */
+.userflow-page-first {
+    page-break-inside: avoid;
+    break-inside: avoid;
+}
+
+.userflow-page {
+    page-break-before: always;
+    break-before: page;
+    page-break-inside: avoid;
+    break-inside: avoid;
+}
+
+.userflow-page-first .lead-in,
+.userflow-page .lead-in {
+    margin: 4pt 0 2pt 0;
+}
+
+.userflow-page-first p,
+.userflow-page p {
+    margin: 0 0 3.5pt 0;
+}
+
+.userflow-first img {
+    width: auto !important;
+    height: 222mm !important;
+    max-height: 222mm !important;
+    max-width: 100% !important;
+    margin: 2mm auto 0 auto !important;
+    border: 0.6pt solid #cbd5e1;
+    border-radius: 3px;
+    box-sizing: border-box;
+}
+
+.userflow-item img {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    max-height: 230mm !important;
+    margin: 2.5mm auto 0 auto !important;
+    border: 0.6pt solid #cbd5e1;
+    border-radius: 3px;
+    box-sizing: border-box;
+}
+
+/* 4.7.1 Class Diagrams Bounded Context list at full 10pt prose */
+.oo-bc-list {
+    font-size: 10pt;
+    line-height: 1.40;
+}
+
+.oo-bc-list .lead-in {
+    margin: 5pt 0 1.5pt 0;
+}
+
+.oo-bc-list p {
+    margin: 0 0 4pt 0;
+}
+
+/* ============================================================================
+   Architecture Bounded Contexts, Heuristic Problems & Bibliography
+   ============================================================================ */
+.bc-block {
+    page-break-inside: avoid;
+    break-inside: avoid;
+    margin: 4mm 0 5mm 0;
+    padding-top: 1mm;
+}
+
+.heuristic-problem {
+    page-break-inside: avoid;
+    break-inside: avoid;
+    margin: 0 0 3mm 0;
+    padding-bottom: 2.5mm;
+    border-bottom: 0.5pt solid #e2e8f0;
+}
+
+.heuristic-problem h5 {
+    margin: 0 0 1.5pt 0;
+    font-size: 10pt;
+    color: #0f172a;
+}
+
+.heuristic-problem h6 {
+    margin: 2pt 0 1pt 0;
+    font-size: 9.5pt;
+    color: #334155;
+}
+
+.heuristic-problem p {
+    font-size: 10pt;
+    line-height: 1.35;
+    margin: 0 0 2pt 0;
+}
+
+.heuristic-problem img {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    max-height: 150mm !important;
+    margin: 2mm auto 0.5mm auto !important;
+    border: 0.6pt solid #cbd5e1;
+    border-radius: 3px;
+    box-sizing: border-box;
+}
+
+/* Database Design (4.8.1): tight list margins at full 10pt prose so all 9 BCs + Relaciones stay unified */
+.db-bc-section {
+    line-height: 1.32;
+}
+
+.db-bc-section p {
+    margin: 0 0 1.8pt 0;
+}
+
+.db-bc-section ul {
+    margin: 0.8pt 0 2.2pt 0;
+}
+
+.db-bc-section li {
+    margin: 0.4pt 0;
+}
+
+.db-bc-section .lead-in {
+    margin: 2.8pt 0 0.8pt 0;
+}
+
+.bib-block p {
+    padding-left: 10mm;
+    text-indent: -10mm;
+    margin: 0 0 6pt 0;
+}
+
+/* ============================================================================
+   Specialized Table Images (MUST appear AFTER global img { width: auto } rule!)
+   ============================================================================ */
+table.table-team-profiles td {
+    padding: 5.5px 7px !important;
+}
+
+table.table-team-profiles td:first-child {
+    text-align: center !important;
+    vertical-align: middle !important;
+}
+
+table.table-team-profiles td img {
+    width: 28mm !important;
+    height: 34mm !important;
+    max-width: 28mm !important;
+    max-height: 34mm !important;
+    object-fit: cover !important;
+    object-position: top center !important;
+    margin: 2px auto !important;
+    border-radius: 4px;
+    border: 0.5pt solid #cbd5e1;
+}
+
+table.table-interview-card td img {
+    max-width: 68mm !important;
+    max-height: 36mm !important;
+    width: auto !important;
+    height: auto !important;
+    margin: 2px 0 !important;
+    border-radius: 3px;
+    border: 0.5pt solid #cbd5e1;
+}
+
+table.table-entrevistas-consolidado td img {
+    max-width: 21mm !important;
+    max-height: 20mm !important;
+    width: auto !important;
+    height: auto !important;
+    margin: 1px auto !important;
+    border-radius: 2px;
+}
+
+/* ============================================================================
+   Cover page specific styles (Pure Pandoc Fenced Div)
+   ============================================================================ */
 .cover-page {
     text-align: center;
     font-family: 'Segoe UI', 'Liberation Sans', Arial, sans-serif;
@@ -256,6 +788,7 @@ td img, th img {
     display: block !important;
     margin: 0 auto 7mm auto !important;
     object-fit: contain !important;
+    border: none !important;
 }
 
 .cover-page table {

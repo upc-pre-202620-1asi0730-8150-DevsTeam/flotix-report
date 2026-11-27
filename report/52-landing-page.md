@@ -788,7 +788,8 @@ Todas las rutas parten de `{baseUrl}/api/v1`.
 
 **Capturas de la interacción con Scalar (Sprint 4)**
 
-<!-- Insertar capturas de Scalar ejecutando los nuevos endpoints del Sprint 4 con datos de muestra -->
+> ![Scalar sprint 4](../assets/images/scalar_sprint_4.png)
+> *Scalar (Sprint 4)*
 
 #### 5.2.4.7. Software Deployment Evidence for Sprint Review
 

@@ -24,7 +24,7 @@ En esta sección se presenta el avance del Sprint 1 en términos de desarrollo d
 | Sprint 1 – 1 Review Summary | Al tratarse del primer sprint del proyecto, no se cuenta con una iteración previa. Se tomó como base el Product Backlog priorizado y los principios de diseño definidos en el Capítulo IV (Style Guidelines e Information Architecture). |
 | Sprint 1 – 1 Retrospective Summary | No aplica para este sprint. El equipo acordó enfocarse en una correcta distribución de tareas por sección del Landing Page y en mantener comunicación constante desde el inicio del desarrollo. |
 | **Sprint Goal & User Stories** | |
-| Sprint 1 Goal | Our focus is on offering prospective fleet owners, drivers, and mechanic workshops a clear, mobile-friendly presentation of Flotix's value proposition, segment benefits, and subscription plans. We believe it delivers an easier plan selection to new visitors. This will be confirmed when visitors on desktop or mobile devices reach the Web Application with their chosen plan in no more than two steps from any call-to-action. |
+| Sprint 1 Goal | Our focus is on offering prospective fleet owners, drivers, and mechanic workshops a clear, responsive presentation of Flotix's value proposition, service benefits, subscription plans, and direct access to the platform across desktop and mobile devices. We believe it delivers immediate understanding of how Flotix optimizes fleet operations and straightforward plan selection to potential customers from all three target segments. This will be confirmed when visitors browse every informational section on desktop and smartphone viewports without layout breaks and reach the Web Application with their chosen plan in no more than two clicks from any call-to-action. |
 | User Stories incluidas en el Sprint | US43: Visualizar sección de inicio (2) · US44: Navegar entre secciones (1) · US45: Visualizar el Landing Page en dispositivos móviles (3) · US46: Consultar beneficios (2) · US47: Consultar planes y precios (3) · US48: Acceder a la Web Application desde el Landing Page (2) |
 | Sprint 1 Velocity | 13 Story Points |
 | Sum of Story Points | 13 Story Points |
@@ -49,9 +49,7 @@ En esta sección se define la matriz de liderazgo y colaboración (LACX) del Spr
 
 El Sprint 1 tuvo como objetivo principal la implementación del Landing Page de Flotix, permitiendo presentar la propuesta de valor del sistema mediante una interfaz clara, estructurada y accesible para los tres segmentos objetivo. Para la gestión del Sprint Backlog se utiliza Trello, organizando los User Stories y sus respectivos Work-Items/Tasks en columnas según su estado de avance (To-do / In-Process / To-Review / Done).
 
-> **Figura 42.** Tablero Trello del Sprint 1.
->
-> ![Tablero Trello del Sprint 1|500](../assets/images/trello-demo.png)
+![Tablero Trello del Sprint Backlog 1|500](../assets/images/trello-demo.png)
 
 **URL del Board:** https://trello.com/invite/b/6aa4d8d2372dbba6abaa9614/ATTI169be87b0916b465e22e953638c3ad30AFD2832F/developer-team-sprint-backlog-1
 
@@ -91,33 +89,33 @@ En el Sprint 1 se logró implementar el Landing Page de Flotix, permitiendo pres
 **Screenshots del Landing Page**
 
 
-> **Figura 43.** Landing Page: vista general (Hero y Navbar).
->
-> ![Landing Page: vista general (Hero y Navbar)|500](../assets/images/Hero-navbar-landing.png)
+> ![Vista general (Hero + Navbar)|500](../assets/images/Hero-navbar-landing.png)
+
+> *Vista general (Hero + Navbar)*
 
 
-> **Figura 44.** Landing Page: sección Beneficios.
->
-> ![Landing Page: sección Beneficios|500](../assets/images/beneficios-landing.png)
+> ![Sección Beneficios|500](../assets/images/beneficios-landing.png)
+
+> *Sección Beneficios*
 
 
-> **Figura 45.** Landing Page: sección Planes.
->
-> ![Landing Page: sección Planes|500](../assets/images/precios-landing.png)
+> ![Sección Planes|500](../assets/images/precios-landing.png)
+
+> *Sección Planes*
 
 
-> **Figura 46.** Landing Page: sección About the Team.
->
-> ![Landing Page: sección About the Team|500](../assets/images/about-the-team-landing.png)
+> ![Sección About the Team|500](../assets/images/about-the-team-landing.png)
 
-> **Figura 47.** Landing Page: sección Footer.
->
-> ![Landing Page: sección Footer|500](../assets/images/footer-landing.png)
+> *Sección About the Team*
+
+> ![Sección Footer|500](../assets/images/footer-landing.png)
+
+> *Sección Footer*
 
 
-> **Figura 48.** Landing Page: sección Términos y condiciones.
->
-> ![Landing Page: sección Términos y condiciones|500](../assets/images/terminos-condiciones-landing.png)
+![Sección Términos y condiciones|500](../assets/images/terminos-condiciones-landing.png)
+
+> *Sección Términos y condiciones*
 
 #### 5.2.1.6. Services Documentation Evidence for Sprint Review
 
@@ -149,21 +147,30 @@ El despliegue del Landing Page de Flotix se realizó utilizando GitHub Pages, ap
 1. **Creación del repositorio:** Se creó el repositorio `flotix-website` conteniendo todos los archivos del Landing Page, asegurando que `index.html` se encuentre en la raíz.
 
 2. **Subida del código:**
-   - Se realizó el push del proyecto a la rama principal (`main`) del repositorio.
-   - Se verificó que todos los recursos estén correctamente enlazados (rutas relativas).
+
+- Se realizó el push del proyecto a la rama principal (`main`) del repositorio.
+
+- Se verificó que todos los recursos estén correctamente enlazados (rutas relativas).
 
 3. **Configuración de GitHub Pages:**
-   - En la sección Settings del repositorio, se habilitó GitHub Pages.
-   - Se seleccionó la rama `main` como fuente de despliegue.
-   - Se definió la carpeta raíz (`/root`) como directorio de publicación.
+
+- En la sección Settings del repositorio, se habilitó GitHub Pages.
+
+- Se seleccionó la rama `main` como fuente de despliegue.
+
+- Se definió la carpeta raíz (`/root`) como directorio de publicación.
 
 4. **Publicación automática:**
-   - GitHub Pages procesó automáticamente el contenido del repositorio.
-   - En pocos minutos, generó una URL pública donde la Landing Page quedó disponible.
+
+- GitHub Pages procesó automáticamente el contenido del repositorio.
+
+- En pocos minutos, generó una URL pública donde la Landing Page quedó disponible.
 
 5. **Actualizaciones:**
-   - Cada vez que se realiza un nuevo push a la rama `main`, GitHub Pages actualiza automáticamente la página.
-   - Esto permite mantener la Landing Page sincronizada con los cambios del repositorio sin intervención manual adicional.
+
+- Cada vez que se realiza un nuevo push a la rama `main`, GitHub Pages actualiza automáticamente la página.
+
+- Esto permite mantener la Landing Page sincronizada con los cambios del repositorio sin intervención manual adicional.
 
 
 **Resultado**
@@ -183,9 +190,7 @@ Durante el Sprint 1, el equipo Developers Team trabajó de manera colaborativa e
 
 La integración del trabajo se realizó de manera progresiva, consolidando las distintas secciones en una única versión funcional del Landing Page.
 
-> **Figura 49.** GitHub Insights del Sprint 1.
->
-> ![GitHub Insights del Sprint 1|500](../assets/images/github-demo.png)
+![GitHub Insights del Sprint 1|500](../assets/images/github-demo.png)
 
 ### 5.2.2. Sprint 2
 
@@ -205,7 +210,7 @@ En esta sección se registra y explica el avance en términos de producto y trab
 | Sprint 1 Review Summary | Durante el Sprint 1 se implementó y desplegó correctamente el Landing Page responsive de Flotix en GitHub Pages, cumpliendo las historias iniciales planificadas (US43–US48). El equipo validó la navegación entre secciones y la adaptación a dispositivos móviles, y consolidó GitFlow y Conventional Commits como estándar de trabajo. |
 | Sprint 1 Retrospective Summary | El equipo identificó como fortaleza la división del trabajo por sección del Landing Page. Como oportunidad de mejora, se acordó no bloquear el desarrollo del frontend a la espera del API Application: se definiría una capa de persistencia local que replique el contrato del backend real, permitiendo avanzar con los Bounded Contexts en paralelo y reemplazar la implementación por un cliente HTTP una vez el API esté disponible. |
 | **Sprint Goal & User Stories** | |
-| Sprint 2 Goal | Our focus is on providing fleet owners, drivers, and mechanic workshops with unified role-based workflows to manage daily fleet operations, fuel consumption, incidents, and preventive maintenance. We believe it delivers centralized operational visibility to owners, simpler field reporting to drivers, and structured service coordination to workshops. This will be confirmed when owners register vehicles and request or approve maintenance in no more than three steps, drivers log fuel refills or route incidents in under two minutes, and workshops quote and complete repairs without phone follow-ups. |
+| Sprint 2 Goal | Our focus is on enabling fleet owners, drivers, and mechanic workshops to operate end-to-end fleet workflows—covering vehicle and driver administration, fuel efficiency tracking with anomaly detection, workshop maintenance coordination, route incident reporting, real-time monitoring with speed alerts, IoT device ordering, and fleet analytics—through dedicated role views. We believe it delivers centralized operational visibility, faster owner–workshop coordination, and streamlined daily field reporting to fleet owners, drivers, and affiliated mechanic workshops. This will be confirmed when owners register vehicles, approve maintenance quotes, detect anomalous fuel records, and review analytics; drivers log fuel refills and route incidents; and mechanics quote, start, and complete repairs with automatic vehicle-availability updates and alerts across all three roles. |
 | User Stories / Epics incluidos | EP01 Gestión de Flota y Conductores (vehículos, conductores)<br>EP02 Control de Combustible (registro, historial y detección de consumo anómalo)<br>EP03 Gestión de Mantenimiento (solicitudes, cotizaciones, talleres) · EP04 Gestión de Incidencias (reporte y seguimiento)<br>EP05 Monitoreo en Tiempo Real (tracking IoT) · EP06 Alertas y Notificaciones<br>EP07 Comercio de Dispositivos IoT (tienda y pedidos) · EP08 Reportes y Analítica |
 | Sprint 2 Velocity | 33 Story Points |
 | Sum of Story Points | 33 Story Points |
@@ -227,13 +232,11 @@ El Sprint 2 tuvo como objetivo principal construir la Web Application completa d
 
 **URL del Board:** https://trello.com/invite/b/6ac1585ab6a4d7605848bae2/ATTI1c6deef09403b58e03ceda301a4bbe43F73C7F73/developer-team-sprint-backlog-2
 
-> **Figura 50.** Tablero Trello del Sprint 2: tareas en To do.
->
 > ![Tablero Trello del Sprint 2: tareas en To do](../assets/images/sprint2.png)
+> *Tablero Trello del Sprint 2: tareas en To do*
 
-> **Figura 51.** Tablero Trello del Sprint 2: tareas en Done.
->
 > ![Tablero Trello del Sprint 2: tareas en Done](../assets/images/sprint2_1.png)
+> *Tablero Trello del Sprint 2: tareas en Done*
 
 | Bounded Context | Work-Item / Task | Descripción | Hrs | Assigned To | Status |
 |---|---|---|:---:|---|:---:|
@@ -293,21 +296,18 @@ En el Sprint 2 se logró implementar y navegar de extremo a extremo la primera v
 
 **Dueño:**
 
-> **Figura 52.** Web Application: dashboard del Dueño.
->
-> ![Web Application: dashboard del Dueño](../assets/images/web_app_dueño.png)
+> ![Dashboard del Dueño](../assets/images/web_app_dueño.png)
+> *Dashboard del Dueño*
 
 **Conductor:**
 
-> **Figura 53.** Web Application: dashboard del Conductor.
->
-> ![Web Application: dashboard del Conductor](../assets/images/web_app_conductor.png)
+> ![Dashboard del Conductor](../assets/images/web_app_conductor.png)
+> *Dashboard del Conductor*
 
 **Mecánica:**
 
-> **Figura 54.** Web Application: dashboard de la Mecánica.
->
-> ![Web Application: dashboard de la Mecánica](../assets/images/web_app_mecanica.png)
+> ![Dashboard de la Mecánica](../assets/images/web_app_mecanica.png)
+> *Dashboard de la Mecánica*
 
 #### 5.2.2.6. Services Documentation Evidence for Sprint Review
 
@@ -354,9 +354,7 @@ Durante el Sprint 2, el equipo Developers Team distribuyó el trabajo por Bounde
 
 Siguiendo la retrospectiva del Sprint 1, el equipo decidió no esperar al API Application para avanzar: se acordó un contrato de repositorio único que los cuatro integrantes reutilizaron en sus respectivos Bounded Contexts, lo que permitió que los 9 módulos se desarrollaran en paralelo sin bloqueos entre sí. El trabajo se organizó mediante GitHub con GitFlow, una rama `feature/<bounded-context>` por módulo, y Pull Requests revisados por al menos un integrante antes de cada merge a `develop`.
 
-> **Figura 55.** GitHub Insights: contribuciones en flotix-webapp durante el Sprint 2.
->
-> ![GitHub Insights: contribuciones en flotix-webapp durante el Sprint 2](../assets/images/app_web_frontend.png)
+> ![Commits](../assets/images/app_web_frontend.png)
 
 
 ### 5.2.3. Sprint 3
@@ -377,7 +375,7 @@ En esta sección se registra y explica el avance en términos de producto y trab
 | Sprint 2 Review Summary | Durante el Sprint 2 se implementó la primera versión de la Web Application de Flotix en Vue 3 con una carpeta independiente por Bounded Context, navegable de extremo a extremo para los tres roles (Dueño, Conductor y Mecánica) y desplegada en Netlify. Los datos se persistieron mediante `LocalStorageRepository`, que replica el contrato del futuro API (`getAll`, `getById`, `findBy`, `add`, `update`, `remove`). No se implementaron Web Services reales. |
 | Sprint 2 Retrospective Summary | El equipo identificó como fortaleza el contrato de repositorio único reutilizado por los cuatro integrantes, que permitió desarrollar los módulos en paralelo sin bloqueos. Como oportunidad de mejora, se acordó implementar el API Application para reemplazar la capa local por un cliente HTTP sin modificar las capas de aplicación ni de presentación, documentar los endpoints con OpenAPI desde el inicio y completar las historias pendientes del Landing Page requeridas para la entrega. |
 | **Sprint Goal & User Stories** | |
-| Sprint 3 Goal | Our focus is on enabling shared real-time operational records across roles, offering a bilingual and accessible Landing Page with product and team videos to visitors, and incrementing integration possibilities for the frontend team. We believe it delivers reliable cross-role coordination to owners, drivers, and workshops, an inclusive overview to new visitors, and autonomous feature delivery to frontend developers. This will be confirmed when updates submitted by drivers or workshops are visible to fleet owners on any device, visitors switch languages and play both videos using only the keyboard, and frontend developers implement core fleet features using the implemented endpoints without intervention of the backend development team. |
+| Sprint 3 Goal | Our focus is on providing persistent, synchronized fleet, fuel, maintenance, incident, IoT telemetry, alert, commerce, and reporting capabilities across owners, drivers, and mechanic workshops, offering a bilingual and accessible Landing Page featuring product and team videos, and exposing standardized self-service API capabilities for frontend integration. We believe it delivers reliable shared operational data with automated business-rule validation to fleet owners, drivers, and workshops, an inclusive multilingual overview of Flotix to prospective visitors, and autonomous integration of core fleet workflows to frontend developers. This will be confirmed when vehicle, fuel, maintenance, incident, telemetry, alert, order, and report records persist across user sessions with real-time updates and anomaly detection; frontend developers integrate the core modules via the interactive OpenAPI documentation in Scalar without backend team intervention; and visitors play both videos, switch between English and Spanish, and navigate the Landing Page using keyboard and screen reader controls. |
 | User Stories incluidas en el Sprint | **Web Services:** TS01 (3) · TS02 (8) · TS03 (5) · TS04 (5) · TS05 (2) · TS06 (3) · TS08 (3) · TS09 (3) · TS10 (3) · TS12 (3) · TS13 (3) · TS14 (2) · TS15 (1) · TS16 (3) · TS17 (2) · TS18 (2) · TS28 (3) · TS31 (2)<br>**Landing Page (EP09):** US49: Ver video About the Product (2) · US51: Ver video About the Team (2) · US53: Cambiar idioma (3) · US54: Acceder al contenido de forma accesible (2) |
 | Fuera del alcance del Sprint | El bounded context `Identity, Profiles & Security` (EP10: autenticación externa con Google, gestión de perfiles por rol y autorización con JWT), las consultas de conductores y talleres respaldadas por usuarios reales en base de datos (`TS07`), el catálogo IoT vía API (`TS24`), la suscripción en tiempo real a `/hubs/notifications` en el Frontend (`TS21–TS23`) y las mejoras surgidas de las entrevistas de validación (`5.3`) quedan planificados para el Sprint 4. |
 | Sprint 3 Velocity | 65 Story Points |
@@ -402,13 +400,11 @@ El Sprint 3 tuvo como objetivo principal implementar, documentar y desplegar la 
 
 **URL del Board:** https://trello.com/invite/b/6adf70a966d4291bccf690d2/ATTIc667f3a211184f0a0f5333d95c73e66c8A418E19/developer-team-sprint-backlog-3
 
-> **Figura 56.** Tablero Trello del Sprint 3: tareas en To do.
->
 > ![Tablero Trello del Sprint 3: tareas en To do](../assets/images/sprint3.png)
+> *Tablero Trello del Sprint 3: tareas en To do*
 
-> **Figura 57.** Tablero Trello del Sprint 3: tareas en Done.
->
 > ![Tablero Trello del Sprint 3: tareas en Done](../assets/images/sprint3_1.png)
+> *Tablero Trello del Sprint 3: tareas en Done*
 
 **Sprint #:** Sprint 3
 
@@ -585,14 +581,12 @@ En el Sprint 3 se logró poner en funcionamiento el API Application de Flotix y 
 
 **Screenshots**
 
-> **Figura 58.** Web Application: dashboard.
->
 > ![Web Application: dashboard](../assets/images/s3-webapp-dashboard.png)
+> *Web Application: dashboard*
 
 
-> **Figura 59.** API Application: documentación en Scalar.
->
-> ![API Application: documentación en Scalar](../assets/images/s3-webapp-scalar.png)
+> ![Web Application: API Scalar](../assets/images/s3-webapp-scalar.png)
+> *Web Application: En Scalar*
 
 #### 5.2.3.6. Services Documentation Evidence for Sprint Review
 
@@ -636,13 +630,11 @@ Todas las rutas parten de `{baseUrl}/api/v1`.
 
 **Capturas de la interacción con la documentación**
 
-> **Figura 60.** Scalar: ejecución de `POST /vehicles` con datos de muestra.
->
-> ![Scalar: ejecución de POST /vehicles con datos de muestra](../assets/images/s3-scalar-post-vehicles.png)
+> ![Scalar: POST /vehicles con datos de muestra](../assets/images/s3-scalar-post-vehicles.png)
+> *Scalar: ejecución de `POST /vehicles` con datos de muestra*
 
-> **Figura 61.** Scalar: respuesta de `GET /vehicles/{vehicleId}/fuel-records`.
->
-> ![Scalar: respuesta de GET /vehicles/{vehicleId}/fuel-records](../assets/images/s3-scalar-get-fuel.png)
+> ![Scalar: GET fuel-records con rendimiento](../assets/images/s3-scalar-get-fuel.png)
+> *Scalar: respuesta de `GET /vehicles/{vehicleId}/fuel-records`*
 
 #### 5.2.3.7. Software Deployment Evidence for Sprint Review
 
@@ -661,14 +653,11 @@ En este Sprint se desplegó por primera vez el API Application junto con su base
 4. **Publicación automática:** cada push a la rama `main` dispara el build y la publicación del servicio.
 5. **Web Application:** se configuró la URL del API en el build de producción y se volvió a publicar en Netlify.
 6. **Verificación:** se comprobó el acceso a la documentación en Scalar y la respuesta de los endpoints desde el entorno desplegado.
+> ![Servicio del API desplegado](../assets/images/s3-deploy-backend.png)
+> *Servicio del backend desplegado*
 
-> **Figura 62.** Servicio del backend desplegado.
->
-> ![Servicio del backend desplegado](../assets/images/s3-deploy-backend.png)
-
-> **Figura 63.** Base de datos PostgreSQL aprovisionada.
->
 > ![Base de datos PostgreSQL aprovisionada](../assets/images/s3-deploy-db.png)
+> *Base de datos PostgreSQL aprovisionada*
 
 **URL del Backend:** https://flotix-platform-production.up.railway.app
 
@@ -689,13 +678,11 @@ Siguiendo la retrospectiva del Sprint 2, el contrato de repositorio definido par
 | Olivares Lao, Gustavo | Tracking, Analytics y acciones de la Mecánica | Telemetría IoT, reportes y transiciones del mantenimiento |
 | Lechuga Aguilar, Joaquin | Incidents, talleres y eliminación de solicitudes | Incidencias, sincronización del vehículo y talleres |
 
-> **Figura 64.** GitHub Insights: contribuciones en `flotix-platform`.
->
-> ![GitHub Insights: contribuciones en flotix-platform](../assets/images/s3-insights-platform.png)
+> ![Commits por integrante en flotix-api](../assets/images/s3-insights-platform.png)
+> *GitHub Insights: contribuciones en `flotix-platform`*
 
-> **Figura 65.** GitHub Insights: contribuciones en `flotix-webapp`.
->
-> ![GitHub Insights: contribuciones en flotix-webapp](../assets/images/s3-insights-webapp.png)
+> ![Commits por integrante en flotix-webapp](../assets/images/s3-insights-webapp.png)
+> *GitHub Insights: contribuciones en `flotix-webapp`*
 
 
 ### 5.2.4. Sprint 4
@@ -704,22 +691,22 @@ En esta sección se registra y explica la planificación y el avance del Sprint 
 
 #### 5.2.4.1. Sprint Planning 4
 
-| Campo | Detalle |
-|---|---|
-| **Sprint #** | Sprint 4 |
-| **Sprint Planning Background** | |
-| Date | 2026-11-24 |
-| Time | 17:55 |
-| Location | Reunión virtual (Google Meet) |
-| Prepared By | Jaime Forcelledo, Gonzalo Alexander |
-| Attendees (to planning meeting) | Jaime Forcelledo, Gonzalo Alexander · Lechuga Aguilar, Joaquin Andre · Olivares Lao, Gustavo Alonso · Munayco Apolaya, Maria Luisa · Jaramillo Mayta, Jhon Jordy |
-| Sprint 3 Review Summary | Durante el Sprint 3 se implementó, documentó en Scalar y desplegó en Railway + Neon PostgreSQL la primera versión del API Application (`flotix-platform`) cubriendo los ocho bounded contexts operativos (`Fleet`, `Fuel`, `Maintenance`, `Incidents`, `Monitoring` con SignalR, `Notifications`, `Commerce` y `Analytics`), y se integraron en `flotix-webapp` (desplegada en Netlify). Asimismo, se realizaron las entrevistas de validación (`5.3`), cuyos hallazgos heurísticos identificaron seis oportunidades concretas de mejora (tres de severidad 3 y tres de severidad 2). Quedó pendiente el bounded context `Identity, Profiles & Security` (autenticación real por rol) y el consumo de un servicio externo de terceros. |
-| Sprint 3 Retrospective Summary | El equipo destacó como fortaleza la arquitectura modular por bounded contexts con OpenAPI (Scalar) y SignalR, que permitió desplegar los ocho módulos operativos de forma estable. Como oportunidades de mejora para el sprint final (TB2), se acordó: (1) incorporar Google Login como servicio externo junto con IAM/JWT para eliminar el último rezago en `localStorage`; (2) cerrar las historias técnicas aún no conectadas con datos reales de usuarios/notificaciones en tiempo real; (3) aplicar las mejoras detectadas en las entrevistas de validación; y (4) mantener coherencia entre la matriz LACX, el Sprint Backlog, las rutas reales de Scalar y los commits de GitHub. |
-| **Sprint Goal & User Stories** | |
-| Sprint 4 Goal | Our focus is on offering fleet users Google sign-in, driver and workshop directories, critical alerts, and safer maintenance approvals, and expanding identity integration possibilities for the frontend team. We believe it delivers quick, secure access to owners, drivers, and workshops, fewer coordination errors to owners, and new identity features to frontend developers. This will be confirmed when users sign in and complete their profile in no more than two steps, owners pick drivers or workshops from the directories in two steps, receive critical alerts within one minute, and approve quotes with no reverted approvals, and frontend developers implement identity features using the implemented endpoints without intervention of the backend development team. |
-| User Stories incluidas en el Sprint | **Nuevas (`EP10` — Google Login & IAM):** US55: Iniciar sesión con Google (3) · US56: Configurar rol y perfil de usuario (3) · TS32: Implementar autenticación con Google y emisión de JWT vía API (5) · TS33: Implementar autorización por roles y consulta de usuarios vía API (3)<br>**Pendientes reales / cierre API:** TS07: Implementar consulta y búsqueda de conductores vía API (2) · TS21: Implementar generación de alertas de exceso de velocidad (3) · TS22: Implementar consulta de alertas y notificaciones (2) · TS23: Implementar marcado de notificaciones como leídas (1) · TS24: Implementar catálogo de dispositivos IoT vía API (2) · TS31: Documentar el RESTful API con OpenAPI — actualización Escenario 2 (2)<br>**Refinamientos por Validación Heurística (5.3) y cierre TB2:** US05 (asignación desde Conductores — P#3) · US13 (datos técnicos del vehículo en solicitud — P#6) · US15 (confirmación antes de aprobar/rechazar y etiqueta "Presupuesto por aprobar" — P#2 y P#4) · US30 / US32 (notificaciones fuera del dashboard — P#1) · US49 y US51 (versiones finales de videos en Landing Page). |
-| Sprint 4 Velocity | 26 Story Points |
-| Sum of Story Points | 26 Story Points |
+| Campo | Detalle                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+|---|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Sprint #** | Sprint 4                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| **Sprint Planning Background** |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| Date | 2026-11-24                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| Time | 17:55                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| Location | Reunión virtual (Google Meet)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| Prepared By | Jaime Forcelledo, Gonzalo Alexander                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| Attendees (to planning meeting) | Jaime Forcelledo, Gonzalo Alexander · Lechuga Aguilar, Joaquin Andre · Olivares Lao, Gustavo Alonso · Munayco Apolaya, Maria Luisa   ·Jaramillo Mayta, Jhon Jordy                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| Sprint 3 Review Summary | Durante el Sprint 3 se implementó, documentó en Scalar y desplegó en Railway + Neon PostgreSQL la primera versión del API Application (`flotix-platform`) cubriendo los ocho bounded contexts operativos (`Fleet`, `Fuel`, `Maintenance`, `Incidents`, `Monitoring` con SignalR, `Notifications`, `Commerce` y `Analytics`), y se integraron en `flotix-webapp` (desplegada en Netlify). Asimismo, se realizaron las entrevistas de validación (`5.3`), cuyos hallazgos heurísticos identificaron seis oportunidades concretas de mejora (tres de severidad 3 y tres de severidad 2). Quedó pendiente el bounded context `Identity, Profiles & Security` (autenticación real por rol) y el consumo de un servicio externo de terceros.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| Sprint 3 Retrospective Summary | El equipo destacó como fortaleza la arquitectura modular por bounded contexts con OpenAPI (Scalar) y SignalR, que permitió desplegar los ocho módulos operativos de forma estable. Como oportunidades de mejora para el sprint final (TB2), se acordó: (1) incorporar Google Login como servicio externo junto con IAM/JWT para eliminar el último rezago en `localStorage`; (2) cerrar las historias técnicas aún no conectadas con datos reales de usuarios/notificaciones en tiempo real; (3) aplicar las mejoras detectadas en las entrevistas de validación; y (4) mantener coherencia entre la matriz LACX, el Sprint Backlog, las rutas reales de Scalar y los commits de GitHub.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| **Sprint Goal & User Stories** |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| Sprint 4 Goal | Our focus is on providing fleet owners, drivers, and mechanic workshops with secure one-click Google sign-in and role-based access to the complete Flotix experience—incorporating real driver and affiliated-workshop directories, real-time external browser notifications for speed and anomalous-fuel alerts, IoT catalog availability, validated usability refinements (budget-approval confirmation, direct driver assignment, clear approval status labels, and vehicle technical details in maintenance requests), final product and team videos on the Landing Page, and complete self-service OpenAPI capabilities for developers. We believe it delivers frictionless secure onboarding, error-proof maintenance approvals, proactive alert awareness outside the dashboard, and full role-isolated operational control to fleet owners, drivers, and affiliated mechanic workshops, while giving frontend developers autonomous access to every authenticated endpoint. This will be confirmed when users of all three roles sign in with their Google account, complete their role profile, and operate 100% of their workflows against persisted data without local demo profiles; owners receive browser notifications for critical alerts and confirm maintenance budgets via an explicit summary dialog before approval; visitors watch the final videos and see mobile compatibility on the Landing Page; and developers test all new authentication and directory endpoints in Scalar without backend team intervention. |
+| User Stories incluidas en el Sprint | **Nuevas (`EP10` — Google Login & IAM):** US55: Iniciar sesión con Google (3) · US56: Configurar rol y perfil de usuario (3) · TS32: Implementar autenticación con Google y emisión de JWT vía API (5) · TS33: Implementar autorización por roles y consulta de usuarios vía API (3)<br>**Pendientes reales / cierre API:** TS07: Implementar consulta y búsqueda de conductores vía API (2) · TS21: Implementar generación de alertas de exceso de velocidad (3) · TS22: Implementar consulta de alertas y notificaciones (2) · TS23: Implementar marcado de notificaciones como leídas (1) · TS24: Implementar catálogo de dispositivos IoT vía API (2) · TS31: Documentar el RESTful API con OpenAPI — actualización Escenario 2 (2)<br>**Refinamientos por Validación Heurística (5.3) y cierre TB2:** US05 (asignación desde Conductores — P#3) · US13 (datos técnicos del vehículo en solicitud — P#6) · US15 (confirmación antes de aprobar/rechazar y etiqueta "Presupuesto por aprobar" — P#2 y P#4) · US30 / US32 (notificaciones fuera del dashboard — P#1) · US49 y US51 (versiones finales de videos en Landing Page).                                                                                                                                                                                                                                                                                                                                                                                                         |
+| Sprint 4 Velocity | 26 Story Points                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| Sum of Story Points | 26 Story Points                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
 
 #### 5.2.4.2. Aspect Leaders and Collaborators
 
@@ -734,17 +721,17 @@ En esta sección se define la matriz de liderazgo y colaboración (LACX) del Spr
 | Lechuga Aguilar, Joaquin Andre | joaquin-aguilar |             C             |                  L                   |                     C                     |                     C                     |
 | Munayco Apolaya, Maria Luisa | malumunayco |             C             |                  C                   |                     C                     |                     C                     |
 | Olivares Lao, Gustavo Alonso | GeGuMaGu25 |             L             |                  C                   |                     C                     |                     C                     |
-| Ramirez Rodriguez, Mauricio Joao | MauRicio1321rr |                           |                                      |                                           |                     C                     |
-
 #### 5.2.4.3. Sprint Backlog 4
 
 El Sprint 4 tiene como objetivo cerrar el ciclo de vida del producto integrando Google Login como servicio externo junto con el bounded context `Identity, Profiles & Security` (`EP10`), eliminando la dependencia residual de `localStorage` en usuarios/conductores/talleres, aplicando las mejoras de usabilidad obtenidas en las entrevistas de validación (`5.3`) y publicando la versión final de la solución. La gestión de tareas se realiza en Trello con las columnas To-do / In-Process / To-Review / Done.
 
 **URL del Board:** https://trello.com/invite/b/6b05eb0c697409d9e9cf81d3/ATTI2efdae52b0d148a5549638a060e4009aA093B97E/developer-team-sprint-backlog-4
 
-> **Figura 66.** Tablero Trello del Sprint 4: tareas en To do.
->
 > ![Tablero Trello del Sprint 4: tareas en To do](../assets/images/sprint_4.png)
+> *Tablero Trello del Sprint 4: tareas en To do*
+
+> ![Tablero Trello del Sprint 4: tareas en In Process](../assets/images/sprint_4_1.png)
+> *Tablero Trello del Sprint 4: tareas en In Process*
 
 **Sprint #:** Sprint 4
 
@@ -763,9 +750,8 @@ El Sprint 4 tiene como objetivo cerrar el ciclo de vida del producto integrando 
 | US13 | Enviar solicitud de mantenimiento | TASK11 | Datos técnicos del vehículo en solicitudes | Visualización de placa, tipo de vehículo y kilometraje actual en las tarjetas y detalles de las solicitudes de mantenimiento. | 3 | Gonzalo Alexander Jaime Forcelledo | To-do |
 | TS31 | Documentar el RESTful API con OpenAPI | TASK12 | Actualización de OpenAPI / Scalar | Registro de los endpoints del contexto IAM y del catálogo IoT mediante `LocalizedOpenApiAssembler`, verificación de ejemplos de request/response y documentación de las rutas reales disponibles en Scalar. | 3 | Gonzalo Alexander Jaime Forcelledo | To-do |
 | US49 / US51 | Videos finales y visibilidad móvil en Landing Page | TASK13 | Actualización final de `flotix-website` | Incorporación de las versiones finales de los videos *About the Product* y *About the Team*, además de destacar la compatibilidad móvil de la plataforma. | 3 | Maria Luisa Munayco Apolaya | To-do |
-| General | Constraint técnico de pruebas y limpieza | TASK14 | Pruebas unitarias, integración y limpieza | Creación del proyecto de pruebas para `flotix-platform`, cobertura de reglas de dominio y endpoints principales, y eliminación de archivos residuales sin uso en el frontend. | 5 | Gonzalo Alexander Jaime Forcelledo | To-do |
+| General | Constraint técnico de pruebas y limpieza | TASK14 | Pruebas unitarias, integración y limpieza | Creación del proyecto de pruebas para `flotix-platform`, cobertura de reglas de dominio y endpoints principales, y eliminación de archivos residuales sin uso en el frontend. | 5 |Gonzalo Alexander Jaime Forcelledo| To-do |
 | General | Constraint técnico de despliegue TB2 | TASK15 | Despliegue final y configuración OAuth | Configuración de credenciales OAuth de Google, orígenes autorizados de Netlify, variables de entorno en Railway/Netlify, verificación de migraciones en Neon y validación End-to-End del release final. | 3 | Gonzalo Alexander Jaime Forcelledo | To-do |
-
 #### 5.2.4.4. Development Evidence for Sprint Review
 
 En esta sección se registrarán los commits integrados durante el Sprint 4 en los repositorios de la solución (`flotix-platform`, `flotix-webapp` y `flotix-website`).
